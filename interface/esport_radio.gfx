@@ -1,9 +1,0 @@
-spriteTypes = {
-	
-
-	spriteType = {
-		name = "GFX_radio_bbc_album_art"
-		texturefile = "gfx/radio_bbc_album_art.tga"
-		noOfFrames = 2
-	}	
-	
