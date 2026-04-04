@@ -232,7 +232,7 @@
 		   factor = 16 }
 	  completion_reward = {
 			add_ideas = SLO_prospering_industry_1
-			add_political_power = 150
+			add_political_power = 250
 		}
 		
 
@@ -272,19 +272,19 @@
 		
 		random_owned_controlled_state = {
 			prioritize = { 70 }
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 5
 			  add_building_construction = {
 			   type = industrial_complex
-				level = 2
+				level = 5
 				 instant_build = yes 
 				}
 			}
 			random_owned_controlled_state = {
 			prioritize = { 70 }
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 5
 			  add_building_construction = {
 			   type = arms_factory
-				level = 2
+				level = 5
 				 instant_build = yes 
 				 }
 			 } 
@@ -305,7 +305,7 @@
 		 completion_reward = {   
 		 random_owned_controlled_state = {
 		 prioritize = { 70 }
-			add_extra_state_shared_building_slots = 6
+			add_extra_state_shared_building_slots = 9
 			  add_building_construction = {
 			   type = infrastructure
 				level = 1
@@ -315,7 +315,7 @@
 				  
 		 random_owned_controlled_state = {
 		 prioritize = { 71 }
-			add_extra_state_shared_building_slots = 6
+			add_extra_state_shared_building_slots = 9
 			  add_building_construction = {
 			   type = infrastructure
 				level = 1
@@ -2569,7 +2569,7 @@
 		}
 			
 		completion_reward = {
-			add_stability = -0.05
+			add_stability = 0.09
 			set_cosmetic_tag = SLO_tuka 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SLO_jozef_tiso
@@ -2633,8 +2633,8 @@
 		ai_will_do = {
 		   factor = 16 }
 		completion_reward = {
-		add_war_support = 0.1
-		add_stability = 0.1
+		add_war_support = 0.2
+		add_stability = 0.2
 	   } 
 	  } 
 	  
@@ -2707,7 +2707,7 @@
 		809 = {
 		add_resource = {
 		  type = steel
-		  amount = 20
+		  amount = 50
 		}
 	  }
 	   } 
