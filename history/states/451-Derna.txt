@@ -1,0 +1,46 @@
+
+state = {
+	id = 451
+	name = "STATE_451"
+	manpower = 45628
+	
+	state_category = wasteland
+
+	history = {
+		add_core_of = SEN
+		set_state_flag = GER_africa_controls
+		owner = ITA
+			add_dynamic_modifier = { modifier = Africa_dev_supplies }
+		
+		victory_points = {
+			1130 10
+		}
+
+		victory_points = {
+			9992 4
+		}
+		
+		buildings = {			
+			infrastructure = 3
+			air_base = 8
+			1130 = {
+				naval_base = 6
+				bunker = 5
+				coastal_bunker = 3				
+			}
+			10120 = {
+				bunker = 3
+				
+			}
+			9992 = {
+				bunker = 2
+				
+			}
+		}
+
+	}
+
+	provinces = {
+		1130 4136 7082 9992 10120  13511 13512 13514 12025
+	}
+}

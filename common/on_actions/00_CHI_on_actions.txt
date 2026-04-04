@@ -1,0 +1,3532 @@
+on_actions = {  
+    on_startup = {
+        effect = {
+            if = {
+				limit = {
+					282 = {
+                        NOT = {
+                            has_state_flag = no_china_war_state_flag
+                            has_state_flag = no_partial_china_war_state_flag
+                        }
+                    }
+				}
+                CHI = {
+                     set_variable = {
+                        var = CHI_coastal_state_counter_var 
+                        value = 1
+                    }
+                    add_equipment_to_stockpile = {
+                        type = convoy_1
+                        amount = 350    
+                        producer = CHI
+                    }
+
+                }
+               
+            }
+            
+            
+            if = {
+				limit = {
+					282 = {
+                        has_state_flag = no_china_war_state_flag
+					}
+				}
+				CHI = {
+                    load_focus_tree = generic_focus
+                    add_ideas = developing_country_chi
+					add_ideas = no_spies_idea
+                    remove_ideas = CHI_agrarian_society
+					remove_ideas = CHI_hyper_inflation_2
+                    remove_ideas = CHI_hyper_inflation_1
+                    remove_dynamic_modifier = { modifier = CHI_army_spirit }
+                    remove_dynamic_modifier = { modifier = CHI_industry_spirit }
+                    delete_unit_template_and_units = { division_template = "Sanjiao Jun" }
+					delete_unit_template_and_units = { division_template = "Juntuán" }
+					delete_unit_template_and_units = { division_template = "Motorized Corps" }
+					delete_unit_template_and_units = { division_template = "Reorganized Division" }
+					delete_unit_template_and_units = { division_template = "Qibing Jun" }
+                    every_state = {
+                        limit = {
+                            is_owned_by = CHI 
+                            arms_factory > 0						
+                        }
+                        remove_building = { type = arms_factory level = 20 }
+                    }
+                    every_state = {
+                        limit = {
+                            is_owned_by = CHI 
+                            industrial_complex > 0						
+                        }
+                        remove_building = { type = industrial_complex level = 20 }
+                    }
+                }
+            }
+			if = {
+				limit = {
+					282 = {
+                        has_state_flag = no_partial_china_war_state_flag
+					}
+				}
+				CHI = {
+                    load_focus_tree = china_scripted_focus_tree
+					add_ideas = neutrality_idea
+                    add_ideas = CHI_state_of_army
+					add_ideas = developing_country_chi
+					add_ideas = no_spies_idea
+                    remove_ideas = CHI_agrarian_society
+					remove_ideas = CHI_hyper_inflation_2
+                    remove_ideas = CHI_hyper_inflation_1
+                    remove_dynamic_modifier = { modifier = CHI_army_spirit }
+                    remove_dynamic_modifier = { modifier = CHI_industry_spirit }
+
+					delete_unit_template_and_units = { division_template = "Sanjiao Jun" }
+					delete_unit_template_and_units = { division_template = "Juntuán" }
+					delete_unit_template_and_units = { division_template = "Motorized Corps" }
+					delete_unit_template_and_units = { division_template = "Reorganized Division" }
+					delete_unit_template_and_units = { division_template = "Qibing Jun" }
+                    division_template = {
+						division_names_group = CHI_ARM_01
+						name = "200th Division"
+						priority = 2
+						is_locked = no
+    					division_cap = 0 
+		
+						regiments = {
+							motorized = { x = 0 y = 0 }
+							motorized = { x = 0 y = 1 }
+							motorized = { x = 0 y = 2 }
+
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 1 y = 1 }
+							anti_air_mot  = { x = 1 y = 2 }
+							
+							light_armor = { x = 2 y = 0 }
+							light_armor = { x = 2 y = 1 }
+							light_armor = { x = 2 y = 2 }
+							light_armor = { x = 2 y = 3 }
+
+							light_armor = { x = 3 y = 0 }
+							light_armor = { x = 3 y = 1 }
+							light_armor = { x = 3 y = 2 }
+							light_armor = { x = 3 y = 3 }
+							
+							light_armor = { x = 4 y = 0 }
+							light_armor = { x = 4 y = 1 }
+						}
+		
+						support = {
+							anti_tank = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							military_police = { x = 0 y = 2 }
+							artillery = { x = 0 y = 3 }
+							mot_recon = { x = 1 y = 0 }
+							anti_air_company = { x = 1 y = 1 }
+							pack_artillery = { x = 1 y = 2 }
+							maintenance_company = { x = 1 y = 3 }
+							
+						}
+					}
+                    division_template = {
+						name = "Juntuan"
+						priority = 1
+                        is_locked = no
+    					division_cap = 0
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+								
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							infantry = { x = 2 y = 3 }
+							
+							anti_air = { x = 3 y = 0 }		
+							pack_artillery_brigade = { x = 3 y = 1 }
+							pack_artillery_brigade = { x = 3 y = 2 }
+							pack_artillery_brigade = { x = 3 y = 3 }
+
+							pack_artillery_brigade = { x = 4 y = 0 }		
+							pack_artillery_brigade = { x = 4 y = 1 }
+			
+							
+						}
+
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							anti_air_company = { x = 0 y = 2 }
+							pack_artillery = { x = 0 y = 3 }
+							military_police = { x = 1 y = 0 }
+							artillery = { x = 1 y = 1 }
+                            anti_tank = { x = 1 y = 2 }
+						
+						}
+					}
+
+                    add_offsite_building = {
+                        type = arms_factory 
+                        level = 20
+                    }
+				}
+				every_state = {
+					limit = {
+						is_owned_by = CHI 
+						arms_factory > 0						
+					}
+					remove_building = { type = arms_factory level = 20 }
+				}
+				every_state = {
+					limit = {
+						is_owned_by = CHI 
+						industrial_complex > 0						
+					}
+					remove_building = { type = industrial_complex level = 20 }
+				}
+                
+               
+			}
+      	
+        }
+    }
+    on_state_control_changed = { 
+        effect = { 
+            if = { 
+                limit = {
+                    ROOT = { 
+                        OR = {
+                            tag = JAP
+                            tag = MAN
+                            tag = RCC
+                        }
+                        
+                    }
+                    FROM = { 
+                        OR = {
+                            tag = CHI
+                            tag = PRC
+                        }
+                       
+                    }
+                    JAP = {
+                        NOT = {
+                            has_war_with = USA 
+                        }
+                    }
+                    
+                    FROM.FROM = {
+                        is_core_of = CHI 
+                        NOT = {
+                            state = 839
+                            state = 609
+                        }
+                    }
+                    
+                    
+                    
+                }
+                JAP = {
+                    add_to_variable = {
+                     var = JAP_current_occupied_states_var
+                     value = 1
+                   } 
+                }
+                if = {
+                    limit = {
+                        JAP = {
+                            check_variable = {
+                                var = JAP_current_occupied_states_var
+                                value = JAP_max_occupied_states_var
+                                compare = greater_than
+                            }
+                        }
+                    }
+                    JAP = {
+                        add_to_variable = {
+                            var = JAP_factory_output_modifier
+                            value = -0.05
+                        }
+                        add_to_variable = {
+                            var = JAP_dockyard_output_modifier
+                            value = -0.05
+                        }    
+                    } 
+                    MAN = {
+                        add_to_variable = {
+                            var = JAP_factory_output_modifier
+                            value = -0.05
+                        }
+                        add_to_variable = {
+                            var = JAP_dockyard_output_modifier
+                            value = -0.05
+                        }    
+                    }
+                    RCC = {
+                        add_to_variable = {
+                            var = RCC_output
+                            value = -0.05
+                        }
+                        add_to_variable = {
+                            var = RCC_dock_output
+                            value = -0.05
+                        }    
+                    }
+                }
+                
+                
+            }
+            if = { 
+                limit = {
+                    FROM = { 
+                        OR = {
+                            tag = JAP
+                            tag = MAN
+                            tag = RCC
+                        }
+                        
+                    }
+                    ROOT = { 
+                        OR = {
+                            tag = CHI
+                            tag = PRC
+                        }
+                       
+                    }
+                    JAP = {
+                        NOT = {
+                            has_war_with = USA 
+                        }
+                    }
+                    
+                    FROM.FROM = {
+                        is_core_of = CHI 
+                         NOT = {
+                            state = 839
+                            state = 609
+                        }
+                    }
+                }
+                
+                if = {
+                    limit = {
+                        JAP = {
+                            check_variable = {
+                                var = JAP_current_occupied_states_var
+                                value = JAP_max_occupied_states_var
+                                compare = greater_than
+                            }
+                        }
+                    }
+                    JAP = {
+                        add_to_variable = {
+                            var = JAP_factory_output_modifier
+                            value = 0.05
+                        }
+                        add_to_variable = {
+                            var = JAP_dockyard_output_modifier
+                            value = 0.05
+                        }    
+                    }
+                    MAN = {
+                        add_to_variable = {
+                            var = JAP_factory_output_modifier
+                            value = 0.05
+                        }
+                        add_to_variable = {
+                            var = JAP_dockyard_output_modifier
+                            value = 0.05
+                        }    
+                    }
+                    RCC = {
+                        add_to_variable = {
+                            var = RCC_output
+                            value = 0.05
+                        }
+                        add_to_variable = {
+                            var = RCC_dock_output
+                            value = 0.05
+                        }    
+                    }
+                   
+                }
+                 JAP = {
+                    add_to_variable = {
+                        var = JAP_current_occupied_states_var
+                        value = -1
+                    } 
+            
+                }
+               
+            }
+             if = { 
+                limit = {
+                    FROM = { 
+                        OR = {
+                            tag = JAP
+                            tag = MAN
+                            tag = RCC
+                        }
+                        
+                    }
+                    ROOT = { 
+                        tag = CHI
+                    }
+                    282 = {
+                        NOT = {
+                            has_state_flag = no_china_war_state_flag
+                            has_state_flag = no_partial_china_war_state_flag
+                        }
+                    }
+                    FROM.FROM = {
+                        is_core_of = CHI 
+                    }
+                    CHI = {
+                        has_idea = CHI_counter_attack
+                        NOT = {
+                            has_country_flag = CHI_got_the_bonus
+                        }
+                    }
+                }
+                CHI = {
+                    add_stability = 0.1
+                    set_country_flag = CHI_got_the_bonus
+                           
+                } 
+            }
+           
+     
+            if = { #Chinese resistance in states Japan occupies  
+                limit = {
+                    FROM.FROM = { is_core_of = CHI }
+                    282 = {
+						has_state_flag = no_partial_china_war_state_flag
+					}
+                }
+                if = { #If CHI is new controller, remove state modifier
+                    limit = {
+                        ROOT = { tag = CHI }
+                        FROM.FROM = { has_dynamic_modifier = { modifier = CHI_invaders_must_die } }
+                    }
+                    FROM.FROM = { remove_dynamic_modifier = { modifier = CHI_invaders_must_die } }
+                }
+            }
+        }
+        effect = {
+            if = { #If CHI lost a state they get buffed :muscle:# 
+                limit = {
+                    282 = {
+						has_state_flag = no_partial_china_war_state_flag
+					}
+                    FROM = { tag = CHI }
+                    ROOT = { has_war_with = CHI }
+                    NOT = {
+                        FROM.FROM = {
+                            has_state_flag = CHI_riches_of_china_flag
+                        }
+                    }
+                }
+                CHI = {
+                   
+                    random_owned_controlled_state = {
+						prioritize = {
+                            605
+                        } 							
+                        create_unit = {
+                            division = "division_template = \"Juntuan\" start_experience_factor = 0.2 start_equipment_factor = 1"
+                            owner = CHI
+                            count = 4
+                        }
+					}
+                }
+                if = {
+                    limit = {
+                        
+                        NOT = {
+                            JAP = {
+                                has_war_with = USA
+                            }
+                        }
+                    }
+                    CHI_frontlines_up = yes
+                    CHI = {
+                        add_to_variable = { CHI_army_defence_factor_var = 0.03 }
+                        add_to_variable = { CHI_org_var = 0.01 }
+                    }
+                }
+              
+                
+                
+            }
+        }
+        effect = {
+            if = { #If CHI lost a state Japan gets factories
+                limit = {
+                    282 = {
+						has_state_flag = no_partial_china_war_state_flag
+					}
+                    FROM = { tag = CHI }
+                    ROOT = { has_war_with = CHI }
+                    NOT = {
+                        FROM.FROM = {
+                            has_state_flag = CHI_riches_of_china_flag
+                        }
+                    }
+                }
+                FROM.FROM = { 
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes 
+                    }
+                  
+                   
+                    set_state_flag = CHI_riches_of_china_flag
+                }
+                
+            }
+        }
+        effect = {
+            if = { 
+                limit = {
+                    FROM = { tag = CHI }
+                    ROOT = { 
+                        OR = {
+                            tag = JAP 
+                            tag = MAN
+                        }
+                    }
+                    282 = {
+						has_state_flag = no_partial_china_war_state_flag
+					}
+                    SOV = {
+                     check_variable = { var = SOV_china_army_xp_gain_var value = -0.10 compare = greater_than }
+                    }
+                }
+
+                SOV = {
+                    add_to_variable = { SOV_china_army_xp_gain_var = -0.04 }
+                    add_to_variable = { SOV_china_pp_gain_var = -0.05 }
+                }
+                
+            }
+    
+        }
+        effect = {
+            if = { 
+                limit = {
+                    FROM = { 
+                        OR = {
+                            tag = JAP 
+                            tag = MAN
+                            tag = RCC
+                        }
+                    }
+                    282 = {
+						has_state_flag = no_partial_china_war_state_flag
+					}
+                    ROOT = { tag = CHI }
+                    SOV = {
+                        check_variable = { var = SOV_china_army_xp_gain_var value = 0.30 compare = less_than }
+                    }
+                }
+                SOV = {
+                    add_to_variable = { SOV_china_army_xp_gain_var = 0.04 }
+                    add_to_variable = { SOV_china_pp_gain_var = 0.05 }
+                }  
+            }
+        }
+    }
+    on_monthly_CHI = {
+        effect = {
+            if = {
+                limit = {
+                    282 = {
+                        NOT = {
+                            has_state_flag = no_china_war_state_flag
+                            has_state_flag = no_partial_china_war_state_flag
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        CHI = {
+                            has_completed_focus = CHI_expand_the_hump
+                            RAJ = {
+                                controls_province = 1553
+                            }
+                        }
+                    }
+                    
+                    CHI = {
+                        add_to_variable = { 
+                            var = CHI_research_hump_lend_lease 
+                            value = 0.002
+                        }
+                    
+                    }
+                }
+                if = {
+				    limit = {
+					    CHI = {
+                            has_completed_focus = CHI_establish_burma_road
+                        }
+                        288 = {
+                            is_controlled_by = RAJ 
+                        }
+                        NOT = {
+                            has_global_flag = CHI_ledo_road_built
+                        }
+                       
+                    }
+                    CHI = {
+                        set_variable = {
+                            var = CHI_burma_routes_used 
+                            value = 0
+                        }
+                    }
+                    if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 3 compare = equals }
+                        }
+                        
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_research_equip_lend_lease 
+                                value = 0.002
+                            }
+                        
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 2 compare = equals }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_research_equip_lend_lease 
+                                value = 0.004
+                            }
+                        
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 1 compare = less_than_or_equals }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_research_equip_lend_lease 
+                                value = 0.006
+                            }
+                        
+                        }
+                    }
+                }
+                if = {
+				    limit = {
+					    CHI = {
+                            has_completed_focus = CHI_establish_hanoi_route
+                        }
+                        671 = {
+                            OR = {
+                                is_controlled_by = FRA 
+                                is_controlled_by = EFR 
+                            }
+                        }
+                        325 = {
+                            is_controlled_by = CHI 
+                        }
+                    }
+                    if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 3 compare = equals }
+                        }
+                        
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_hanoi_research_equip_lend_lease 
+                                value = 0.002
+                            }
+                        
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 2 compare = equals }
+                        }
+                        if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 2 compare = greater_than_or_equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_research_equip_lend_lease 
+                                    value = 0.004
+                                }
+                            
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 1 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_research_equip_lend_lease 
+                                    value = 0.002
+                                }
+                            
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 1 compare = less_than_or_equals }
+                        }
+                        if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 3 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_research_equip_lend_lease 
+                                    value = 0.006
+                                }
+                            
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 2 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_research_equip_lend_lease 
+                                    value = 0.004
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 1 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_research_equip_lend_lease 
+                                    value = 0.002
+                                }
+                            
+                            }
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        ledo_road_is_functional = yes 
+                    }
+                     
+                    CHI = {
+                        add_to_variable = { 
+                            var = CHI_ledo_research_equip_lend_lease 
+                            value = 0.008
+                        }
+                       
+                    }
+                }
+                if = {
+                    limit = {
+                        CHI = {
+                            check_variable = {
+                                var = CHI_coastal_state_counter_var
+                                value = 4
+                                compare = greater_than_or_equals
+                            }
+                        }
+                    }
+                    CHI = {
+                        add_to_variable = { 
+                            var = CHI_research_equip_lend_lease 
+                            value = 0.008
+                        }
+                       
+                    }
+
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {
+                            var = CHI_coastal_state_counter_var
+                            value = 3
+                            compare = greater_than_or_equals
+                        }
+                    }
+                    CHI = {
+                        add_to_variable = { 
+                            var = CHI_research_equip_lend_lease 
+                            value = 0.006
+                        }
+                        
+                    }
+                    
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {
+                            var = CHI_coastal_state_counter_var
+                            value = 2
+                            compare = greater_than_or_equals
+                        }
+                    }
+                        CHI = {
+                        add_to_variable = { 
+                            var = CHI_research_equip_lend_lease 
+                            value = 0.004
+                        }
+                       
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {
+                            var = CHI_coastal_state_counter_var
+                            value = 1
+                            compare = greater_than_or_equals
+                        }
+                    }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_research_equip_lend_lease 
+                                value = 0.002
+                            }
+                       
+                    }
+                }
+            }
+        }
+    }
+    on_weekly_CHI = {
+        effect = {
+              every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = RAJ 
+                            is_core_of = AST  
+                            is_core_of = NZL  
+                        }
+                        NOT = {
+                            has_dynamic_modifier = { modifier = JAP_china_resistance2 }
+                            state = 288
+                            state = 640
+                            state = 823
+                            state = 432
+                            state = 434 
+                            state = 430
+                            state = 324  
+                            state = 434  
+                        }
+                        OR = {
+                            is_controlled_by = JAP 
+                            is_controlled_by = MAN 
+                            is_controlled_by = RCC 
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = JAP_china_resistance2
+                    }
+                }
+                every_state = {
+                    limit = {
+                         OR = {
+                            is_core_of = RAJ 
+                            is_core_of = AST  
+                            is_core_of = NZL
+                        }
+                        has_dynamic_modifier = { modifier = JAP_china_resistance2 }
+                        NOT = {
+                            is_controlled_by = JAP 
+                            is_controlled_by = MAN 
+                            is_controlled_by = RCC 
+                            
+                        }                          
+
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = JAP_china_resistance2
+                    }
+                }
+             if = {
+				limit = {
+					282 = {
+                        NOT = {
+                            has_state_flag = no_china_war_state_flag
+                            has_state_flag = no_partial_china_war_state_flag
+                        }
+                    }
+				}
+                every_state = {
+                    limit = {
+                        is_core_of = CHI 
+                        NOT = {
+                            is_core_of = RCC 
+                            is_core_of = MAN 
+                            state = 745
+                            state = 524
+                            state = 839
+                            has_dynamic_modifier = { modifier = JAP_china_resistance }
+                        }
+                        OR = {
+                            is_controlled_by = JAP 
+                            is_controlled_by = MAN 
+                        }
+
+                    }
+                    add_dynamic_modifier = {
+                        modifier = JAP_china_resistance 
+                    }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = CHI 
+                        has_dynamic_modifier = { modifier = JAP_china_resistance }
+                        NOT = {
+                            is_core_of = MAN 
+                            state = 745
+                            state = 524 
+                            state = 839 
+                        }
+                        is_controlled_by = RCC 
+                          
+
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = JAP_china_resistance 
+                    }
+                }
+               
+                if = {
+                    limit = {
+                         CHI = {
+                            has_completed_focus = CHI_expand_the_hump
+                            RAJ = {
+                                controls_province = 1553
+                            }
+                        }
+                    }
+                     
+                    CHI = {
+                        add_to_variable = { 
+                            var = CHI_hump_inf_equip_lend_lease 
+                            value = 165
+                        }
+                        add_to_variable = { 
+                            var = CHI_hump_horse_equip_lend_lease 
+                            value = 45
+                        }
+                        add_to_variable = { 
+                            var = CHI_hump_arty_equip_lend_lease 
+                            value = 8
+                        }
+                        add_to_variable = { 
+                            var = CHI_hump_sup_equip_lend_lease 
+                            value = 9
+                        }
+                        add_to_variable = { 
+                            var = CHI_hump_mot_equip_lend_lease 
+                            value = 5
+                        }
+                        add_to_variable = { 
+                            var = CHI_hump_radio_equip_lend_lease 
+                            value = 6
+                        }
+                        add_to_variable = { 
+                            var = CHI_hump_anti_air_equip_lend_lease 
+                            value = 5
+                        }   
+                    
+                    }
+                }
+                if = {
+                    limit = {
+                        CHI = {
+                            has_completed_focus = CHI_14th_airforce_in_china
+                        }
+                    }
+                    
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 4125
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 10044
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 11947
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 4083
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 1193
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 7182
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 4207
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 1187
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 12023
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 1597
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                controls_province = 1038
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_key_airfields_owned_var 
+                                value = 1
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            JAP_has_land_connection_through_china = no
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 1 
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                    is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier1
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 2 
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                    is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier2
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 3
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier3
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 4
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                    is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier4
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 5
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier5
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 6
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier6
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 7
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier7
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 8
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier8
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 9
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier9
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 10
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier10
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_key_airfields_owned_var
+                                value = 11 
+                                compare = equals
+                            }
+                        }
+                         every_state = {
+                            limit = {
+                                OR = {
+                                     is_controlled_by = JAP 
+                                    is_controlled_by = MAN
+                                    is_controlled_by = RCC
+                                }
+                                OR = {
+                                    state = 671
+                                    state = 286
+                                    state = 670
+                                    state = 741
+                                    state = 289
+                                    state = 333
+                                    state = 724
+                                    state = 336
+                                    state = 523
+                                    state = 647
+                                    is_core_of = RAJ 
+                                    is_core_of = INS
+                                    is_core_of = AST
+                                    state = 623
+                                    state = 327
+                                    state = 624
+                                    state = 625
+                                    state = 628
+                                    state = 627
+                                    state = 626
+                                    state = 635
+                                    state = 723
+                                    state = 284
+                                }
+                                NOT = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier11
+                                    }
+                                }
+                                
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            add_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            JAP_has_land_connection_through_china = no
+                        }
+                        every_state = {
+                            limit = {
+                                OR = {
+                                    NOT = {
+                                        is_controlled_by = JAP 
+                                        is_controlled_by = MAN
+                                        is_controlled_by = RCC
+                                    }
+                                    
+                                }
+                                OR = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier1
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier2
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier3
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier4
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier5
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier6
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier7
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier8
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier9
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier10
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier11
+                                    }
+                                    
+
+                                }
+                                            
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                           
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            JAP_has_land_connection_through_china = yes
+                        }
+                        every_state = {
+                            limit = {
+                                OR = {
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier1
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier2
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier3
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier4
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier5
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier6
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier7
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier8
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier9
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier10
+                                    }
+                                    has_dynamic_modifier = {
+                                        modifier = CHI_14th_airforce_modifier11
+                                    }
+                                    
+
+                                }
+                                            
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier1
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier2
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier3
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier4
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier5
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier6
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier7
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier8
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier9
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier10
+                            }
+                            remove_dynamic_modifier = {
+                                modifier = CHI_14th_airforce_modifier11
+                            }
+                           
+                        }
+                    }
+                    
+                    set_variable = { CHI_key_airfields_owned_var = 0 }
+
+                }
+                set_variable = {
+                    var = CHI_coastal_state_counter_var 
+                    value = 0
+                }
+                if = {
+                    limit = {
+                        ledo_road_is_functional = yes 
+                    }
+                     
+                    CHI = {
+                        add_to_variable = { 
+                            var = CHI_ledo_inf_equip_lend_lease 
+                            value = 410
+                        }
+                        add_to_variable = { 
+                            var = CHI_ledo_horse_equip_lend_lease 
+                            value = 105
+                        }
+                        add_to_variable = { 
+                            var = CHI_ledo_arty_equip_lend_lease 
+                            value = 19
+                        }
+                        add_to_variable = { 
+                            var = CHI_ledo_sup_equip_lend_lease 
+                            value = 21
+                        }
+                        add_to_variable = { 
+                            var = CHI_ledo_mot_equip_lend_lease 
+                            value = 8
+                        }
+                        add_to_variable = { 
+                            var = CHI_ledo_radio_equip_lend_lease 
+                            value = 9
+                        }
+                        add_to_variable = { 
+                            var = CHI_ledo_anti_air_equip_lend_lease 
+                            value = 8
+                        }   
+                    
+                    }
+                }
+               
+                if = {
+                    limit = {
+                        CHI = {
+                            has_completed_focus = CHI_approach_the_allies
+                        }
+                        ledo_road_is_functional = no
+                    
+                    }
+                    if = {
+                        limit = {
+                            597 = {
+                                is_controlled_by = CHI 
+                                any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                      
+
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                      CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            840 = {
+                                is_controlled_by = CHI 
+                                any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                      CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                   
+                    if = {
+                        limit = {
+                            614 = {
+                                is_controlled_by = CHI 
+                                 any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                      CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            608 = {
+                                is_controlled_by = CHI 
+                                any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                      CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            598 = {
+                                is_controlled_by = CHI 
+                                any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                               AND = {
+                                    CHI = {
+                                         controls_province = 7191
+                                    }
+                                    613 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 7191
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                    
+                               }
+                               AND = {
+                                    CHI = {
+                                        controls_province = 10034
+                                    }
+                                     613  = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 10034
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 4042
+                                    }
+                                     613 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4042
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 12076
+                                    }
+                                     613 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 12076
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    
+                     if = {
+                        limit = {
+                            OR = {
+                               AND = {
+                                    CHI = {
+                                         controls_province = 4099
+                                    }
+                                    596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4099
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                    
+                               }
+                               AND = {
+                                    CHI = {
+                                        controls_province = 1055
+                                    }
+                                     596  = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 1055
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 4013
+                                    }
+                                     596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4013
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 1168
+                                    }
+                                     596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 1168
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 10058
+                                    }
+                                     596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 10058
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 7058
+                                    }
+                                     596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 7058
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 1096
+                                    }
+                                     596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 1096
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 11991
+                                    }
+                                     596 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 11991
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                   
+                    if = {
+                        limit = {
+                            OR = {
+                               AND = {
+                                    CHI = {
+                                         controls_province = 11986
+                                    }
+                                    595 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 11986
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                    
+                               }
+                               AND = {
+                                    CHI = {
+                                        controls_province = 4196
+                                    }
+                                     595 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4196
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 7027
+                                    }
+                                     595 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 7027
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 13628
+                                    }
+                                     595 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 13628
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 4169
+                                    }
+                                     595 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4169
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 10069
+                                    }
+                                     10069 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4169
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                               AND = {
+                                    CHI = {
+                                         controls_province = 7071
+                                    }
+                                    822 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 7071
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                    
+                               }
+                               AND = {
+                                    CHI = {
+                                        controls_province = 10010
+                                    }
+                                     822 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 10010
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 10093
+                                    }
+                                     822 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 10093
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 9938
+                                    }
+                                     822 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 9938
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    
+                    if = {
+                        limit = {
+                            593 = {
+                                is_controlled_by = CHI 
+                                 any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                               AND = {
+                                    CHI = {
+                                         controls_province = 7108
+                                    }
+                                    592 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 7108
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                    
+                               }
+                               AND = {
+                                    CHI = {
+                                        controls_province = 1047
+                                    }
+                                     592 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 1047
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 11938
+                                    }
+                                     592 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 11938
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 9963
+                                    }
+                                     592 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 9963
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 7039
+                                    }
+                                     592 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 7039
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                     if = {
+                        limit = {
+                            OR = {
+                               AND = {
+                                    CHI = {
+                                         controls_province = 4023
+                                    }
+                                    594 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 4023
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                    
+                               }
+                               AND = {
+                                    CHI = {
+                                        controls_province = 1018
+                                    }
+                                     594 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 1018
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+                                AND = {
+                                    CHI = {
+                                        controls_province = 10004
+                                    }
+                                     594 = {
+                                        any_province_building_level = {
+                                            province = {
+                                                id = 10004
+                                            }
+                                            building = naval_base
+                                            level > 4
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    
+                    if = {
+                        limit = {
+                            591 = {
+                                is_controlled_by = CHI 
+                                 any_province_building_level = {
+                                    province = {
+                                        all_provinces = yes
+                                        limit_to_naval_base = yes
+                                    }
+                                    building = naval_base
+                                    level > 4
+                                }
+                            }
+                        }
+                         CHI = {
+                            add_to_variable = {
+                                var = CHI_coastal_state_counter_var 
+                                value = 1
+                            }  
+                        }
+                    }
+                    if = {
+                        limit = {
+                            CHI = {
+                                check_variable = {
+                                    var = CHI_coastal_state_counter_var
+                                    value = 4
+                                    compare = greater_than_or_equals
+                                }
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_oversees_inf_equip_lend_lease 
+                                value = 410
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_horse_equip_lend_lease 
+                                value = 105
+                            }
+                             add_to_variable = { 
+                                var = CHI_oversees_arty_equip_lend_lease 
+                                value = 19
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_sup_equip_lend_lease 
+                                value = 21
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_mot_equip_lend_lease 
+                                value = 8
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_radio_equip_lend_lease 
+                                value = 9
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_anti_air_equip_lend_lease 
+                                value = 8
+                            }
+                        
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_coastal_state_counter_var
+                                value = 3
+                                compare = greater_than_or_equals
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_oversees_inf_equip_lend_lease 
+                                value = 290
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_horse_equip_lend_lease 
+                                value = 80
+                            }
+                             add_to_variable = { 
+                                var = CHI_oversees_arty_equip_lend_lease 
+                                value = 14
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_sup_equip_lend_lease 
+                                value = 17
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_mot_equip_lend_lease 
+                                value = 6
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_radio_equip_lend_lease 
+                                value = 7
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_anti_air_equip_lend_lease 
+                                value = 6
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_coastal_state_counter_var
+                                value = 2
+                                compare = greater_than_or_equals
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_oversees_inf_equip_lend_lease 
+                                value = 200
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_horse_equip_lend_lease 
+                                value = 53
+                            }
+                             add_to_variable = { 
+                                var = CHI_oversees_arty_equip_lend_lease 
+                                value = 10
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_sup_equip_lend_lease 
+                                value = 11
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_mot_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_radio_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_anti_air_equip_lend_lease 
+                                value = 5
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = {
+                                var = CHI_coastal_state_counter_var
+                                value = 1
+                                compare = greater_than_or_equals
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_oversees_inf_equip_lend_lease 
+                                value = 100
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_horse_equip_lend_lease 
+                                value = 27
+                            }
+                             add_to_variable = { 
+                                var = CHI_oversees_arty_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_sup_equip_lend_lease 
+                                value = 6
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_mot_equip_lend_lease 
+                                value = 3
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_radio_equip_lend_lease 
+                                value = 3
+                            }
+                            add_to_variable = { 
+                                var = CHI_oversees_anti_air_equip_lend_lease 
+                                value = 3
+                            }
+                        }
+                    }
+                }
+                if = {
+				    limit = {
+					    CHI = {
+                            has_completed_focus = CHI_establish_hanoi_route
+                        }
+                        671 = {
+                            OR = {
+                                is_controlled_by = FRA 
+                                is_controlled_by = EFR 
+                            }
+                        }
+                        325 = {
+                            is_controlled_by = CHI 
+                        }
+                    }
+                    CHI = {
+                         set_variable = {
+                            var = CHI_hanoi_routes_used 
+                            value = 0
+                        }
+                    }
+                    if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 3 compare = equals }
+                        }
+                      
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_hanoi_routes_used 
+                                value = 1
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_hanoi_inf_equip_lend_lease 
+                                value = 100
+                            }
+                            add_to_variable = { 
+                                var = CHI_hanoi_horse_equip_lend_lease 
+                                value = 27
+                            }
+                            add_to_variable = { 
+                                var = CHI_hanoi_arty_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_hanoi_sup_equip_lend_lease 
+                                value = 6
+                            }
+                            add_to_variable = { 
+                                var = CHI_hanoi_mot_equip_lend_lease 
+                                value = 3
+                            }
+                            add_to_variable = { 
+                                var = CHI_hanoi_radio_equip_lend_lease 
+                                value = 3
+                            }
+                            add_to_variable = { 
+                                var = CHI_hanoi_anti_air_equip_lend_lease 
+                                value = 3
+                            }
+                        
+                        }
+                        
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 2 compare = equals }
+                        }
+                        if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 2 compare = greater_than_or_equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_routes_used 
+                                    value = 2
+                                }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_inf_equip_lend_lease 
+                                    value = 200
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_horse_equip_lend_lease 
+                                    value = 53
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_arty_equip_lend_lease 
+                                    value = 10
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_sup_equip_lend_lease 
+                                    value = 11
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_mot_equip_lend_lease 
+                                    value = 5
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_radio_equip_lend_lease 
+                                    value = 5
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_anti_air_equip_lend_lease 
+                                    value = 5
+                                }
+                            
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 1 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_routes_used 
+                                    value = 1
+                                }
+                            }
+                             CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_inf_equip_lend_lease 
+                                    value = 100
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_horse_equip_lend_lease 
+                                    value = 27
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_arty_equip_lend_lease 
+                                    value = 5
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_sup_equip_lend_lease 
+                                    value = 6
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_mot_equip_lend_lease 
+                                    value = 3
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_radio_equip_lend_lease 
+                                    value = 3
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_anti_air_equip_lend_lease 
+                                    value = 3
+                                }
+                            
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 1 compare = less_than_or_equals }
+                        }
+                        if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 3 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_routes_used 
+                                    value = 3
+                                }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_inf_equip_lend_lease 
+                                    value = 290
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_horse_equip_lend_lease 
+                                    value = 80
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_arty_equip_lend_lease 
+                                    value = 14
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_sup_equip_lend_lease 
+                                    value = 17
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_mot_equip_lend_lease 
+                                    value = 6
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_radio_equip_lend_lease 
+                                    value = 7
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_anti_air_equip_lend_lease 
+                                    value = 6
+                                }
+                            
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 2 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_routes_used 
+                                    value = 2
+                                }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_inf_equip_lend_lease 
+                                    value = 200
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_horse_equip_lend_lease 
+                                    value = 53
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_arty_equip_lend_lease 
+                                    value = 10
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_sup_equip_lend_lease 
+                                    value = 11
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_mot_equip_lend_lease 
+                                    value = 5
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_radio_equip_lend_lease 
+                                    value = 5
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_anti_air_equip_lend_lease 
+                                    value = 5
+                                }
+                            
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { var = CHI_hanoi_route_dev_var value = 1 compare = equals }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_routes_used 
+                                    value = 1
+                                }
+                            }
+                            CHI = {
+                                add_to_variable = { 
+                                    var = CHI_hanoi_inf_equip_lend_lease 
+                                    value = 100
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_horse_equip_lend_lease 
+                                    value = 27
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_arty_equip_lend_lease 
+                                    value = 5
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_sup_equip_lend_lease 
+                                    value = 6
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_mot_equip_lend_lease 
+                                    value = 3
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_radio_equip_lend_lease 
+                                    value = 3
+                                }
+                                add_to_variable = { 
+                                    var = CHI_hanoi_anti_air_equip_lend_lease 
+                                    value = 3
+                                }
+                            
+                            }
+                        }
+                    }
+                }
+                if = {
+				    limit = {
+					    CHI = {
+                            has_completed_focus = CHI_establish_burma_road
+                        }
+                        288 = {
+                            is_controlled_by = RAJ 
+                        }
+                        NOT = {
+                            has_global_flag = CHI_ledo_road_built
+                        }
+                    }
+                    CHI = {
+                         set_variable = {
+                            var = CHI_burma_routes_used 
+                            value = 0
+                        }
+                    }
+                    if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 3 compare = equals }
+                        }
+                      
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_routes_used 
+                                value = 1
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_inf_equip_lend_lease 
+                                value = 100
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_horse_equip_lend_lease 
+                                value = 27
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_arty_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_sup_equip_lend_lease 
+                                value = 6
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_mot_equip_lend_lease 
+                                value = 3
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_radio_equip_lend_lease 
+                                value = 3
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_anti_air_equip_lend_lease 
+                                value = 3
+                            }
+                        
+                        }
+                        
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 2 compare = equals }
+                        }
+                       CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_routes_used 
+                                value = 2
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_inf_equip_lend_lease 
+                                value = 200
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_horse_equip_lend_lease 
+                                value = 53
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_arty_equip_lend_lease 
+                                value = 10
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_sup_equip_lend_lease 
+                                value = 11
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_mot_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_radio_equip_lend_lease 
+                                value = 5
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_anti_air_equip_lend_lease 
+                                value = 5
+                            }
+                        
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { var = CHI_coastal_state_counter_var value = 1 compare = less_than_or_equals }
+                        }
+                       CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_routes_used 
+                                value = 3
+                            }
+                        }
+                        CHI = {
+                            add_to_variable = { 
+                                var = CHI_burma_inf_equip_lend_lease 
+                                value = 290
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_horse_equip_lend_lease 
+                                value = 80
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_arty_equip_lend_lease 
+                                value = 14
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_sup_equip_lend_lease 
+                                value = 17
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_mot_equip_lend_lease 
+                                value = 6
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_radio_equip_lend_lease 
+                                value = 7
+                            }
+                            add_to_variable = { 
+                                var = CHI_burma_anti_air_equip_lend_lease 
+                                value = 6
+                            }
+                        
+                        }
+                    }
+                }
+                
+                
+                CHI = {
+                    set_variable = {
+                        var = CHI_overall_available_routes  
+                        value = CHI_coastal_state_counter_var
+                    } 
+                    add_to_variable = {
+                        var = CHI_overall_available_routes  
+                        value = CHI_hanoi_routes_used
+                    }
+                    add_to_variable = {
+                        var = CHI_overall_available_routes  
+                        value = CHI_burma_routes_used
+                    }
+                    if = {
+                        limit = {
+                            ledo_road_is_functional = yes 
+                        }
+                        set_variable = {
+                            var = CHI_ledo_road_available_var  
+                            value = 4
+                        }
+                        
+                        add_to_variable = {
+                            var = CHI_overall_available_routes  
+                            value = 4
+                        }
+                    }
+                    else = {
+                        set_variable = {
+                            var = CHI_ledo_road_available_var  
+                            value = 0
+                        }
+                    }
+                    set_variable = {
+                        var = CHI_missed_lend_leases_var  
+                        value = 4
+                    }
+                    subtract_from_variable = {
+                        var = CHI_missed_lend_leases_var  
+                        value = CHI_overall_available_routes
+                    }
+
+                }
+                
+            }
+        }
+    }
+}	

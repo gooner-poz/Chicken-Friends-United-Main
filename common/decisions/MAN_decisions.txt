@@ -1,0 +1,9291 @@
+
+prospect_for_resources = {
+
+	MAN_develop_kirin_aluminium_deposits = { #328
+		
+		icon = aluminium
+
+		allowed = {
+			original_tag = MAN
+		}
+		priority = 2
+		available = {
+			has_tech = excavation1
+		}
+		highlight_states = {
+ 			highlight_state_targets = { 
+				 state = 328
+			 }	 
+		}
+
+		visible = {
+			#has_completed_focus = MAN_develop_aluminum_sources
+			controls_state = 328
+			328 = {
+				NOT = {
+					has_state_flag = kirin_aluminium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			328 = { set_state_flag = kirin_aluminium_developed } 
+			328 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				}
+			}	
+		}
+
+		MAN_develop_advanced_chahar_iron_ore_deposits = { #612
+		
+		icon = steel
+
+		allowed = {
+
+		}
+		priority = 5
+		highlight_states = {
+ 			highlight_state_targets = { 
+				 state = 612
+			 }	 
+		}
+
+		available = {
+			
+			has_war = yes
+			OR={
+				has_completed_focus = MAN_steel_casting_industry
+				has_completed_focus = MAN_jinriki_kinrou
+				has_completed_focus = MAN_man_for_money_pre_1
+				}
+
+			
+			has_tech = construction2
+			has_tech = excavation2
+		}
+
+		visible = {
+			#has_completed_focus = MAN_jinriki_kinrou
+			controls_state = 716
+			612 = {
+				NOT = {
+					has_state_flag = advanced_liaotung_iron_ore
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			
+			civilian_factory_use = 3
+			weekly_manpower = -400
+		}
+
+		remove_effect = {
+			612 = { set_state_flag = advanced_liaotung_iron_ore }
+			612 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MAN_develop_advanced_chahar_rare_ore_deposits = { #612
+		
+		icon = chromium
+
+		allowed = {
+			
+		}
+		priority = 5
+		
+		highlight_states = {
+		 highlight_state_targets = { 
+			 state = 612
+		 }	 
+		}
+
+		available = {
+			has_war = yes
+			has_completed_focus = MAN_jinriki_kinrou
+			has_tech = construction3
+			has_tech = excavation3
+		}
+
+		visible = {
+		#has_completed_focus = MAN_jinriki_kinrou
+		controls_state = 716
+		612 = {
+			NOT = {
+				has_state_flag = liaotung_rare_ore_deposits
+			}
+		}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+		civilian_factory_use = 3
+		weekly_manpower = -600
+		}
+
+		remove_effect = {
+		612 = { set_state_flag = liaotung_rare_ore_deposits }
+		612 = {
+			add_resource = {
+				type = chromium
+				amount = 10
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	}
+
+	MAN_develop_liaotung_iron_ore_deposits = { #716
+		
+	icon = steel
+
+	allowed = {
+
+	}
+	priority = 6
+	highlight_states = {
+		 highlight_state_targets = { 
+			 state = 716
+		 }	 
+	}
+
+	available = {
+		has_tech = construction2
+		has_tech = excavation1
+	}
+
+	visible = {
+		#has_completed_focus = MAN_expand_showa_steel_works
+		controls_state = 716
+		716 = {
+			NOT = {
+				has_state_flag = liaotung_steel_developed
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	cost = 25
+	days_remove = 60
+
+	modifier = {
+		civilian_factory_use = 3
+	}
+
+	remove_effect = {
+		716 = { set_state_flag = liaotung_steel_developed }
+		716 = {
+			add_resource = {
+				type = steel
+				amount = 12
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+	}
+
+	MAN_oil_deposits = { #716
+		
+	icon = oil
+
+	allowed = {
+
+	}
+
+	highlight_states = {
+		 highlight_state_targets = { 
+			 state = 761
+		 }	 
+	}
+	priority = 4
+	available = {
+		has_tech = construction3
+		has_tech = excavation2
+		has_tech = oil_processing
+	}
+
+	visible = {
+		#has_completed_focus = MAN_expand_showa_steel_works
+		controls_state = 761
+		761 = {
+			NOT = {
+				has_state_flag = oil_deposits
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	cost = 25
+	days_remove = 60
+
+	modifier = {
+		civilian_factory_use = 3
+	}
+
+	remove_effect = {
+		761 = { set_state_flag = oil_deposits }
+		761 = {
+			add_resource = {
+				type = oil
+				amount = 12
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+	
+}
+##################################
+##################################
+##################################
+##################################
+
+MAN_internal_factions = {
+	#MAN_mitzu_
+	#MAN_SM_
+	#MAN_MIC_
+	#MAN_KPT_
+
+	#
+	# MAN_mitzu is focus more around stability and growth
+	#
+	#
+	# MAN_SM is the construction faction that will bring infra with influence and resource gain with the loyality
+	#
+	#
+	# MAN_MIC(aka Mangyo) is industrial based and will: loyality will affect output by 10%/=10% and influence spawns new factories so R! 0-25-50 R! - G! 50-75-100 G1
+	#
+	# MAN_KPT will be based on the more political control ,where all workers focuses are affected but these are not inclined to be controled that much by the manchurian goverment
+
+	MAN_pro_corpo_stance ={
+		icon = GFX_decision_category_gre_investment_decisions
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_2_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			NOT = {
+				has_completed_focus = MAN_obedience
+			}
+			NOT = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 0
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			modifier = {
+				factor = 1
+				has_completed_focus = MAN_obedience
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			set_country_flag = path_1_selected
+
+
+			set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+
+
+			if={
+				limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT = {
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+				}
+				MAN_mitzu_medium_influence_increase_effect = yes
+				MAN_SM_medium_influence_increase_effect = yes
+
+				custom_effect_tooltip = MANspace
+
+				MAN_KPT_high_loyalty_decrease_effect = yes
+				MAN_KPT_low_influence_decrease_effect = yes
+
+				else_if = {
+					limit = {
+						OR = {
+							NOT = {
+								JAP = {
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					MAN_mitzu_medium_influence_increase_effect = yes
+					MAN_SM_medium_influence_increase_effect = yes
+					MAN_MIC_medium_influence_increase_effect = yes
+
+					custom_effect_tooltip = MANspace
+
+					MAN_KPT_medium_loyalty_decrease_effect = yes
+					MAN_KPT_low_influence_decrease_effect = yes
+
+				}
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+							NOT = {
+								has_completed_focus = MAN_modernizing_the_economy
+							}
+						}
+					}
+					MAN_mitzu_medium_influence_increase_effect = yes
+					MAN_SM_medium_influence_increase_effect = yes
+					MAN_MIC_medium_influence_increase_effect = yes
+
+					custom_effect_tooltip = MANspace
+
+					MAN_KPT_medium_loyalty_decrease_effect = yes
+					MAN_KPT_low_influence_decrease_effect = yes
+
+				}
+			}
+			custom_effect_tooltip = spacers
+		}
+		remove_effect = {
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = MAN_the_death_of_china
+			add_to_variable = {
+				var = MAN_stability_factor_var
+				value = 0.1
+				tooltip = stability_tooltip_general
+			}
+
+			add_to_variable = {
+				var = MAN_political_power_factor_var
+				value = -0.05
+				tooltip = political_power_gain_modifier_tooltip
+			}
+			set_country_flag = pro_corpo
+		}
+	}
+
+
+	MAN_expand_building_funds = {
+		icon = GFX_decision_generic_electricity
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			has_country_flag = pro_corpo
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_copro_loyal_50
+				if = {
+					limit = {
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+						
+					}
+					check_variable = {
+						Mitsui_loyalty > 49
+					}
+					check_variable = {
+						SM_loyalty > 49
+					}
+						else_if = {
+							limit = {
+								OR = {
+									JAP = {
+										has_completed_focus = JAP_found_mangyo
+									}
+									has_completed_focus = MAN_modernizing_the_economy
+								}
+							}
+							check_variable = {
+								Mitsui_loyalty > 49
+							}
+							check_variable = {
+								SM_loyalty > 49
+							}
+							check_variable = {
+								MIC_loyalty > 49
+							}
+					}
+					
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_2_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		fire_only_once = yes
+		days_remove = 70
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 70 }
+			
+		}
+		remove_effect = {
+
+			set_country_flag = pro_corpo_2
+
+
+			if={
+				limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT ={
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+			 	 
+				}
+				MAN_mitzu_low_loyalty_decrease_effect = yes
+				MAN_SM_low_loyalty_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR ={
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					MAN_mitzu_low_loyalty_decrease_effect = yes
+					MAN_SM_low_loyalty_decrease_effect = yes
+					MAN_MIC_low_loyalty_decrease_effect = yes
+				}
+			}
+			custom_effect_tooltip = spacers
+			every_state = {
+				add_extra_state_shared_building_slots = 5
+				limit = {
+					is_core_of = MAN 
+				}
+			}
+		
+			custom_effect_tooltip = MANspace
+		}
+	}
+
+
+	MAN_quality_workers = {
+		icon = GFX_decision_generic_disband_irregulars
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			has_country_flag = pro_corpo
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_copro_loyal_50
+				if = {
+					limit = {
+							JAP = {
+								NOT ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					check_variable = {
+						Mitsui_loyalty > 49
+					}
+					check_variable = {
+						SM_loyalty > 49
+					}
+						else_if = {
+							limit = {
+								OR = {
+									JAP = {
+										has_completed_focus = JAP_found_mangyo
+									}
+									has_completed_focus = MAN_modernizing_the_economy
+								}
+				
+							}
+							check_variable = {
+								Mitsui_loyalty > 49
+							}
+							check_variable = {
+								SM_loyalty > 49
+							}
+							check_variable = {
+								MIC_loyalty > 49
+							}
+					}
+				}
+			}
+
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_2_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = reduce_workers_needs
+			set_country_flag = reduce_workers_needs
+			custom_effect_tooltip = spacers
+		}
+		remove_effect = {
+
+			#under is the flag that sets the focuses rewards of workers 
+			
+			set_country_flag = good_workers
+		}
+	}
+
+	MAN_stabily_and_opportunity = {
+		icon = GFX_decision_gre_paying_ifc_debt
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			has_country_flag = pro_corpo_2
+
+			if = {
+				limit = {
+					JAP ={
+						NOT = {
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT = {
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+				}
+				
+				custom_trigger_tooltip = {
+					tooltip = custom_tooltip_copro_loyal_75
+					if = {
+						limit = {
+							JAP = {
+								NOT ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+							NOT ={
+								has_completed_focus = MAN_modernizing_the_economy
+							}
+						}
+						AND = {
+							check_variable = {
+								Mitsui_loyalty >74
+							}
+							check_variable = {
+								Mitsui_influence >74
+							}
+						}
+						AND = {
+							check_variable = {
+								SM_loyalty >74
+							}
+							check_variable = {
+								SM_influence >74
+							}
+						}
+
+							else_if = {
+								limit = {
+									OR = {
+										JAP = {
+											has_completed_focus = JAP_found_mangyo
+										}
+										has_completed_focus = MAN_modernizing_the_economy
+									}
+								
+								}
+								AND = {
+									check_variable = {
+										Mitsui_loyalty >74
+									}
+									check_variable = {
+										Mitsui_influence >74
+									}
+								}
+								AND = {
+									check_variable = {
+										SM_loyalty >74
+									}
+									check_variable = {
+										SM_influence >74
+									}
+								}
+								AND = {
+									check_variable = {
+										MIC_loyalty >74
+									}
+									check_variable = {
+										MIC_influence >74
+									}
+								}
+							}
+						}
+					}
+			}
+			
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_2_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+			 add_political_power = 25
+
+			 custom_effect_tooltip = spacers
+
+			 if={
+				limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT ={
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+				}
+				MAN_mitzu_medium_influence_increase_effect = yes
+				MAN_SM_medium_influence_increase_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					MAN_mitzu_medium_influence_increase_effect = yes
+					MAN_SM_medium_influence_increase_effect = yes
+					MAN_MIC_medium_influence_increase_effect = yes
+				}
+			}
+			MAN_KPT_low_loyalty_decrease_effect = yes
+			custom_effect_tooltip = spacers
+		}
+		remove_effect = {
+			
+			MAN_KPT_low_influence_decrease_effect = yes
+
+			custom_effect_tooltip = spacers
+
+			custom_effect_tooltip = MAN_the_death_of_china
+
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.05
+					tooltip = stability_tooltip_general
+				}
+
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = 0.001
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}
+
+			set_country_flag = Arasaka_forming
+		}
+	}
+
+	Unite_all_companies_in_one = {
+		icon = GFX_decision_category_generic_formable_nations
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			has_country_flag = Arasaka_forming
+
+
+				custom_trigger_tooltip = {
+					tooltip = arasaka_formations
+
+					has_country_flag = MAN_MTZ_integrated
+
+					has_country_flag = MAN_SM_integrated
+
+					has_country_flag = MAN_MIC_integrated
+					
+				}
+			
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_2_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		fire_only_once = yes
+		days_remove = 28
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 28 }
+
+			 add_political_power = 75
+
+			 custom_effect_tooltip = spacers
+
+			
+		}
+		remove_effect = {
+
+			custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.05
+					tooltip = stability_tooltip_general
+				}
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = 0.002
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}
+
+			set_country_flag = corpo_rule
+			mark_focus_tree_layout_dirty = yes
+			
+		}
+	}
+
+
+	# pro corporations^ path unique decisions for it
+	################################### 	################################### 	################################### 	################################### 
+	# middle path !
+
+
+
+
+	MAN_middle_stance = {
+		icon = GFX_decision_category_generic_political_actions
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			has_completed_focus = MAN_obedience
+			
+
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_1_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			NOT = {
+				has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+			}
+			NOT = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+		}
+
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 0
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = MAN_obedience
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+			}
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+
+			set_country_flag = path_2_selected
+
+			set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+
+			set_country_flag = center_path_faction
+
+
+		}
+		remove_effect = {
+			MAN_mitzu_low_influence_increase_effect = yes
+			MAN_SM_low_influence_increase_effect = yes
+			if ={
+				limit = {
+					OR ={
+						JAP = {
+							has_completed_focus = JAP_found_mangyo
+						}
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+					
+				}
+				MAN_MIC_low_loyalty_increase_effect = yes
+			}
+			MAN_KPT_low_influence_increase_effect = yes
+		}
+	}
+
+	MAN_balance_and_growth = {
+		icon = GFX_decision_generic_operation
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			has_country_flag = center_path_faction
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_1_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_obedience
+		}
+
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = MAN_obedience
+			}
+			modifier = {
+				factor = 1
+				has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+			}
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 70
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 70 }
+			set_country_flag = center_path_faction_2
+
+			
+			MAN_SM_medium_loyalty_increase_effect = yes
+			
+			if ={
+				limit = {
+					OR ={
+						JAP = {
+							has_completed_focus = JAP_found_mangyo
+						}
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+					
+				}
+				MAN_MIC_low_loyalty_increase_effect = yes
+			}
+			MAN_KPT_low_loyalty_increase_effect = yes
+
+			custom_effect_tooltip = MANspace
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = MAN_the_death_of_china
+			add_to_variable = { 
+				MAN_kempeitai_var_stability_factor = 0.001
+				tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+			}
+		}
+	}
+
+	MAN_force_there_hand = {
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			NOT = {
+				has_country_flag = faction_our_hand
+			}
+			has_country_flag = center_path_faction_2
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_1_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_obedience
+		}
+
+
+		ai_will_do = {
+			base = 5
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			add_political_power = 50
+			custom_effect_tooltip = spacers
+			set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+			set_country_flag = faction_there_hand
+
+			if={
+				limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT ={
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+				}
+
+				MAN_mitzu_medium_loyalty_increase_effect = yes
+				MAN_SM_medium_loyalty_increase_effect = yes
+
+				else_if = {
+					limit = {
+						OR ={
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					MAN_mitzu_medium_loyalty_increase_effect = yes
+					MAN_SM_medium_loyalty_increase_effect = yes
+					MAN_MIC_medium_loyalty_increase_effect = yes
+				}
+			}
+			MAN_KPT_medium_loyalty_decrease_effect = yes
+
+
+			custom_effect_tooltip = MANspace
+		}
+		remove_effect = {
+			MAN_KPT_medium_influence_decrease_effect = yes
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = MAN_the_death_of_china
+
+			add_to_variable = {
+				var = MAN_political_power_factor_var
+				value = 0.1
+				tooltip = political_power_gain_modifier_tooltip
+			}
+		}
+	}
+
+	MAN_force_our_hand = {
+		icon = GFX_decision_generic_break_treaty
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			NOT = {
+				has_country_flag = faction_there_hand
+			}
+			has_country_flag = center_path_faction_2
+		}
+		visible = {
+			NOT = {
+				has_country_flag = path_1_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_obedience
+		}
+
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = MAN_obedience
+			}
+			modifier = {
+				factor = 1
+				has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+			}
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			add_political_power = -25
+			custom_effect_tooltip = spacers
+			set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+			set_country_flag = faction_our_hand
+			if={
+				limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT ={
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+				}
+				MAN_mitzu_low_loyalty_decrease_effect = yes
+				MAN_SM_low_loyalty_decrease_effect = yes
+				MAN_KPT_high_loyalty_increase_effect = yes
+				else_if = {
+					limit = {
+						OR ={
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					MAN_mitzu_low_loyalty_decrease_effect = yes
+					MAN_SM_low_loyalty_decrease_effect = yes
+					MAN_MIC_low_loyalty_decrease_effect = yes
+					MAN_KPT_high_loyalty_increase_effect = yes
+				}
+			}
+
+
+			custom_effect_tooltip = MANspace
+		}
+		remove_effect = {
+			MAN_KPT_high_influence_increase_effect = yes
+
+			custom_effect_tooltip = spacers
+
+			custom_effect_tooltip = MAN_the_death_of_china
+
+			add_to_variable = {
+				var = MAN_stability_factor_var
+				value = 0.1
+				tooltip = stability_tooltip_general
+			}
+		}
+	}
+	
+	MAN_stabily_and_opportunity_center = {
+		icon = GFX_decision_onmap_recruit_operative
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			OR = {
+				has_country_flag = faction_there_hand
+				has_country_flag = faction_our_hand
+			}
+			
+		}
+		visible = {
+
+			NOT = {
+				has_country_flag = path_1_selected
+			}
+			NOT = {
+				has_country_flag = path_3_selected
+			}
+			has_completed_focus = MAN_obedience
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+			add_political_power = 25
+
+			custom_effect_tooltip = spacers
+
+		}
+		remove_effect = {
+			custom_effect_tooltip = MAN_the_death_of_china
+
+			add_to_variable = {
+				var = MAN_stability_factor_var
+				value = 0.05
+				tooltip = stability_tooltip_general
+			}
+			custom_effect_tooltip = MANspace
+			set_country_flag = pro_corpo_5
+
+			custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = 0.001
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+			}
+		}
+	}
+
+
+
+
+		# middle path^ path unique decisions for it
+		################################### 	################################### 	################################### 
+		# anti corporations !
+		
+
+
+
+		#colors yellow Y and here we gonna get the decisions that get +0.4 stab weekly,political power gain and less workers and even gaining workers
+		
+		MAN_anti_corpo_stance ={
+			icon = GFX_decision_category_SOV_merge_designers
+			priority = 50
+
+			allowed = { 
+				original_tag = MAN
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				NOT = {
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+				NOT = {
+					has_completed_focus = MAN_obedience
+				}
+
+			}
+
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 10
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				modifier = {
+					factor = 1
+					has_completed_focus = MAN_obedience
+				}
+			}
+
+			fire_only_once = yes
+			days_remove = 120
+
+			complete_effect = {
+
+				set_country_flag = path_3_selected
+
+				set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+
+				if={
+					limit = {
+							JAP = {
+								NOT ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+
+					MAN_mitzu_low_influence_decrease_effect = yes
+					MAN_SM_low_influence_decrease_effect = yes
+
+					else_if = {
+						limit = {
+							OR ={
+								JAP ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							has_completed_focus = MAN_modernizing_the_economy
+							}
+						}
+						MAN_mitzu_low_influence_decrease_effect = yes
+						MAN_SM_low_influence_decrease_effect = yes
+						MAN_MIC_low_influence_decrease_effect = yes
+					}
+				}
+
+				custom_effect_tooltip = MANspace
+
+				MAN_KPT_low_loyalty_increase_effect = yes
+				MAN_KPT_low_influence_increase_effect = yes
+
+				custom_effect_tooltip = MANspace
+			}
+			remove_effect = {
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_the_death_of_china
+
+						add_to_variable = {
+							var = MAN_stability_factor_var
+							value = -0.05
+							tooltip = stability_tooltip_general
+						}
+
+				set_country_flag = right_side_center
+			}
+		}
+
+		MAN_crush_the_corrupt_ones = {
+			icon = GFX_decision_generic_speech
+			priority = 50
+	
+			allowed = { 
+				original_tag = MAN
+			}
+	
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+				has_country_flag = right_side_center
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+	
+	
+			ai_will_do = {
+				base = 5
+			}
+			
+	
+			fire_only_once = yes
+			days_remove = 70
+	
+			complete_effect = {
+				set_country_flag = { flag = faction_change_going value = 1 days = 70 }
+				set_country_flag = faction_there_hand
+	
+				if={
+					limit = {
+							JAP = {
+								NOT ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+					}
+					MAN_SM_medium_loyalty_decrease_effect = yes
+					else_if = {
+						limit = {
+								JAP = {
+									has_completed_focus = JAP_found_mangyo
+								}
+						}
+						MAN_SM_medium_loyalty_decrease_effect = yes
+						MAN_MIC_low_loyalty_decrease_effect = yes
+					}
+				}
+				MAN_KPT_medium_loyalty_increase_effect = yes
+				custom_effect_tooltip = MANspace
+			}
+			remove_effect = {
+				if={
+					limit = {
+							JAP = {
+								NOT ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+						}
+					
+					MAN_SM_low_influence_decrease_effect = yes
+					else_if = {
+						limit = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						MAN_SM_low_influence_decrease_effect = yes
+						MAN_MIC_low_influence_decrease_effect = yes
+					}
+				}
+				MAN_KPT_low_influence_increase_effect = yes
+
+				set_country_flag = right_side_spirit
+
+				custom_effect_tooltip = spacers
+
+			 custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = -0.001
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}
+
+				add_to_variable = {
+					var = MAN_political_power_factor_var
+					value = 0.05
+					tooltip = political_power_gain_modifier_tooltip
+				}
+				custom_effect_tooltip = spacers
+
+				add_stability = 0.05
+			}
+		}
+
+		MAN_crush_the_corruption = {
+			icon = GFX_decision_generic_scorched_earth
+			priority = 50
+	
+			allowed = { 
+				original_tag = MAN
+			}
+	
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+
+				has_country_flag = right_side_spirit
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+	
+	
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				modifier = {
+					factor = 10
+					has_completed_focus = MAN_obedience
+				}
+				modifier = {
+					factor = 1
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+			}
+			
+	
+			fire_only_once = yes
+			days_remove = 120
+	
+			complete_effect = {
+				set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+				set_country_flag = faction_there_hand
+	
+				MAN_SM_medium_loyalty_decrease_effect = yes
+				MAN_mitzu_low_loyalty_decrease_effect = yes
+					
+				MAN_KPT_medium_loyalty_increase_effect = yes
+
+				custom_effect_tooltip = MANspace
+			}
+			remove_effect = {
+				set_country_flag = right_side_crusher
+
+				MAN_SM_medium_influence_decrease_effect = yes
+				MAN_mitzu_low_influence_decrease_effect = yes
+
+				MAN_KPT_high_influence_increase_effect = yes
+
+				custom_effect_tooltip = spacers
+
+			custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = -0.001
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}
+				add_to_variable = {
+					var = MAN_political_power_factor_var
+					value = 0.05
+					tooltip = political_power_gain_modifier_tooltip
+				}
+				custom_effect_tooltip = spacers
+
+				add_stability = 0.05
+			}
+		}
+	
+		#
+		######
+
+		MAN_reconsile_with_corps = {
+			icon = GFX_decision_generic_political_discourse
+			priority = 50
+	
+			allowed = { 
+				original_tag = MAN
+			}
+	
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+				
+				has_country_flag = right_side_center
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+	
+	
+			ai_will_do = {
+				base = 5
+			}
+			
+	
+			fire_only_once = yes
+			days_remove = 70
+	
+			complete_effect = {
+				set_country_flag = { flag = faction_change_going value = 1 days = 70 }
+				set_country_flag = faction_there_hand
+	
+				if={
+					limit = {
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+					}
+					MAN_mitzu_low_loyalty_increase_effect = yes
+					MAN_SM_low_loyalty_increase_effect = yes
+					else_if = {
+						limit = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						MAN_mitzu_low_loyalty_increase_effect = yes
+						MAN_SM_low_loyalty_increase_effect = yes
+						MAN_MIC_low_loyalty_increase_effect = yes
+					}
+				}
+
+				custom_effect_tooltip = MANspace
+			}
+			remove_effect = {
+				if={
+					limit = {
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+					}
+					MAN_mitzu_low_influence_increase_effect = yes
+					MAN_SM_low_influence_increase_effect = yes
+					else_if = {
+						limit = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						MAN_mitzu_low_influence_increase_effect = yes
+						MAN_SM_low_influence_increase_effect = yes
+						MAN_MIC_low_influence_increase_effect = yes
+					}
+				}
+
+				set_country_flag = right_side_forget
+				custom_effect_tooltip = spacers
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = 0.001
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}
+
+			}
+		}
+
+		MAN_reconsile_and_be_pacient = {
+			icon = GFX_decision_eng_trade_unions_demand
+			priority = 50
+	
+			allowed = { 
+				original_tag = MAN
+			}
+	
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+				has_country_flag = right_side_forget
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+	
+	
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				modifier = {
+					factor = 10
+					has_completed_focus = MAN_obedience
+				}
+				modifier = {
+					factor = 1
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+			}
+			
+	
+			fire_only_once = yes
+			days_remove = 120
+	
+			complete_effect = {
+				set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+				set_country_flag = right_side_go_on
+	
+				if={
+					limit = {
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+					}
+					MAN_mitzu_low_loyalty_increase_effect = yes
+					MAN_SM_low_loyalty_increase_effect = yes
+					else_if = {
+						limit = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						MAN_mitzu_low_loyalty_increase_effect = yes
+						MAN_SM_low_loyalty_increase_effect = yes
+						MAN_MIC_low_loyalty_increase_effect = yes
+					}
+				}
+				MAN_KPT_low_loyalty_increase_effect = yes
+				custom_effect_tooltip = MANspace
+			}
+			remove_effect = {
+				
+				if={
+					limit = {
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+					}
+					MAN_mitzu_low_influence_decrease_effect = yes
+					MAN_SM_low_influence_decrease_effect = yes
+					else_if = {
+						limit = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						MAN_mitzu_low_influence_decrease_effect = yes
+						MAN_SM_low_influence_decrease_effect = yes
+						MAN_MIC_low_influence_decrease_effect = yes
+					}
+				}
+				MAN_KPT_medium_influence_increase_effect = yes
+				custom_effect_tooltip = spacers
+
+			custom_effect_tooltip = MAN_the_death_of_china
+			add_to_variable = {
+				var = MAN_stability_factor_var
+				value = 0.05
+				tooltip = stability_tooltip_general
+			}
+
+			}
+		}
+
+		##############################################
+		#
+		#	nightmare in manchuria
+		#
+
+
+
+		MAN_tojo_purge = {
+			icon = GFX_decision_category_generic_crisis
+			priority = 50
+	
+			allowed = { 
+				original_tag = MAN
+			}
+	
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+				has_country_flag = right_side_crusher
+
+				custom_trigger_tooltip = {
+					tooltip = custom_tooltip_tojo_decision_thing
+					check_variable = {
+						KPT_loyalty > 74
+					}
+					check_variable = {
+						KPT_influence > 74
+					}
+				}
+				
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+				NOT= {
+					has_country_flag = almsot_fuck_up_2
+				}
+				
+			}
+	
+	
+			ai_will_do = {
+				base = 100
+
+			}
+			
+	
+			fire_only_once = yes
+			days_remove = 14
+
+			complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 14 }
+	
+				set_country_flag = almsot_fuck_up_1
+			}
+			remove_effect = {
+				set_country_flag = TOJO_flag
+
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = 0.003
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}		
+			}
+		}
+		
+
+		MAN_the_sun_is_dark = {
+			icon = GFX_decision_category_SWI_presidential_office
+			priority = 50
+	
+			allowed = { 
+				original_tag = MAN
+			}
+	
+			available = {
+				NOT = {
+					has_country_flag = faction_change_going
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+
+				has_country_flag = right_side_go_on
+				
+
+
+				custom_trigger_tooltip = {
+					tooltip = custom_tooltip_blacksun_decision_thing
+					check_variable = {
+						KPT_loyalty > 74
+					}
+
+					check_variable = {
+						SM_loyalty > 74
+					}
+				}
+			}
+			visible = {
+				NOT = {
+					has_country_flag = path_1_selected
+				}
+				NOT = {
+					has_country_flag = path_2_selected
+				}
+				has_completed_focus = MAN_kwantung_army_takes_control
+
+				NOT= {
+					has_country_flag = almsot_fuck_up_1
+				}
+			}
+	
+	
+			ai_will_do = {
+				base = 100
+
+			}
+			
+	
+			fire_only_once = yes
+			days_remove = 14
+
+			complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 14 }
+	
+				set_country_flag = almsot_fuck_up_2
+			}
+			remove_effect = {
+				set_country_flag = Peace_for_now
+
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.05
+					tooltip = stability_tooltip_general
+				}
+
+				add_to_variable = { 
+					MAN_kempeitai_var_stability_factor = 0.001
+					tooltip = MAN_kempeitai_var_stability_factor_tooltip 
+				}	
+			}
+		}
+	
+	
+	
+		# anti corporations ^ path unique decisions for it
+	################################### 	################################### 	################################### 
+
+
+	JAP_companies_benefits  = { 
+		icon = GFX_decision_generic_fundraising
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+		}
+		visible = {
+
+		}
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		custom_cost_text = stabber_cost_jap
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		days_remove = 90
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+
+			set_country_flag = { flag = faction_change_going value = 1 days = 90 }
+
+		}
+
+
+		remove_effect = {
+			if={
+				limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT ={
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+				}
+				MAN_mitzu_medium_loyalty_increase_effect = yes
+				MAN_SM_medium_loyalty_increase_effect = yes
+
+				else_if = {
+					limit = {
+						OR ={
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+					MAN_mitzu_medium_loyalty_increase_effect = yes
+					MAN_SM_medium_loyalty_increase_effect = yes
+					MAN_MIC_medium_loyalty_increase_effect = yes
+				}
+			}
+		}
+	}
+
+	MAN_companies_benefits  = { 
+		icon = GFX_decision_generic_fundraising
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+		}
+		visible = {
+
+		}
+
+		custom_cost_trigger = {
+			has_political_power >24
+		}
+		custom_cost_text = stabber_cost_man
+
+		days_remove = 90
+		days_re_enable = 0
+
+		fire_only_once = no
+
+
+		complete_effect = {
+
+				hidden_effect = {
+					add_political_power = -24
+				}
+
+			set_country_flag = { flag = faction_change_going value = 1 days = 90 }
+
+		 }	
+
+
+	 remove_effect = {
+		if={
+			limit = {
+					JAP = {
+						NOT ={
+							has_completed_focus = JAP_found_mangyo
+						}
+					}
+					NOT ={
+						has_completed_focus = MAN_modernizing_the_economy
+					}
+			}
+
+			MAN_mitzu_medium_influence_increase_effect = yes
+			MAN_SM_medium_influence_increase_effect = yes
+			MAN_KPT_low_loyalty_decrease_effect = yes
+
+			else_if = {
+				limit = {
+					OR = {
+						JAP = {
+							has_completed_focus = JAP_found_mangyo
+						}
+					has_completed_focus = MAN_modernizing_the_economy
+					}	
+				}
+
+				MAN_mitzu_medium_influence_increase_effect = yes
+				MAN_SM_medium_influence_increase_effect = yes
+				MAN_MIC_medium_influence_increase_effect = yes
+				MAN_KPT_low_loyalty_decrease_effect = yes
+
+				}
+			}
+		}
+	}
+	
+
+	KPT_benefits  = { 
+		icon = GFX_decision_generic_army_support
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			custom_trigger_tooltip = {
+				tooltip = condis_2
+				NOT = {
+					has_country_flag = MAN_KPT_remove
+				}
+			}
+		}
+		visible = {
+
+		}
+
+		custom_cost_trigger = {
+			has_stability > 0.019
+		}
+		custom_cost_text = stabber_cost_2
+
+		days_remove = 90
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+
+			hidden_effect = {
+				add_stability = -0.02
+			}
+
+			set_country_flag = { flag = faction_change_going value = 1 days = 90 }
+			
+			MAN_KPT_medium_loyalty_increase_effect = yes
+			custom_effect_tooltip = MANspace
+
+			
+		}
+		
+
+		remove_effect = {
+
+			custom_effect_tooltip = spacers
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.04
+			}
+		}
+	}
+
+	KPT_influence  = { 
+		icon = GFX_decision_generic_army_support
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			custom_trigger_tooltip = {
+				tooltip = condis_2
+				NOT = {
+					has_country_flag = MAN_KPT_remove
+				}
+			}
+		}
+		visible = {
+
+		}
+
+		custom_cost_trigger = {
+			has_political_power >24
+		}
+		custom_cost_text = stabber_cost_man
+
+		days_remove = 90
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+
+			hidden_effect = {
+				add_political_power = -25
+			}
+
+			set_country_flag = { flag = faction_change_going value = 1 days = 90 }
+
+				if={
+					limit = {
+							JAP = {
+								NOT ={
+									has_completed_focus = JAP_found_mangyo
+								}
+							}
+							NOT ={
+								has_completed_focus = MAN_modernizing_the_economy
+							}
+					}
+		
+					MAN_mitzu_low_loyalty_decrease_effect = yes
+					MAN_SM_low_loyalty_decrease_effect = yes
+					MAN_KPT_medium_influence_increase_effect = yes
+		
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+		
+					MAN_mitzu_low_loyalty_decrease_effect = yes
+					MAN_SM_low_loyalty_decrease_effect = yes
+					MAN_MIC_low_loyalty_decrease_effect = yes
+					MAN_KPT_medium_influence_increase_effect = yes
+				}
+			}
+
+		}
+
+
+		remove_effect = {
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.02
+			}
+		}
+	}
+
+	Abose_button_left_side= {
+		icon = GFX_decision_hol_attract_foreign_investors
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			custom_trigger_tooltip = {
+				tooltip = condis_1
+				NOT = {
+					OR = {
+						AND = {
+							has_country_flag = MAN_MTZ_remove
+							has_country_flag = MAN_SM_remove
+							has_country_flag = MAN_MIC_remove
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = abose_1_tooltip
+				check_variable = {
+					worker_abose < 4
+				}
+			}
+			
+
+			
+		}
+		visible = {
+			has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+		}
+
+		modifier = {
+			consumer_goods_expected_value = -0.02
+		}
+
+		days_remove = 120
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+
+		 set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+
+		 add_political_power  = 50
+
+		 custom_effect_tooltip = spacers
+
+			if={
+				limit = {
+					OR ={
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+				}
+				MAN_mitzu_medium_loyalty_decrease_effect = yes
+				MAN_SM_medium_loyalty_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+					MAN_mitzu_medium_loyalty_decrease_effect = yes
+					MAN_SM_medium_loyalty_decrease_effect = yes
+					MAN_MIC_medium_loyalty_decrease_effect = yes
+				}
+			}
+
+		}
+
+
+		remove_effect = {
+			if={
+				limit = {
+					OR ={
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+				}
+				MAN_mitzu_medium_influence_decrease_effect = yes
+				MAN_SM_medium_influence_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+					MAN_mitzu_low_influence_decrease_effect = yes
+					MAN_SM_medium_influence_decrease_effect = yes
+					MAN_MIC_low_influence_decrease_effect = yes
+				}
+			}
+			add_to_variable = {
+				var = worker_abose
+				value = 1
+			}
+
+			random_state = {
+				prioritize = {
+					714
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				 }
+			}		
+			
+
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = communist_manchu_removal_1
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = communist_manchu_removal_4
+			custom_effect_tooltip = communist_manchu_removal_5
+			custom_effect_tooltip = MANspace
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_MTZ_integrated
+						has_country_flag = MAN_MTZ_remove
+					}
+					NOT = {
+						has_country_flag = MAN_SM_integrated
+						has_country_flag = MAN_MIC_remove
+					}
+					NOT = {
+						has_country_flag = MAN_SM_integrated
+						has_country_flag = MAN_MIC_remove
+					}
+				}
+
+				add_popularity = {
+					ideology = communism
+					popularity = 0.08
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.02
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.02
+				}
+
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						NOT = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+
+					add_popularity = {
+						ideology = communism
+						popularity = 0.04
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						OR = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+
+					add_popularity = {
+						ideology = communism
+						popularity = 0.04
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						OR = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+
+	Abose_button_middle_side= {
+		icon = GFX_decision_hol_attract_foreign_investors
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			custom_trigger_tooltip = {
+				tooltip = condis_1
+				NOT = {
+					OR = {
+						AND = {
+							has_country_flag = MAN_MTZ_remove
+							has_country_flag = MAN_SM_remove
+							has_country_flag = MAN_MIC_remove
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = abose_2_tooltip
+				check_variable = {
+					worker_abose < 6
+				}
+			}
+			
+
+			
+		}
+		visible = {
+			has_completed_focus = MAN_obedience
+		}
+
+		modifier = {
+			consumer_goods_expected_value = -0.02
+		}
+
+		days_remove = 120
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+
+		 set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+
+		 add_political_power  = 75
+
+		 custom_effect_tooltip = spacers
+
+			if={
+				limit = {
+					OR ={
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+				}
+				MAN_mitzu_medium_loyalty_decrease_effect = yes
+				MAN_SM_medium_loyalty_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+					MAN_mitzu_medium_loyalty_decrease_effect = yes
+					MAN_SM_medium_loyalty_decrease_effect = yes
+					MAN_MIC_medium_loyalty_decrease_effect = yes
+				}
+			}
+
+		}
+
+
+		remove_effect = {
+			if={
+				limit = {
+					OR ={
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+				}
+				MAN_mitzu_medium_influence_decrease_effect = yes
+				MAN_SM_medium_influence_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+					MAN_mitzu_low_influence_decrease_effect = yes
+					MAN_SM_medium_influence_decrease_effect = yes
+					MAN_MIC_low_influence_decrease_effect = yes
+				}
+			}
+			add_to_variable = {
+				var = worker_abose
+				value = 1
+			}
+
+			random_state = {
+				prioritize = {
+					714
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				 }
+			}		
+			
+
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = communist_manchu_removal_1
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = communist_manchu_removal_4
+			custom_effect_tooltip = communist_manchu_removal_5
+			custom_effect_tooltip = MANspace
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_MTZ_integrated
+						has_country_flag = MAN_MTZ_remove
+					}
+					NOT = {
+						has_country_flag = MAN_SM_integrated
+						has_country_flag = MAN_MIC_remove
+					}
+					NOT = {
+						has_country_flag = MAN_SM_integrated
+						has_country_flag = MAN_MIC_remove
+					}
+				}
+
+				add_popularity = {
+					ideology = communism
+					popularity = 0.08
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.02
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.02
+				}
+
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						NOT = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+
+					add_popularity = {
+						ideology = communism
+						popularity = 0.04
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						OR = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+
+					add_popularity = {
+						ideology = communism
+						popularity = 0.04
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						OR = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+
+	Abose_button_right_side= {
+		icon = GFX_decision_hol_attract_foreign_investors
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+		}
+		visible = {
+			has_completed_focus = MAN_kwantung_army_takes_control
+		}
+
+		modifier = {
+			consumer_goods_expected_value = -0.02
+		}
+
+		days_remove = 120
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+
+		 set_country_flag = { flag = faction_change_going value = 1 days = 120 }
+
+		 add_political_power  = 50
+
+		 custom_effect_tooltip = spacers
+
+			if={
+				limit = {
+					OR ={
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+				}
+				MAN_mitzu_medium_loyalty_decrease_effect = yes
+				MAN_SM_medium_loyalty_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+					MAN_mitzu_medium_loyalty_decrease_effect = yes
+					MAN_SM_medium_loyalty_decrease_effect = yes
+					MAN_MIC_medium_loyalty_decrease_effect = yes
+				}
+			}
+
+		}
+
+
+		remove_effect = {
+			if={
+				limit = {
+					OR ={
+						JAP = {
+							NOT ={
+								has_completed_focus = JAP_found_mangyo
+							}
+						}
+						NOT ={
+							has_completed_focus = MAN_modernizing_the_economy
+						}
+					}
+				}
+				MAN_mitzu_medium_influence_decrease_effect = yes
+				MAN_SM_medium_influence_decrease_effect = yes
+				else_if = {
+					limit = {
+						OR = {
+							JAP = {
+								has_completed_focus = JAP_found_mangyo
+							}
+						has_completed_focus = MAN_modernizing_the_economy
+						}	
+					}
+					MAN_mitzu_low_influence_decrease_effect = yes
+					MAN_SM_medium_influence_decrease_effect = yes
+					MAN_MIC_low_influence_decrease_effect = yes
+				}
+			}
+			add_to_variable = {
+				var = worker_abose
+				value = 1
+			}
+
+			random_state = {
+				prioritize = {
+					714
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				 }
+			}		
+			
+
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = communist_manchu_removal_1
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = communist_manchu_removal_4
+			custom_effect_tooltip = communist_manchu_removal_5
+			custom_effect_tooltip = MANspace
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_MTZ_integrated
+						has_country_flag = MAN_MTZ_remove
+					}
+					NOT = {
+						has_country_flag = MAN_SM_integrated
+						has_country_flag = MAN_MIC_remove
+					}
+					NOT = {
+						has_country_flag = MAN_SM_integrated
+						has_country_flag = MAN_MIC_remove
+					}
+				}
+
+				add_popularity = {
+					ideology = communism
+					popularity = 0.08
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.02
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.02
+				}
+
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						NOT = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+
+					add_popularity = {
+						ideology = communism
+						popularity = 0.04
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						OR = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+
+					add_popularity = {
+						ideology = communism
+						popularity = 0.04
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = MAN_MTZ_integrated
+							has_country_flag = MAN_MTZ_remove
+						}
+						OR = {
+							has_country_flag = MAN_SM_integrated
+							has_country_flag = MAN_SM_remove
+						}
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.01
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+
+	KPT_removal  = { 
+		icon = GFX_decision_SWI_elect_confederation_president
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			NOT = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			custom_trigger_tooltip = {
+				tooltip = condis_3
+				NOT = {
+					OR = {
+						has_country_flag = MAN_KPT_remove
+						has_country_flag = MAN_KPT_integrated
+					}
+					
+				}
+			}
+		}
+		visible = {
+
+		}
+
+
+		days_remove = 90
+		days_re_enable = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 90 }
+
+			MAN_KPT_low_loyalty_decrease_effect = yes
+
+		}
+
+
+		remove_effect = {
+			custom_effect_tooltip = MANspace
+			MAN_KPT_low_influence_decrease_effect = yes
+				
+
+			custom_effect_tooltip = spacers
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.04
+			}
+			add_stability = 0.02
+		}
+	}
+
+	#coomon shit ^ path unique decisions for it
+	################################### 	################################### 	################################### 
+	#integrate and pacify
+
+	MAN_integrate_MTZ = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_integrate_MTZ
+				check_variable = {
+					Mitsui_loyalty > 74
+				}
+				check_variable = {
+					Mitsui_influence > 74
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				check_variable = {
+					Mitsui_loyalty > 50
+				}
+				check_variable = {
+					Mitsui_influence > 50
+				}	
+			}
+			NOT = {
+				has_country_flag = MAN_MTZ_remove
+			}
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+		
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+
+		}
+		remove_effect = {
+			set_country_flag = MAN_MTZ_integrated
+			custom_effect_tooltip = MAN_integrated_faction	
+			custom_effect_tooltip = spacers
+
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.05
+					tooltip = stability_tooltip_general
+				}
+			}
+
+			add_to_variable = {
+				var = MAN_political_power_factor_var
+				value = 0.075
+				tooltip = political_power_gain_modifier_tooltip
+			}
+		}
+	}
+	MAN_integrate_SM = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_integrate_SM
+				check_variable = {
+					SM_loyalty > 74
+				}
+				check_variable = {
+					SM_influence > 74
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				check_variable = {
+					SM_loyalty > 50
+				}
+				check_variable = {
+					SM_influence > 50
+				}	
+			}
+			NOT ={
+				has_country_flag = MAN_SM_remove
+			}
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+
+		}
+		remove_effect = {
+			set_country_flag = MAN_SM_integrated
+			custom_effect_tooltip = MAN_integrated_faction	
+			custom_effect_tooltip = spacers
+
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_obedience
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_obedience
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.05
+					tooltip = stability_tooltip_general
+				}
+			}
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = MAN_recruitable_tt0
+
+			add_to_variable = {
+				var = MAN_military_industry_dm_local_resources_factor
+				value = 0.075
+				tooltip = MAN_resorse_2_fix
+			}
+		}
+	}
+	MAN_integrate_MIC = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_integrate_MIC
+				check_variable = {
+					MIC_loyalty > 74
+				}
+				check_variable = {
+					MIC_influence > 74
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				check_variable = {
+					MIC_loyalty > 50
+				}
+				check_variable = {
+					MIC_influence > 50
+				}	
+			}
+			NOT ={
+				has_country_flag = MAN_MIC_remove
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+
+		}
+		remove_effect = {
+			set_country_flag = MAN_MIC_integrated
+			custom_effect_tooltip = MAN_integrated_faction	
+			custom_effect_tooltip = spacers
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.05
+					tooltip = stability_tooltip_general
+				}
+			}
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = MAN_recruitable_tt0
+			add_to_variable = {
+				var = MAN_military_industry_dm_production_speed_industrial_complex_factor
+				value = 0.1
+				tooltip = industrial_complex_build_speed_factor_tooltip
+			}
+		}
+	}
+	MAN_integrate_KPT = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_integrate_KPT
+				check_variable = {
+					KPT_loyalty > 99
+				}
+				check_variable = {
+					KPT_influence > 99
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				check_variable = {
+					KPT_loyalty > 50
+				}
+				check_variable = {
+					KPT_influence > 50
+				}	
+			}
+			NOT = {
+				has_country_flag = MAN_KPT_remove
+			}
+			
+		}
+
+
+		ai_will_do = {
+			base = 100
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+			
+		}
+		remove_effect = {
+			set_country_flag = MAN_KPT_integrated
+			custom_effect_tooltip = MAN_integrated_faction
+			custom_effect_tooltip = spacers
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = 0.1
+					tooltip = stability_tooltip_general
+				}
+			}
+			
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = MAN_recruitable_tt0
+			add_to_variable = {
+				var = MAN_military_industry_dm_factory_max_efficiency_factor
+				value = 0.02
+				tooltip = production_factory_max_efficiency_tooltip
+			}
+
+			add_to_variable = {
+				var = MAN_military_industry_dm_production_speed_arms_factory_factor
+				value = 0.15
+				tooltip = arms_factory_build_speed_factor_tooltip
+			}
+		}
+	}
+
+	MAN_pacify_MTZ = {
+		icon = GFX_decision_SWI_no_elected_president
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_p_MTZ
+				check_variable = {
+					Mitsui_loyalty < 1
+				}
+				check_variable = {
+					Mitsui_influence < 1
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				has_completed_focus = MAN_obedience
+			}
+			OR = {
+				check_variable = {
+					Mitsui_loyalty < 26
+				}
+				check_variable = {
+					Mitsui_influence < 26
+				}	
+			}
+				NOT = {
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+				NOT ={
+					has_country_flag = MAN_MTZ_integrated
+				}
+
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+		
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+
+		}
+		remove_effect = {
+			set_country_flag = MAN_MTZ_remove
+			custom_effect_tooltip = MAN_remove_faction
+			custom_effect_tooltip = spacers
+
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = -0.025
+					tooltip = stability_tooltip_general
+				}
+	
+				add_to_variable = {
+					var = MAN_political_power_factor_var
+					value = -0.05
+					tooltip = political_power_gain_modifier_tooltip
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = -0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+		}
+	}
+	MAN_pacify_SM = {
+		icon = GFX_decision_SWI_no_elected_president
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_p_SM
+				check_variable = {
+					SM_loyalty < 1
+				}
+				check_variable = {
+					SM_influence < 1
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				has_completed_focus = MAN_obedience
+			}
+			OR = {
+				check_variable = {
+					SM_loyalty < 26
+				}
+				check_variable = {
+					SM_influence < 26
+				}	
+			}
+			NOT = {
+				has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+			}
+			NOT = {
+				has_country_flag = MAN_SM_integrated
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+
+		}
+		remove_effect = {
+			set_country_flag = MAN_SM_remove
+			custom_effect_tooltip = MAN_remove_faction
+			custom_effect_tooltip = spacers
+
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = -0.025
+					tooltip = stability_tooltip_general
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_recruitable_tt0
+				add_to_variable = {
+					var = MAN_military_industry_dm_local_resources_factor
+					value = -0.05
+					tooltip = MAN_resorse_2_fix
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = -0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+
+		}
+	}
+	MAN_pacify_MIC = {
+		icon = GFX_decision_SWI_no_elected_president
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+			
+			OR = {
+				JAP = {
+					has_completed_focus = JAP_found_mangyo
+				}
+				has_completed_focus = MAN_modernizing_the_economy
+			}
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_p_MIC
+				check_variable = {
+					MIC_loyalty < 1
+				}
+				check_variable = {
+					MIC_influence < 1
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				has_completed_focus = MAN_obedience
+			}
+			OR = {
+				check_variable = {
+					MIC_loyalty < 26
+				}
+				check_variable = {
+					MIC_influence < 26
+				}	
+			}
+			OR = {
+				JAP = {
+					has_completed_focus = JAP_found_mangyo
+				}
+				has_completed_focus = MAN_modernizing_the_economy
+			}
+				NOT = {
+					has_completed_focus = MAN_the_law_on_zaibatsu_regulations
+				}
+				NOT= {
+					has_country_flag = MAN_MIC_integrated
+				}
+
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+
+		}
+		remove_effect = {
+			set_country_flag = MAN_MIC_remove
+			custom_effect_tooltip = MAN_remove_faction
+			custom_effect_tooltip = spacers
+
+			if = {
+				limit = { 
+					NOT = {
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = -0.025
+					tooltip = stability_tooltip_general
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_recruitable_tt0
+				add_to_variable = {
+					var = MAN_military_industry_dm_production_speed_industrial_complex_factor
+					value = -0.05
+					tooltip = industrial_complex_build_speed_factor_tooltip
+				}
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = MAN_kwantung_army_takes_control
+				}
+				custom_effect_tooltip = MAN_the_death_of_china
+				add_to_variable = {
+					var = MAN_stability_factor_var
+					value = -0.025
+					tooltip = stability_tooltip_general
+				}
+			}
+		}
+	}
+	MAN_pacify_KPT = {
+		icon = GFX_decision_SWI_no_elected_president
+		priority = 50
+
+		allowed = { 
+			original_tag = MAN
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = faction_change_going
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = custom_tooltip_p_KPT
+				check_variable = {
+					KPT_loyalty < 1
+				}
+				check_variable = {
+					KPT_influence < 1
+				}
+			}
+			
+		}
+		visible = {
+			OR = {
+				check_variable = {
+					KPT_loyalty < 26
+				}
+				check_variable = {
+					KPT_influence < 26
+				}	
+			}
+			NOT ={
+				has_country_flag = MAN_KPT_integrated
+			}
+			NOT = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+			}
+			
+		}
+
+
+		ai_will_do = {
+			base = 100
+		}
+		
+
+		fire_only_once = yes
+		days_remove = 50
+
+		complete_effect = {
+			set_country_flag = { flag = faction_change_going value = 1 days = 50 }
+			
+		}
+		remove_effect = {
+			set_country_flag = MAN_KPT_remove
+			custom_effect_tooltip = MAN_remove_faction
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = MAN_the_death_of_china
+			add_to_variable = {
+				var = MAN_stability_factor_var
+				value = -0.025
+				tooltip = stability_tooltip_general
+			}
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = MAN_recruitable_tt0
+			add_to_variable = {
+				var = MAN_military_industry_dm_production_speed_arms_factory_factor
+				value = -0.05
+				tooltip = arms_factory_build_speed_factor_tooltip
+			}
+			add_to_variable = {
+				var = MAN_military_industry_dm_production_speed_industrial_complex_factor
+				value = 0.1
+				tooltip = industrial_complex_build_speed_factor_tooltip
+			}
+		}
+	}
+
+	SYSTEM_CHANGE_OY_BONUS_1 ={
+		icon = GFX_decision_generic_scorched_earth
+ 
+		available = {
+			tag = MAN
+		}
+
+		visible = {
+			always = no
+		}
+
+		modifier = {
+			industrial_capacity_factory = -0.10
+			industrial_capacity_dockyard = -0.15
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 21
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 21
+
+		activation = {
+			NOT = { 
+				OR = {
+					has_country_flag = MAN_MTZ_integrated
+					has_country_flag = MAN_MTZ_remove
+				}
+			}
+			NOT = {
+				has_idea_with_trait = JAP_naoki_hoshino_trait
+			}
+
+			check_variable = {
+				var = Mitsui_loyalty
+				value = Mitsui_influence
+				compare = less_than
+			}
+
+		}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+			remove_effect = {
+				add_stability = -0.0001
+			}
+	}
+	SYSTEM_CHANGE_OY_BONUS_2 ={
+		icon = GFX_decision_generic_scorched_earth
+ 
+		available = {
+			tag = MAN
+		}
+
+		visible = {
+			always = no
+		}
+
+		modifier = {
+			local_resources_factor = -0.10
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 21
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 21
+
+		activation = {
+			NOT = { 
+				OR = {
+					has_country_flag = MAN_SM_integrated
+					has_country_flag = MAN_SM_remove
+				}
+			}
+			NOT = {
+				has_idea_with_trait = JAP_naoki_hoshino_trait
+			}
+
+			check_variable = {
+				var = SM_loyalty
+				value = SM_influence
+				compare = less_than
+			}
+
+			}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+			remove_effect = {
+				add_stability = -0.0001
+			}
+	}
+	SYSTEM_CHANGE_OY_BONUS_3 ={
+		icon = GFX_decision_generic_scorched_earth
+ 
+		available = {
+			tag = MAN
+		}
+
+		visible = {
+			always = no
+		}
+
+		modifier = {
+			production_speed_industrial_complex_factor = -0.10
+		}
+
+
+		selectable_mission = no
+		days_mission_timeout = 21
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 21
+
+		activation = {
+			NOT = { 
+				OR = {
+					has_country_flag = MAN_MIC_integrated
+					has_country_flag = MAN_MIC_remove
+				}
+			}
+			NOT = {
+				has_idea_with_trait = JAP_naoki_hoshino_trait
+			}
+			OR = {
+				has_completed_focus = MAN_modernizing_the_economy
+				JAP = {
+					has_completed_focus = JAP_found_mangyo
+				}
+			}
+			
+			check_variable = {
+				var = MIC_loyalty
+				value = MIC_influence
+				compare = less_than
+			}
+
+			}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+			remove_effect = {
+				add_stability = -0.0001
+			}
+	}
+	SYSTEM_CHANGE_OY_BONUS_4 ={
+		icon = GFX_decision_generic_scorched_earth
+ 
+		available = {
+			tag = MAN
+		}
+
+		visible = {
+			always = no
+		}
+
+		modifier = {
+			production_speed_arms_factory_factor = -0.1
+			production_speed_dockyard_factor = -0.1
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 21
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 21
+
+		activation = {
+			NOT = { 
+				OR = {
+					has_country_flag = MAN_KPT_integrated
+					has_country_flag = MAN_KPT_remove
+				}
+			}
+
+			NOT = {
+				OR = {
+					has_idea_with_trait = leader_of_kuangtung
+					has_completed_focus = MAN_kwantung_army_takes_control			
+				}
+
+			}
+
+			check_variable = {
+				var = KPT_loyalty
+				value = KPT_influence
+				compare = less_than
+			}
+
+			}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+			remove_effect = {
+				add_stability = -0.0001
+			}
+	}
+
+	SYSTEM_CHANGE_OY_BONUS_10 ={
+		icon = GFX_decision_generic_ignite_civil_war
+ 
+		available = {
+			tag = MAN
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_1
+					OR = {
+						communism > 0.20
+						democratic > 0.20
+					}
+				}
+				
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_2
+					neutrality > 0.35
+				}
+			}
+		}
+
+		visible = {
+			always = no
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 70
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 70
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			industrial_capacity_dockyard = -0.1
+		}
+
+		activation = {
+			OR = {
+				communism > 0.20
+				neutrality > 0.3
+				democratic > 0.20
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			custom_effect_tooltip = communist_manchu_removal_2
+
+			if = {
+				limit = {
+					has_stability > 0.01
+				 }
+					add_stability = -0.005
+
+					else_if = {
+						limit = { has_stability < 0.01 }
+						add_war_support = -0.01
+				}
+			}
+		}
+
+	}
+	SYSTEM_CHANGE_OY_BONUS_11 ={
+		icon = GFX_decision_generic_ignite_civil_war
+ 
+		available = {
+			tag = MAN
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_3
+					OR = {
+						communism > 0.30
+						democratic > 0.30
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_4
+					neutrality > 0.45
+				}
+			}
+		}
+
+		visible = {
+			always = no
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 1
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 70
+
+		modifier = {
+			stability_weekly = -0.001
+			industrial_capacity_factory = -0.2
+			industrial_capacity_dockyard = -0.2
+			consumer_goods_expected_value = 0.02
+		}
+
+		activation = {
+			OR = {
+				communism > 0.30
+				neutrality > 0.45
+				democratic > 0.30
+			}
+
+		}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = communist_manchu_removal_2
+			if = {
+				limit = {
+					has_stability > 0.01
+				 }
+					add_stability = -0.01
+
+					else_if = {
+						limit = { has_stability < 0.01 }
+						add_war_support = -0.02
+				}
+			}
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.01
+			}
+		}
+	}
+	SYSTEM_CHANGE_OY_BONUS_12 ={
+		icon = GFX_decision_generic_ignite_civil_war
+ 
+		available = {
+			tag = MAN
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_5
+					OR = {
+						communism > 0.40
+						democratic > 0.40
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_6
+					neutrality > 0.6
+				}
+			}
+		}
+
+		visible = {
+			always = no
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 1
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 70
+
+		modifier = {
+			civilian_factory_use = 5
+			consumer_goods_expected_value = 0.05
+			stability_weekly = -0.002
+			industrial_capacity_factory = -0.4
+			industrial_capacity_dockyard = -0.4
+		}
+
+		activation = {
+			OR = {
+				communism > 0.40
+				neutrality > 0.6
+				democratic > 0.40
+			}
+		}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = communist_manchu_removal_2
+			if = {
+				limit = {
+					has_stability > 0.01
+				 }
+					add_stability = -0.02
+
+					else_if = {
+						limit = { has_stability < 0.01 }
+						add_war_support = -0.03
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.02
+			}
+		}
+	}
+
+	SYSTEM_CHANGE_OY_BONUS_13 ={
+		icon = GFX_decision_generic_ignite_civil_war
+ 
+		available = {
+			tag = MAN
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_7
+					OR = {
+					communism > 0.55
+					democratic > 0.55
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = unpatriotic_moffo_8
+					neutrality > 0.75
+				}
+			}
+		}
+
+		visible = {
+			always = no
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 60
+		is_good = no
+		fire_only_once = no
+
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 5
+			consumer_goods_expected_value = 0.1
+			stability_weekly = -0.003
+			industrial_capacity_factory = -0.6
+			industrial_capacity_dockyard = -0.6
+		}
+
+		activation = {
+			OR = {
+				communism > 0.55
+				neutrality > 0.75
+				democratic > 0.55
+			}
+		}
+			
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = communist_manchu_removal_2
+			if = {
+				limit = {
+					has_stability > 0.01
+				 }
+					add_stability = -0.03
+
+					else_if = {
+						limit = { has_stability < 0.01 }
+						add_war_support = -0.03
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+		}
+	}
+
+
+}
+
+
+##################################
+##################################
+##################################
+##################################
+MAN_economic_retadism = {
+	##################################
+	#
+	#		manpower/1334 -> 1% for right side ->1% all sides
+	#		uses for : gaining loggi_(number)k ex loggi_5k
+	#		uses for : removes(needs workers) neddie(number)k ex neddie_5k->neddie_50k
+	##################################
+
+	MAN_forced_1Beijing = {
+		icon = GFX_decision_generic_operation
+		available = { 
+			OR={
+				MAN ={controls_province = 9843 }
+				any_allied_country ={controls_province = 9843 }
+			}
+
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				num_of_civilian_factories_available_for_projects > 1
+			}	
+
+			NOT =  {
+				has_country_flag = workeers_flag_1			
+			}
+		 } 
+		visible = {
+			NOT={has_completed_focus = MAN_loyalty_of_the_weak}
+		}
+
+					
+		highlight_states = {
+			highlight_state_targets = {
+				state = 608
+		}
+		highlight_color_while_active = 2
+		highlight_color_before_active = 1
+		}
+
+		priority = 3
+		modifier = {
+
+			civilian_factory_use = 1
+	
+		}
+	
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 0
+		complete_effect = {
+
+			set_country_flag = { flag = workeers_flag_1 value = 1 days = 90 }
+		}
+		remove_effect = {
+			add_to_variable = { workeers_flag = +1 }
+			custom_effect_tooltip = loggi_5k
+				add_to_variable = { var = counter_man_total value = 500 }
+				add_to_variable = {
+					var = logs
+					value = 500
+				}
+				if = {
+					limit = {
+						NOT ={
+							has_completed_focus = MAN_kwantung_army_takes_control
+						}
+					}
+					add_stability = -0.01
+				}
+				
+		}
+	}
+	
+	MAN_forced_2Nanjing = {
+		icon = oppression
+		available = {
+ 			OR={
+				MAN ={controls_province = 11913}
+				any_allied_country ={controls_province = 11913}
+			}
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				num_of_civilian_factories_available_for_projects > 1
+			}
+
+			NOT =  {
+				has_country_flag = workeers_flag_2			
+			}
+	
+		 } 
+		visible = {
+			NOT={has_completed_focus = MAN_loyalty_of_the_weak}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 613
+		}
+		highlight_color_while_active = 2
+		highlight_color_before_active = 1
+		}
+
+		priority = 3
+		modifier = {
+			civilian_factory_use = 1
+		}
+	
+		fire_only_once = no
+	
+
+		days_remove = 90
+		days_re_enable = 0
+		complete_effect = {
+			if = {
+				limit = {
+					NOT ={
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				add_stability = -0.05
+				else_if = {
+					limit = {
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+					add_stability = -0.025
+				}
+			}
+			set_country_flag = { flag = workeers_flag_2 value = 1 days = 90 }
+		}
+		remove_effect = {
+	
+			add_to_variable = { workeers_flag = +1 }
+			custom_effect_tooltip = loggi_20k
+			custom_effect_tooltip = MANspace
+				add_to_variable = { var = counter_man_total value = 2000 }
+				add_to_variable = {
+					var = logs
+					value = 2000
+				}
+		}
+	}
+	
+	MAN_forced_3Wuhan = {
+		icon = GFX_decision_generic_operation
+		available = { 
+			OR={
+				MAN ={controls_province = 4619}
+				any_allied_country ={controls_province = 4619}
+			}
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				num_of_civilian_factories_available_for_projects > 1
+			}
+
+			NOT =  {
+				has_country_flag = workeers_flag_2_21			
+			}
+	
+		 } 
+
+			highlight_states = {
+				highlight_state_targets = {
+					state = 620
+			}
+
+			highlight_color_while_active = 2
+			highlight_color_before_active = 1
+		}
+
+		priority = 3
+		modifier = {
+			civilian_factory_use = 1
+		}
+	
+		fire_only_once = no
+	
+		cost = 25
+		days_remove = 90
+		days_re_enable = 0
+		complete_effect = {
+			set_country_flag = { flag = workeers_flag_2_21 value = 1 days = 90 }
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT ={
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				add_stability = -0.02
+			}
+			add_to_variable = { workeers_flag = +1 }
+			custom_effect_tooltip = loggi_20k
+			custom_effect_tooltip = MANspace
+				add_to_variable = { var = counter_man_total value = 2000 }
+				add_to_variable = {
+					var = logs
+					value = 2000
+				}
+	
+		}
+	}
+
+	MAN_forced_4Changsha = {
+		icon = GFX_decision_generic_operation
+		available = {
+			OR={
+				MAN ={controls_province = 7097}
+				any_allied_country ={controls_province = 7097}
+			} 
+
+			OR = {
+				has_completed_focus = MAN_kwantung_army_takes_control
+				num_of_civilian_factories_available_for_projects > 2
+			}
+
+			NOT =  {
+				has_country_flag = workeers_flag_3			
+			}
+	
+		 } 
+
+		highlight_states = {
+				highlight_state_targets = {
+					state = 602
+				}
+			highlight_color_while_active = 2
+			highlight_color_before_active = 1
+		}
+
+		priority = 3
+		modifier = {
+			civilian_factory_use = 2
+		}
+	
+		fire_only_once = no
+	
+		cost = 35
+		days_remove = 90
+		days_re_enable = 0
+		complete_effect = {
+
+			set_country_flag = { flag = workeers_flag_3 value = 1 days = 90 }
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT ={
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+				}
+				add_stability = -0.04
+				else_if = {
+					limit = {
+						has_completed_focus = MAN_kwantung_army_takes_control
+					}
+					add_stability = -0.02
+				}
+			}
+			add_to_variable = { workeers_flag = +1 }
+			custom_effect_tooltip = loggi_40k
+			custom_effect_tooltip = MANspace
+				add_to_variable = { var = counter_man_total value = 4000 }
+				add_to_variable = {
+					var = logs
+					value = 4000
+				}
+	
+		}
+	}
+	
+	 ##################################
+	 ##################################
+	 #
+	 #		3 new voluntters buttons
+	 #
+	 ##################################
+	 ##################################
+	 			# each will give a option of how to deal with the workers,left means you can get decent amounts with no negatives,center gets you better buffs and right will increase the amount but alos the penalty
+
+			contexted_zone = {
+				icon = GFX_decision_generic_operation
+
+				available = {
+					OR = {
+						has_war_with = CHI
+						NOT = {
+							country_exists = CHI
+						}
+					}
+					NOT = {
+						has_country_flag = ANti_infinite_com
+					}
+				}
+
+				fire_only_once = no
+
+				days_remove = -1
+
+				cost = 0
+
+				modifier = {
+					political_power_gain = -0.4
+					industrial_capacity_factory = -0.1
+					industrial_capacity_dockyard = -0.1
+				}
+
+				remove_effect = {
+					custom_effect_tooltip = JAP_kempeitai_bonus2
+					custom_effect_tooltip = 7daysfree
+				}
+				complete_effect = {
+					set_country_flag = { flag = ANti_infinite_com value = 1 days = 7}
+					custom_effect_tooltip = stab_rec_tooltip
+					custom_effect_tooltip = MANspace
+					add_stability = -0.01
+					RCC = {
+						add_to_variable = {
+							RCC_compliance_gain = 0.01
+						}
+					
+					}
+				}
+
+			}
+			contexted_zone_cancel = {
+				icon = GFX_decision_generic_operation
+
+				available = {
+					NOT = {
+						has_country_flag = ANti_infinite_com
+					}
+				}
+
+				visible = {
+					has_decision = contexted_zone
+				}
+
+				fire_only_once = no
+				cost = 0
+				days_re_enable = 2
+
+				remove_effect = {
+					custom_effect_tooltip = JAP_kempeitai_bonus3
+					custom_effect_tooltip = 7daysfree
+				}
+				complete_effect = {
+					set_country_flag = { flag = ANti_infinite_com value = 1 days = 7}
+					remove_decision = contexted_zone
+					RCC = {
+						add_to_variable = {
+							RCC_compliance_gain = -0.01
+						}
+					
+					}
+				}
+			}
+			
+			####################
+
+			center_side_workers = {
+				icon = GFX_decision_generic_operation
+
+				available = {
+					OR = {
+						has_war_with = CHI
+						NOT = {
+							country_exists = CHI
+						}
+					}
+					NOT = {
+						has_country_flag = ANti_infinite_com_2
+					}
+				}
+
+				fire_only_once = no
+
+				days_remove = -1
+
+				cost = 0
+
+				modifier = {
+
+					political_power_gain = -0.1
+					industrial_capacity_factory = -0.2
+					industrial_capacity_dockyard = -0.2
+
+				}
+
+				remove_effect = {
+					custom_effect_tooltip = 30daysfree
+				}
+				complete_effect = {
+					set_country_flag = { flag = ANti_infinite_com_2 value = 1 days = 30}
+					custom_effect_tooltip = heavy_rec_tooltip
+					custom_effect_tooltip = MANspace
+					add_stability = -0.01
+
+				}
+			}
+			center_side_workers_cancel = {
+				icon = GFX_decision_generic_operation
+
+				available = {
+					NOT = {
+						has_country_flag = ANti_infinite_com_2
+					}
+				}
+
+				visible = {
+					has_decision = center_side_workers
+				}
+				fire_only_once = no
+				cost = 0
+				remove_effect = {
+					custom_effect_tooltip = 30daysfree
+				}
+				complete_effect = {
+					set_country_flag = { flag = ANti_infinite_com_2 value = 1 days = 30}
+					remove_decision = center_side_workers
+					
+				}
+			}
+
+	 ##################################
+	 ##################################
+
+
+	 #Here i have the new worker sistem where if you go in the negative with the workers needed bad buffs come,and vise versa but too many workers is actually bad
+	
+
+	  workers_shortage_g3 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_g3
+			 }
+			 check_variable = {
+				 logs > 7999
+			 }			
+			 
+ 
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+ 
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g2
+					 add_idea = MAN_worker_shortage_g3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g1
+					 add_idea = MAN_worker_shortage_g3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_y0
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_y0
+					 add_idea = MAN_worker_shortage_g3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r1
+					 add_idea = MAN_worker_shortage_g3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r2
+					 add_idea = MAN_worker_shortage_g3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r3
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r3
+					 add_idea = MAN_worker_shortage_g3
+				 }
+
+			 }
+ 
+		 }
+	  }
+	  workers_shortage_g2 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_g2
+			 }
+			 check_variable = {
+				 logs > 4999
+			 }
+			 NOT= {
+				 check_variable = {
+					logs > 7999
+				}	
+			 }
+		
+			 
+ 
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+			if = {
+				limit = { 
+					has_idea = MAN_worker_shortage_g3
+				}
+				swap_ideas = {
+					remove_idea = MAN_worker_shortage_g3
+					add_idea = MAN_worker_shortage_g2
+				}
+
+			}
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g1
+					 add_idea = MAN_worker_shortage_g2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_y0
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_y0
+					 add_idea = MAN_worker_shortage_g2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r1
+					 add_idea = MAN_worker_shortage_g2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r2
+					 add_idea = MAN_worker_shortage_g2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r3
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r3
+					 add_idea = MAN_worker_shortage_g2
+				 }
+
+			 }
+ 
+		 }
+	  }
+	  workers_shortage_g1 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_g1
+			 }
+			 check_variable = {
+				logs > 2499
+			 }
+			 NOT= {
+				check_variable = {
+				   logs > 4999
+			   }	
+			}			
+			 
+ 
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+			if = {
+				limit = { 
+					has_idea = MAN_worker_shortage_g3
+				}
+				swap_ideas = {
+					remove_idea = MAN_worker_shortage_g3
+					add_idea = MAN_worker_shortage_g1
+				}
+
+			}
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g2
+					 add_idea = MAN_worker_shortage_g1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_y0
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_y0
+					 add_idea = MAN_worker_shortage_g1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r1
+					 add_idea = MAN_worker_shortage_g1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r2
+					 add_idea = MAN_worker_shortage_g1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r3
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r3
+					 add_idea = MAN_worker_shortage_g1
+				 }
+
+			 }
+ 
+		 }
+	  }
+	  workers_shortage_y0 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_y0
+			 }
+			 check_variable = {
+				 logs > -1
+			 }
+			 NOT= {
+				check_variable = {
+				   logs > 2499
+			   }	
+			}		
+			 
+ 
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+			if = {
+				limit = { 
+					has_idea = MAN_worker_shortage_g3
+				}
+				swap_ideas = {
+					remove_idea = MAN_worker_shortage_g3
+					add_idea = MAN_worker_shortage_y0
+				}
+
+			}
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g2
+					 add_idea = MAN_worker_shortage_y0
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g1
+					 add_idea = MAN_worker_shortage_y0
+				 }
+
+			 }
+
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r1
+					 add_idea = MAN_worker_shortage_y0
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r2
+					 add_idea = MAN_worker_shortage_y0
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r3
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r3
+					 add_idea = MAN_worker_shortage_y0
+				 }
+
+			 }
+ 
+		 }
+	  }
+	  workers_shortage_r1 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_r1
+			 }
+			 check_variable = {
+				logs < 0
+			}
+			 NOT = {
+			   check_variable = {
+				   logs < -999
+			   }
+			}
+			 
+ 
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+			if = {
+				limit = { 
+					has_idea = MAN_worker_shortage_g3
+				}
+				swap_ideas = {
+					remove_idea = MAN_worker_shortage_g3
+					add_idea = MAN_worker_shortage_r1
+				}
+
+			}
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g2
+					 add_idea = MAN_worker_shortage_r1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g1
+					 add_idea = MAN_worker_shortage_r1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_y0
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_y0
+					 add_idea = MAN_worker_shortage_r1
+				 }
+
+			 }
+
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r2
+					 add_idea = MAN_worker_shortage_r1
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r3
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r3
+					 add_idea = MAN_worker_shortage_r1
+				 }
+
+			 }
+ 
+		 }
+	  }
+	  workers_shortage_r2 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_r2
+			 }
+			 check_variable = {
+				 logs < -999
+			 }
+			 NOT = {
+				check_variable = {
+					logs < -2999
+				}
+			 }
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+			if = {
+				limit = { 
+					has_idea = MAN_worker_shortage_g3
+				}
+				swap_ideas = {
+					remove_idea = MAN_worker_shortage_g3
+					add_idea = MAN_worker_shortage_r2
+				}
+
+			}
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g2
+					 add_idea = MAN_worker_shortage_r2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g1
+					 add_idea = MAN_worker_shortage_r2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_y0
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_y0
+					 add_idea = MAN_worker_shortage_r2
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r1
+					 add_idea = MAN_worker_shortage_r2
+				 }
+
+			 }
+
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r3
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r3
+					 add_idea = MAN_worker_shortage_r2
+				 }
+
+			 }
+ 
+		 }
+	  }
+	  workers_shortage_r3 = {
+		 icon = GFX_decision_generic_disband_irregulars
+ 
+		 available = {
+			 tag = MAN
+		 }
+ 
+		 visible = {
+			 country_exists = MAN
+		 }
+ 
+		 selectable_mission = no
+		 days_mission_timeout = 14
+		 is_good = no
+		 fire_only_once = no
+ 
+		 days_remove = 14
+ 
+		 activation = {
+			 NOT = {
+				 has_idea = MAN_worker_shortage_r3
+			 }
+			 check_variable = {
+				 logs < -2999
+			 }
+		 }
+ 
+		 ai_will_do = {
+			 factor = 0
+		 }
+ 
+		 remove_effect = {
+			if = {
+				limit = { 
+					has_idea = MAN_worker_shortage_g3
+				}
+				swap_ideas = {
+					remove_idea = MAN_worker_shortage_g3
+					add_idea = MAN_worker_shortage_r3
+				}
+
+			}
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g2
+					 add_idea = MAN_worker_shortage_r3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_g1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_g1
+					 add_idea = MAN_worker_shortage_r3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_y0
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_y0
+					 add_idea = MAN_worker_shortage_r3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r1
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r1
+					 add_idea = MAN_worker_shortage_r3
+				 }
+
+			 }
+			 if = {
+				 limit = { 
+					 has_idea = MAN_worker_shortage_r2
+				 }
+				 swap_ideas = {
+					 remove_idea = MAN_worker_shortage_r2
+					 add_idea = MAN_worker_shortage_r3
+				 }
+
+			 }
+		 }
+	  }
+
+	##################################
+	##################################
+
+	#construction speed is here where on left and center is 1% and the right is 2%
+
+		MAN_speed = {
+			icon = GFX_decision_eng_trade_unions_support
+				available = { 
+					OR={
+						MAN ={has_full_control_of_state = 716}
+						any_allied_country ={has_full_control_of_state = 716}
+					}
+
+					num_of_civilian_factories_available_for_projects > 3
+						
+					check_variable = {
+						var = logs
+						   value = 1500
+						compare = greater_than_or_equals
+					}
+				}
+	
+				visible = {
+					NOT= {has_completed_focus = MAN_import_of_labor_for_construction}	
+
+					check_variable = {
+						workeers_CSS < 11
+					}
+				}
+				priority = 3
+
+					modifier = {
+						civilian_factory_use = 4
+					}
+
+					custom_cost_trigger = {
+						check_variable = {
+							var = logs
+							   value = 1500
+							compare = greater_than_or_equals
+						}
+					}
+					custom_cost_text = MAN_1500_Volunteers_2 
+					fire_only_once = no
+		
+			days_remove = 70
+
+			complete_effect = {
+
+				add_to_variable = {
+					var = workeers_CSS
+					value = 1
+				}
+
+				set_country_flag = { flag = MAN_politics value = 1 days = 70}
+
+			   subtract_from_variable = {
+				var = logs
+				value = 1500
+			   }
+			}
+
+			remove_effect = {					
+				custom_effect_tooltip = MAN_recruitable_tt0
+				add_to_variable = {
+					var = MAN_military_industry_dm_production_speed_buildings_factor
+					value =0.01
+				tooltip = MAN_military_industry_dm_production_speed_buildings_factor
+			}
+
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = limit_cst_tooltip
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = Check_add_4
+		}
+	}
+
+	MAN_speed_long = {
+		icon = GFX_decision_eng_trade_unions_support
+			available = { 
+					has_completed_focus = MAN_import_of_labor_for_construction
+					OR={
+						MAN ={has_full_control_of_state = 716}
+						any_allied_country ={has_full_control_of_state = 716}
+					}
+
+					num_of_civilian_factories_available_for_projects > 1
+
+						check_variable = {
+							var = logs
+							   value = 2250
+							compare = greater_than_or_equals
+						}
+					} 
+			visible = {
+				has_completed_focus = MAN_import_of_labor_for_construction	
+
+				check_variable = {
+					workeers_CSS < 16
+				}
+
+			}
+			priority = 3
+			modifier = {
+				civilian_factory_use = 2
+			}
+			
+			custom_cost_trigger = {
+				check_variable = {
+					var = logs
+					   value = 2250
+					compare = greater_than_or_equals
+				}
+			}
+			custom_cost_text = MAN_2250_Volunteers_2 
+			fire_only_once = no
+	
+			days_remove = 70
+			days_re_enable = 0
+
+			complete_effect = {	
+
+				add_to_variable = {
+					var = workeers_CSS
+					value = 1
+				}
+
+				set_country_flag = { flag = MAN_politics value = 1 days = 70}
+
+			   subtract_from_variable = {
+				var = logs
+				value = 2250
+			   }
+			}
+
+		remove_effect = {
+			custom_effect_tooltip = MAN_recruitable_tt0
+
+			add_to_variable = {
+				var = MAN_military_industry_dm_production_speed_buildings_factor
+				value = 0.02
+				tooltip = MAN_military_industry_dm_production_speed_buildings_factor
+			}
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = limit_cst_1_tooltip
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = Check_add_4
+		}
+	}
+
+	##################################
+	#
+	#		millies civiies forte note
+	#
+	##################################
+
+	MAN_civie = {
+	 icon = GFX_decision_generic_factory
+		available = {
+			OR={
+				MAN ={has_full_control_of_state = 715}
+				any_allied_country ={has_full_control_of_state = 715}
+			}
+
+			num_of_civilian_factories_available_for_projects > 2
+			
+
+			check_variable = {
+				compare = greater_than_or_equals
+				value = 2500
+				var = logs
+			}
+		
+		}
+
+		visible = {
+			NOT= {
+				has_completed_focus = MAN_total_economic_control
+			}
+		}
+
+		priority = 3
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+			
+		custom_cost_trigger = {
+			check_variable = {
+				var = logs
+				   value = 2500
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = MAN_2500_Volunteers_2 
+		fire_only_once = no
+
+		days_remove = 70
+		days_re_enable = 0
+
+		complete_effect = {	
+		   subtract_from_variable = {
+			var = logs
+			value = 2500
+		   }
+		   add_to_variable = {
+			var = worker_civs
+			value = 1
+		}
+		}
+
+	 remove_effect = {
+
+			add_to_variable = {
+				var = workers_civs
+				value = 1
+			}
+
+			715 ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = Check_add_2
+		}
+	}
+
+	MAN_civie_right = {
+		icon = GFX_decision_generic_factory
+		   available = {
+			   OR={
+				   MAN ={has_full_control_of_state = 715}
+				   any_allied_country ={has_full_control_of_state = 715}
+			   }
+   
+			   num_of_civilian_factories_available_for_projects > 2
+			   
+   
+			   check_variable = {
+				   compare = greater_than_or_equals
+				   value = 2000
+				   var = logs
+			   }
+		   
+		   }
+
+		   visible = {
+				has_completed_focus = MAN_total_economic_control
+			}
+   
+		   priority = 3
+   
+		   modifier = {
+			   civilian_factory_use = 2
+		   }
+			   
+		   custom_cost_trigger = {
+			   check_variable = {
+				   var = logs
+					  value = 2000
+				   compare = greater_than_or_equals
+			   }
+		   }
+		   custom_cost_text = MAN_2000_Volunteers_2 
+		   fire_only_once = no
+   
+		   days_remove = 70
+		   days_re_enable = 0
+   
+		   complete_effect = {	
+			  subtract_from_variable = {
+			   var = logs
+			   value = 2000
+			  }
+			  add_to_variable = {
+			   var = worker_civs
+			   value = 1
+		   }
+		   }
+   
+		remove_effect = {
+   
+			   add_to_variable = {
+				   var = workers_civs
+				   value = 1
+			   }
+   
+			   715 ={
+				   add_extra_state_shared_building_slots = 1
+				   add_building_construction = {
+					   type = industrial_complex
+					   level = 1
+					   instant_build = yes
+				   }
+			   }
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = Check_add_2
+		}
+	 }
+
+
+	
+	 MAN_mills = {
+
+	 icon = GFX_decision_generic_merge_plant_materiel
+		available = { 
+			OR={
+				MAN ={has_full_control_of_state = 715}
+				any_allied_country ={has_full_control_of_state = 715}
+				}
+
+				num_of_civilian_factories_available_for_projects > 1
+	
+
+			check_variable = {
+				compare = greater_than_or_equals
+				value = 1500
+				var = logs
+			}
+		
+		}
+
+		visible = {
+			NOT = {
+				has_completed_focus = MAN_total_economic_control
+			}
+		}
+
+		priority = 3
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+			
+		custom_cost_trigger = {
+			check_variable = {
+				var = logs
+				   value = 1500
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = MAN_1500_Volunteers_2 
+		fire_only_once = no
+
+		days_remove = 70
+		days_re_enable = 0
+
+		complete_effect = {	
+		   subtract_from_variable = {
+			var = logs
+			value = 1500
+		   }
+
+		   add_to_variable = {
+			var = worker_mills
+			value = 1
+		}
+		}
+	 remove_effect = {
+
+			715 ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = Check_add_2
+		}
+	}
+
+	MAN_mills_right = {
+
+		icon = GFX_decision_generic_merge_plant_materiel
+		   available = { 
+			   OR={
+				   MAN ={has_full_control_of_state = 715}
+				   any_allied_country ={has_full_control_of_state = 715}
+				   }
+   
+				   num_of_civilian_factories_available_for_projects > 1
+	   
+   
+			   check_variable = {
+				   compare = greater_than_or_equals
+				   value = 1000
+				   var = logs
+			   }
+		   }
+
+		   visible = {
+				has_completed_focus = MAN_total_economic_control
+			}
+   
+		   priority = 3
+   
+		   modifier = {
+			   civilian_factory_use = 1
+		   }
+			   
+		   custom_cost_trigger = {
+			   check_variable = {
+				   var = logs
+					  value = 1000
+				   compare = greater_than_or_equals
+			   }
+		   }
+		   custom_cost_text = MAN_1000_Volunteers_2 
+		   fire_only_once = no
+   
+		   days_remove = 70
+		   days_re_enable = 0
+   
+		   complete_effect = {	
+			  subtract_from_variable = {
+			   var = logs
+			   value = 1000
+			  }
+   
+			  add_to_variable = {
+			   var = worker_mills
+			   value = 1
+		   }
+		   }
+		remove_effect = {
+   
+			   715 ={
+				   add_extra_state_shared_building_slots = 1
+				   add_building_construction = {
+					   type = arms_factory
+					   level = 1
+					   instant_build = yes
+				   }
+			   }
+			   custom_effect_tooltip = MANspace
+			   custom_effect_tooltip = Check_add_2
+		   }
+	}
+	
+	MAN_doky = {
+		icon = GFX_decision_generic_merge_plant_ship
+			available = {
+ 				OR={
+					MAN ={has_full_control_of_state = 610}
+					any_allied_country ={has_full_control_of_state = 610}
+				}
+
+				num_of_civilian_factories_available_for_projects > 1
+				
+					
+			check_variable = {
+				compare = greater_than_or_equals
+				value = 1000
+				var = logs
+			}
+			check_variable = {
+				worker_cost_3 < 21
+			}
+						
+		} 
+		visible = {
+			NOT= {has_completed_focus = MAN_navy_1_1}
+		}
+		priority = 3
+		modifier = {
+			consumer_goods_expected_value = -0.01
+			civilian_factory_use = 1
+		}
+			
+		custom_cost_trigger = {
+			check_variable = {
+				var = logs
+				   value = 1000
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = MAN_1000_Volunteers_2 
+		fire_only_once = no
+
+		days_remove = 70
+		days_re_enable = 0
+
+		complete_effect = {	
+		   subtract_from_variable = {
+				var = logs
+				value = 1000
+		   }
+
+		   add_to_variable = {
+				var = worker_cost_3
+				value = 1
+			}
+		}
+		remove_effect = {
+
+			random_state = {
+				prioritize = {
+					610
+					716
+				}
+				limit = {
+					is_core_of = MAN
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = spacers
+			custom_effect_tooltip = limit_cst_tooltip_2
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = Check_add_3
+		}
+	}
+
+	MAN_doky_LaynaLazar_twitch_eyes = {
+		icon = GFX_decision_generic_merge_plant_ship
+			available = {
+
+				OR={
+					has_completed_focus = MAN_navy_1_1
+					MAN ={has_full_control_of_state = 610}
+					any_allied_country ={has_full_control_of_state = 610}
+				}
+				
+				num_of_civilian_factories_available_for_projects > 1
+					
+					
+			check_variable = {
+				compare = greater_than_or_equals
+				value = 1500
+				var = logs
+			}
+			check_variable = {
+				worker_cost_3 < 10
+			}
+						
+		} 
+		visible = {
+			has_completed_focus = MAN_navy_1_1
+		}
+		
+		priority = 3
+
+		modifier = {
+			consumer_goods_expected_value = -0.01
+			civilian_factory_use = 1
+		}
+							
+		custom_cost_trigger = {
+			check_variable = {
+				var = logs
+				   value = 1500
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = MAN_1500_Volunteers_2 
+		fire_only_once = no
+
+		days_remove = 70
+		days_re_enable = 0
+
+		complete_effect = {	
+		   subtract_from_variable = {
+					var = logs
+			value = 1500
+		   }
+		   add_to_variable = {
+				var = worker_cost_3
+				value = 1
+			}
+		}
+			remove_effect = {
+
+				random_state = {
+					prioritize = {
+						610
+						716
+					}
+					limit = {
+						is_core_of = MAN
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+	
+				custom_effect_tooltip = spacers
+				custom_effect_tooltip = limit_cst_tooltip_3
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = Check_add_3
+			}
+	}
+	
+	MAN_mines = {
+			icon = GFX_decision_generic_construction
+				available = {
+					OR={
+						NOT={has_completed_focus = MAN_man_for_money_pre_1}
+						MAN ={has_full_control_of_state = 717}
+						any_allied_country ={has_full_control_of_state = 717}
+					}
+
+
+					num_of_civilian_factories_available_for_projects > 1
+					
+
+					NOT={has_completed_focus = MAN_man_for_money_pre_1} 
+			
+					check_variable = {
+						compare = greater_than_or_equals
+						value = 1000
+						var = logs
+					}
+				
+				}
+				highlight_states = {
+					highlight_state_targets = {
+						state = 717
+					}
+					highlight_color_while_active = 1
+					highlight_color_before_active = 1
+				}
+				on_map_mode = decision_view_only
+		
+				priority = 3
+				modifier = {
+					civilian_factory_use = 1
+				}
+				visible = {
+					NOT={has_completed_focus = MAN_man_for_money_pre_1}
+					NOT={has_completed_focus = MAN_steel_casting_industry}
+				}
+					
+				custom_cost_trigger = {
+					check_variable = {
+						var = logs
+						   value = 1000
+						compare = greater_than_or_equals
+					}
+				}
+				custom_cost_text = MAN_1000_Volunteers_2 
+				fire_only_once = no
+		
+				days_remove = 70
+				days_re_enable = 0
+		
+				complete_effect = {	
+				   subtract_from_variable = {
+						var = logs
+						value = 1000
+				   }
+				    add_to_variable = {
+						var = worker_Pmind
+						value = 1
+					}
+				}
+			remove_effect = {
+
+
+				717 ={
+					add_resource = {
+							type = steel
+							amount = 1
+					}
+					add_resource = {
+						type = aluminium
+						amount = 1
+					}
+
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = Check_add_3
+				}
+	}
+
+	MAN_mines_at_cost = {
+				icon = GFX_decision_generic_construction
+					available = {
+						OR={
+							MAN ={has_full_control_of_state = 612}
+							any_allied_country ={has_full_control_of_state = 612}
+						}
+
+
+						num_of_civilian_factories_available_for_projects > 1
+						
+
+						NOT={has_completed_focus = MAN_man_for_money_pre_1} 
+				
+						check_variable = {
+							compare = greater_than_or_equals
+							value = 1000
+							var = logs
+						}
+					
+					}
+					highlight_states = {
+						highlight_state_targets = {
+							state = 612
+						}
+						highlight_color_while_active = 1
+						highlight_color_before_active = 1
+					}
+					on_map_mode = decision_view_only
+			
+					priority = 3
+					modifier = {
+						civilian_factory_use = 1
+					}
+					visible = {
+						NOT={has_completed_focus = MAN_man_for_money_pre_1}
+						NOT={has_completed_focus = MAN_steel_casting_industry}
+					}
+						
+					custom_cost_trigger = {
+						check_variable = {
+							var = logs
+							   value = 1000
+							compare = greater_than_or_equals
+						}
+					}
+					custom_cost_text = MAN_1000_Volunteers_2 
+					fire_only_once = no
+			
+					days_remove = 70
+					days_re_enable = 0
+			
+					complete_effect = {	
+					   subtract_from_variable = {
+							var = logs
+							value = 1000
+					   }
+					   add_to_variable = {
+							var = worker_Smind
+							value = 1
+					 }
+					}
+
+				remove_effect = {
+					612 ={
+					add_resource = {
+						type = tungsten
+						amount = 1
+					}
+					add_resource = {
+						type = chromium
+						amount = 1
+					}
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = Check_add_3
+
+			}
+	}
+
+		####################################################################################################
+		#
+		# #center SIDE MINES TO COMPENSATE FOR NO RESROURCES EXTRACTION
+		#
+		#
+
+		MAN_mines_center = {
+			icon = GFX_decision_generic_construction
+				available = {
+					has_completed_focus = MAN_steel_casting_industry
+					OR={
+											
+						MAN ={has_full_control_of_state = 717}
+						any_allied_country ={has_full_control_of_state = 717}
+						}
+					 num_of_civilian_factories_available_for_projects > 1
+			
+					check_variable = {
+						compare = greater_than_or_equals
+						value = 1000
+						var = logs
+					}
+				
+				}
+				highlight_states = {
+					highlight_state_targets = {
+						state = 717
+					}
+					highlight_color_while_active = 1
+					highlight_color_before_active = 1
+				}
+				on_map_mode = decision_view_only
+		
+				priority = 3
+				modifier = {
+					civilian_factory_use = 1
+				}
+				visible = {
+					has_completed_focus = MAN_steel_casting_industry
+				}
+					
+				custom_cost_trigger = {
+					check_variable = {
+						var = logs
+						   value = 1000
+						compare = greater_than_or_equals
+					}
+				}
+				custom_cost_text = MAN_1000_Volunteers_2 
+				fire_only_once = no
+		
+				days_remove = 45
+				days_re_enable = 0
+		
+				complete_effect = {	
+				   subtract_from_variable = {
+						var = logs
+						value = 1000
+				   }
+				   add_to_variable = {
+						var = worker_Pmind
+						value = 1
+					}
+				}
+				remove_effect = {
+
+					717 ={
+							add_resource = {
+									type = steel
+									amount = 1
+							}
+							add_resource = {
+								type = aluminium
+								amount = 1
+							}
+						}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = Check_add_3
+				}
+		}
+
+		MAN_mines_at_cost_center = {
+				icon = GFX_decision_generic_construction
+					available = {
+ 						has_completed_focus = MAN_steel_casting_industry
+						OR={
+							MAN ={has_full_control_of_state = 612}
+							any_allied_country ={has_full_control_of_state = 612}
+							}
+
+							num_of_civilian_factories_available_for_projects > 1
+				
+						check_variable = {
+							compare = greater_than_or_equals
+							value = 1000
+							var = logs
+						}
+					
+					}
+					highlight_states = {
+						highlight_state_targets = {
+							state = 612
+						}
+						highlight_color_while_active = 1
+						highlight_color_before_active = 1
+					}
+					on_map_mode = decision_view_only
+			
+					priority = 3
+					modifier = {
+						civilian_factory_use = 1
+					}
+					visible = {
+						has_completed_focus = MAN_steel_casting_industry
+					}
+						
+					custom_cost_trigger = {
+						check_variable = {
+							var = logs
+							   value = 1000
+							compare = greater_than_or_equals
+						}
+					}
+					custom_cost_text = MAN_1000_Volunteers_2 
+					fire_only_once = no
+			
+					days_remove = 45
+					days_re_enable = 0
+			
+					complete_effect = {	
+					   subtract_from_variable = {
+							var = logs
+							value = 1000
+					   }
+					   add_to_variable = {
+							var = worker_Smind
+							value = 1
+						}
+					}
+				remove_effect = {
+					
+					612 ={
+						add_resource = {
+							type = tungsten
+							amount = 1
+					}
+					add_resource = {
+						type = chromium
+						amount = 1
+					}
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = Check_add_3
+			}
+		}
+		
+		#
+		#
+		#
+		#
+		####################################################################################################
+		#
+		# #LEFT SIDE MINES TO COMPENSATE FOR NO RESROURCES EXTRACTION
+		#
+		#
+
+		MAN_mines_left = {
+			icon = GFX_decision_generic_construction
+				available = {
+					has_completed_focus = MAN_man_for_money_pre_1
+					OR={
+					
+						MAN ={has_full_control_of_state = 717}
+						any_allied_country ={has_full_control_of_state = 717}
+						}
+
+					num_of_civilian_factories_available_for_projects > 2
+			
+					check_variable = {
+						compare = greater_than_or_equals
+						value = 1500
+						var = logs
+					}
+				
+				}
+				highlight_states = {
+					highlight_state_targets = {
+						state = 717
+					}
+					highlight_color_while_active = 1
+					highlight_color_before_active = 1
+				}
+				on_map_mode = decision_view_only
+		
+				priority = 3
+				modifier = {
+					civilian_factory_use = 2
+				}
+				visible = {
+					has_completed_focus = MAN_man_for_money_pre_1
+				}
+					
+				custom_cost_trigger = {
+					check_variable = {
+						var = logs
+						   value = 1500
+						compare = greater_than_or_equals
+					}
+				}
+				custom_cost_text = MAN_1500_Volunteers_2 
+				fire_only_once = no
+		
+				days_remove = 70
+				days_re_enable = 0
+		
+				complete_effect = {	
+				   subtract_from_variable = {
+						var = logs
+						value = 1500
+				   }
+
+				   add_to_variable = {
+						var = worker_Pmind
+						value = 1
+					}
+				}
+			remove_effect = {
+				717 ={
+					add_resource = {
+							type = steel
+							amount = 2
+					}
+					add_resource = {
+						type = aluminium
+						amount = 2
+					}
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = Check_add_3
+				}
+			}
+			MAN_mines_at_cost_left = {
+				icon = GFX_decision_generic_construction
+					available = { 
+						has_completed_focus = MAN_man_for_money_pre_1
+						OR={
+							MAN ={has_full_control_of_state = 612}
+							any_allied_country ={has_full_control_of_state = 612}
+							}
+
+							num_of_civilian_factories_available_for_projects > 2
+				
+						check_variable = {
+							compare = greater_than_or_equals
+							value = 1500
+							var = logs
+						}
+					
+					}
+					highlight_states = {
+						highlight_state_targets = {
+							state = 612
+						}
+						highlight_color_while_active = 1
+						highlight_color_before_active = 1
+					}
+					on_map_mode = decision_view_only
+			
+					priority = 3
+					modifier = {
+						civilian_factory_use = 2
+					}
+					visible = {
+						has_completed_focus = MAN_man_for_money_pre_1
+					}
+						
+					custom_cost_trigger = {
+						check_variable = {
+							var = logs
+							   value = 1500
+							compare = greater_than_or_equals
+						}
+					}
+					custom_cost_text = MAN_1500_Volunteers_2 
+					fire_only_once = no
+			
+					days_remove = 70
+					days_re_enable = 0
+			
+					complete_effect = {	
+					   subtract_from_variable = {
+							var = logs
+							value = 1500
+					   }
+					   add_to_variable = {
+							var = worker_Smind
+							value = 1
+						}
+					}
+
+				remove_effect = {
+					612 ={
+							add_resource = {
+								type = tungsten
+								amount = 2
+						}
+						add_resource = {
+							type = chromium
+							amount = 2
+						}
+					}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = Check_add_3
+				}
+		}
+		
+		#
+		#
+		#
+		#
+		###############################################################################################
+	
+		MAN_guards = {
+			icon = GFX_decision_hol_draw_up_staff_plans
+				available = { 
+					 has_completed_focus = Bring_the_mandate_back
+
+						num_of_civilian_factories_available_for_projects > 1
+		
+					check_variable = {
+						compare = greater_than_or_equals
+						value = 500
+						var = logs
+					}
+				} 
+		
+				priority = 3
+				modifier = {
+					civilian_factory_use = 1
+				}
+			visible = {
+
+			}
+			custom_cost_trigger = {
+				check_variable = {
+					var = logs
+					   value = 500
+					compare = greater_than_or_equals
+				}
+			}
+			custom_cost_text = MAN_500_Volunteers_2 
+			fire_only_once = no
+	
+			days_remove = 35
+			days_re_enable = 0
+	
+			complete_effect = {	
+			   subtract_from_variable = {
+				var = logs
+				value = 500
+			   }
+			}
+			remove_effect = {
+				division_template = {
+					name = "Kaijo Hoan-cho"
+					priority = 2
+			
+					  regiments = {
+						garrison = { x = 0 y = 0 }
+						garrison = { x = 0 y = 1 }
+						garrison = { x = 0 y = 2 }
+				  
+						garrison = { x = 1 y = 0 }
+						garrison = { x = 1 y = 1 }
+						garrison = { x = 1 y = 2 }
+
+						garrison = { x = 2 y = 0 }
+						garrison = { x = 2 y = 1 }
+						garrison = { x = 2 y = 2 }
+						garrison = { x = 4 y = 1 }
+						artillery_brigade = { x = 4 y = 0 }
+
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						artillery_brigade = { x = 3 y = 2 }
+						artillery_brigade = { x = 3 y = 3 }
+					  }
+					  support = {
+							  artillery = { x = 0 y = 0 }
+							  engineer = { x = 0  y = 1 }  
+							  military_police = { x = 0  y = 2 }
+							  anti_air_company = { x = 0 y = 3 }
+					  }
+					  is_locked = no
+				  }
+					  
+				  every_state = {
+					  limit = { state = 716 }
+	  
+					  create_unit = {
+						  division = "name = \"Kaijo Hoan-cho\" division_template = \"Kaijo Hoan-cho\" start_experience_factor = 0.3 start_equipment_factor = 1" 
+						  owner = MAN
+					  }	
+					  create_unit = {
+						  division = "name = \"Kaijo Hoan-cho\" division_template = \"Kaijo Hoan-cho\" start_experience_factor = 0.3 start_equipment_factor = 1" 
+						  owner = MAN
+					  }	
+				  }
+				
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = repetition_30
+			}
+		}
+}
+#################################
+#
+#
+#	#SHORT-NEW IMPORT REDO
+#
+#
+#
+#################
+
+MAN_research_unit_short_funded ={
+
+		MAN_research_electric = {
+			icon = GFX_decision_generic_research
+
+			available = { 
+				num_of_civilian_factories_available_for_projects > 1
+			}
+			visible = {
+				
+			}
+		 priority = 5
+			fire_only_once = yes
+
+			modifier = {
+				civilian_factory_use = 1
+
+			}
+	
+			cost = 25
+			days_remove = 60
+			days_re_enable = 30
+			complete_effect = {
+			
+			   }
+			remove_effect = {
+				add_tech_bonus = {
+			bonus = 0.75
+			uses = 2
+			category = electronics
+			name = electronics
+			}	
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = done_only_one_man_tooltip	
+			custom_effect_tooltip = MANspace
+			}
+		}
+
+		MAN_import_jap_guns = {
+			#importing guns from japan
+			icon = generic_industry
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+				set_variable = {
+					block_it_fully = 1
+				}
+
+			}
+
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g1
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						OR = {
+							check_variable = {
+								weeks_waited_ic = 0
+							}
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 350
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 700
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1050
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1400
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1750
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2100
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2450
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2800
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 3150
+						producer = JAP
+					}
+				}
+
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+				
+			}
+		}
+		
+		MAN_import_tanks = {
+			icon = generic_industry
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+			}
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g6
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 0
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 25
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 15
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 50
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 40
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 75
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 60
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 100
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 80
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 125
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 100
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 20
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 150
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 120
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 80
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 175
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 150
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 120
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 200
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 200
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 160
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = radio_equipment
+						amount = 250
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = special_equipment
+						amount = 200
+						producer = JAP
+					}
+				}
+
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+
+			}
+		}
+
+		MAN_trucks = {
+			icon = generic_industry
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+			}
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g7
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 0
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 25
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 50
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 75
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 100
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 140
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 200
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 250
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 300
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 350
+						producer = JAP
+					}
+				}
+
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+
+			}
+		}
+
+		MAN_jap_arty = {
+			#importing arti from japan
+			icon = generic_industry
+			
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+			}
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g2
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 0
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 25
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 50
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 75
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 100
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 125
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 150
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 175
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 200
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 250
+						producer = JAP
+					}
+				}
+
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+			}
+		}
+		MAN_Heavy_jap_arty = {
+			icon = generic_industry
+
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+			}
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g3
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 0
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 10
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 20
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 30
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 40
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 50
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 75
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 90
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 105
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_artillery_equipment
+						amount = 120
+						producer = JAP
+					}
+				}
+
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+				
+			}
+		}
+		MAN_rocket_jap_arty = {
+			icon = generic_industry
+
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+				OR = {
+					JAP = {
+						has_tech = rocket_artillery
+					}
+					has_tech = rocket_artillery
+
+				}
+				
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+			}
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g4
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 0
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 20
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 40
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 60
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 80
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 100
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 120
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 140
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 160
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 180
+						producer = JAP
+					}
+				}
+
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+			}
+		}
+
+		MAN_anti_air_jap_arty = {
+			icon = generic_industry
+			
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 3
+				dockyard > 0
+
+				NOT = {
+					has_country_flag = delivery_from_japan
+				}
+
+			} 
+
+			visible = {}
+			priority = 5
+			fire_only_once = no
+
+			modifier = {
+				civilian_factory_use = 4
+			}
+			
+			cost = 25
+			days_remove = 28
+
+			complete_effect = {
+				set_country_flag = { flag = delivery_from_japan value = 1 days = 28}
+			}
+			remove_effect = {
+				custom_effect_tooltip = MAN_Import_cooldown
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = MAN_ammount_g5
+				custom_effect_tooltip = MANspace
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 0
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 20
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 5
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 1	
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 40
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 10
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 2
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 60
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 15
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 3
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 80
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 20
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 4
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 100
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 25
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 5
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 125
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 40
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 6
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 150
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 55
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 7
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 175
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 70
+						producer = JAP
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							weeks_waited_ic = 8
+						}
+
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 200
+						producer = JAP
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_anti_air_equipment
+						amount = 85
+						producer = JAP
+					}
+				}
+				
+				set_variable = {
+					weeks_waited_ic = -1
+				}
+				set_variable = {
+					block_it_fully = 0
+				}
+				add_to_variable = {
+					var = counter_imports 
+					value = 1
+				}
+			}
+		}
+	
+	################################################################################################################
+		
+		#Import la fonduri si bonusuri
+		
+		
+	################################################################################################################
+	MAN_slot_long = {
+		icon = GFX_decision_SOV_academy_of_sciences
+		available = { 
+			num_of_civilian_factories_available_for_projects > 2
+		} 
+		visible = {
+			
+			
+		}
+		modifier = {
+			civilian_factory_use = 2
+			consumer_goods_expected_value = 0.01
+		}
+ 		priority = 8
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 240
+
+		remove_effect = {
+
+			add_research_slot = 1
+			custom_effect_tooltip = MANspace
+			custom_effect_tooltip = done_only_one_man_tooltip
+			custom_effect_tooltip = MANspace
+		}
+	}
+	MAN_research_guns_short = {
+			icon = GFX_decision_generic_decision
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 2
+				
+				NOT =  {
+				 has_country_flag = MAN_731_flag			
+				 }
+			 } 
+
+			fire_only_once = yes
+
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_expected_value = 0.01
+			}
+			
+			cost = 35
+			days_remove = 150
+
+			complete_effect = {
+				set_country_flag = { flag = MAN_731_flag value = 1 days = 150 }
+			}
+			remove_effect = {
+
+					add_tech_bonus = {
+						bonus = 0.75
+						uses = 1
+						category = infantry_weapons
+						name = infantry_equipment
+					}
+					mio:JAP_tokyo_arsenal_organization = {
+						add_mio_funds = 2000
+						add_mio_funds_gain_factor = 0.06
+					}
+
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = done_only_one_man_tooltip
+					custom_effect_tooltip = MANspace
+				}
+		}
+
+		######shortarty
+		MAN_research_arty_short = {
+			icon = GFX_decision_generic_decision
+			available = { 
+
+				num_of_civilian_factories_available_for_projects > 2
+				
+				NOT =  {
+				 has_country_flag = MAN_731_flag			
+				 }
+
+			 } 
+
+
+			fire_only_once = yes
+
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_expected_value = 0.01
+			}
+
+			cost = 35
+			days_remove = 150
+
+			complete_effect = {
+				set_country_flag = { flag = MAN_731_flag value = 1 days = 150 }
+			   }
+			remove_effect = {
+
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = artillery
+					name = artillery
+				}
+
+				mio:JAP_osaka_army_arsenal_artillery_organization = {
+					add_mio_funds = 1500
+					add_mio_funds_gain_factor = 0.06
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = done_only_one_man_tooltip
+				custom_effect_tooltip = MANspace
+			}
+		}
+	####tankshort
+		MAN_research_tanks_short = {
+			icon = GFX_decision_generic_decision
+			available = {
+				num_of_civilian_factories_available_for_projects > 2
+				NOT =  {
+				 has_country_flag = MAN_731_flag			
+				 }
+			 } 
+
+
+			fire_only_once = yes
+
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_expected_value = 0.01
+			}
+	
+			cost = 35
+			days_remove = 150
+
+			complete_effect = {
+				set_country_flag = { flag = MAN_731_flag value = 1 days = 150 }
+			   }
+
+			   remove_effect = {
+
+				add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = armor
+					name = armor
+				}
+				mio:JAP_mech_fuckers = {
+					add_mio_funds = 1500
+					add_mio_funds_gain_factor = 0.06
+				}
+				mio:JAP_mitsu = {
+					add_mio_funds = 1500
+					add_mio_funds_gain_factor = 0.06
+				}
+				mio:JAP_osaka_army_arsenal_organization = {
+					add_mio_funds = 1500
+					add_mio_funds_gain_factor = 0.06
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = done_only_one_man_tooltip
+				custom_effect_tooltip = MANspace
+			}
+		}
+
+	}
+
+##################################
+
+##################################
+
+##################################
+
+
+MAN_research_unit_long_funded ={
+
+	MAN_slot = {
+			icon = GFX_decision_SOV_academy_of_sciences
+			available = { 
+				num_of_civilian_factories_available_for_projects > 2
+			} 
+			visible = {
+				
+				
+			}
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_expected_value = 0.01
+			}
+	priority = 8
+			fire_only_once = yes
+	
+			cost = 25
+			days_remove = 240
+
+			remove_effect = {
+	
+				add_research_slot = 1
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = done_only_one_man_tooltip
+				custom_effect_tooltip = MANspace
+			}
+		}
+ ##################
+		MAN_research_speed_long = {
+				icon = GFX_decision_generic_research
+				available = {
+					num_of_civilian_factories_available_for_projects > 1
+				 } 
+				 
+				visible = {
+					
+					
+				}
+				priority = 5
+				modifier = {
+					civilian_factory_use = 1
+
+				}
+	
+				fire_only_once = no
+		
+				cost = 15
+				days_remove = 60
+				days_re_enable = 30
+				complete_effect = {
+
+				   }
+				remove_effect = {
+					custom_effect_tooltip = MAN_the_death_of_china
+
+					add_to_variable = { MAN_kempeitai_var_research_speed_factor = +0.025 tooltip = research_speed_factor_tooltip }
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = repetition_30
+					custom_effect_tooltip = MANspace
+					
+
+			}
+		}
+
+			MAN_research_electric_long = {
+				icon = GFX_decision_generic_research
+	
+				available = { 
+					num_of_civilian_factories_available_for_projects > 2
+				} 
+				priority = 4
+				visible = {
+					
+				}
+	
+				fire_only_once = yes
+	
+				modifier = {
+					civilian_factory_use = 1
+					consumer_goods_expected_value = 0.01
+				}
+		
+				cost = 25
+				days_remove = 60
+
+				complete_effect = {
+				
+				   }
+				remove_effect = {
+
+					add_tech_bonus = {
+						bonus = 1.5
+						uses = 1
+						category = electronics
+						name = electronics
+					}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = done_only_one_man_tooltip
+					custom_effect_tooltip = MANspace
+					
+		}
+	}
+		
+
+	MAN_research_guns_long = {
+		icon = generic_industry
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = MAN_need_research_speed
+						MAN = {
+							check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.18 compare = greater_than_or_equals }
+						}
+					}
+					num_of_civilian_factories_available_for_projects > 1
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					}
+
+				 } 
+				visible = {
+					check_variable = {
+						inf1 < 2
+					}
+				}
+	
+				fire_only_once = no
+	
+				modifier = {
+					civilian_factory_use = 2
+				}
+
+				days_remove = 90
+				days_re_enable = 1
+
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 101 }
+				}
+				remove_effect = {
+
+						add_tech_bonus = {
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							name = infantry_equipment
+						}
+						custom_effect_tooltip = MANspace
+						mio:JAP_tokyo_arsenal_organization = {
+							add_mio_funds_gain_factor = 0.04
+							add_mio_funds = 750
+						}
+				
+					add_to_variable = { MAN_731_infantry = +1}
+					add_to_variable = { inf1 = +1}
+
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = repetition_double_30
+					custom_effect_tooltip = MANspace
+					}
+				
+			}
+			MAN_advance_guns_long = {
+				icon = generic_industry
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = MAN_need_research_speed2
+						MAN = {
+							check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.10 compare = greater_than_or_equals }
+						}
+					}
+					num_of_civilian_factories_available_for_projects > 2
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+
+					NOT = {
+						check_variable = {
+							MAN_731_infantry < 2
+						}
+					 }
+				 } 
+				visible = {
+					
+					
+				}
+	
+				fire_only_once = yes
+	
+				modifier = {
+					civilian_factory_use = 3
+
+				}
+				
+				days_remove = 150
+				days_re_enable = 1
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 151 }
+				   }
+
+				remove_effect = {
+
+						add_tech_bonus = {
+							bonus = 0.75
+							uses = 1
+							ahead_reduction = 0.5
+							category = infantry_weapons
+							name = infantry_equipment
+						}
+						custom_effect_tooltip = MANspace
+						mio:JAP_tokyo_arsenal_organization = {
+							add_mio_funds_gain_factor = 0.06
+							add_mio_funds = 1200
+						}
+
+					add_to_variable = { MAN_731_elites_inf = +1}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = MAN_retardism_for_retards
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = done_only_one_man_tooltip
+					custom_effect_tooltip = MANspace
+					}
+				
+			}
+			MAN_elite_manchurians= {#3
+				icon = generic_industry
+				available = { 
+					custom_trigger_tooltip = {
+						tooltip = MAN_need_research_speed4
+						MAN = {
+							check_variable = { var = MAN_kempeitai_var_research_speed_factor value = 0.00 compare = greater_than_or_equals }
+						}
+					}
+					OR = {has_completed_focus = MAN_special_forces_3 has_completed_focus = MAN_frontline_infantry_3 }
+					num_of_civilian_factories_available_for_projects > 4
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+					 check_variable = {
+						MAN_731_elites_inf = 1
+					}
+
+					
+				 } 
+				visible = {
+					
+					
+				}
+	
+				fire_only_once = yes
+	
+				modifier = {
+					civilian_factory_use = 5
+
+				}
+				
+				days_remove = 210
+				days_re_enable = 1
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 201 }
+				   }
+				remove_effect = {
+
+						add_tech_bonus = {
+							bonus = 1
+							uses = 1
+							ahead_reduction = 1.0
+							category = infantry_weapons
+							name = infantry_equipment
+						}
+						custom_effect_tooltip = MANspace
+						mio:JAP_tokyo_arsenal_organization = {
+							add_mio_funds_gain_factor = 0.12
+							add_mio_size = 1
+						}
+						custom_effect_tooltip = MANspace
+						custom_effect_tooltip = MAN_retardism
+						custom_effect_tooltip = MANspace
+
+					}
+				
+			}
+
+ ################################################################################################################
+			MAN_research_arty_long = {#1
+				icon = GFX_decision_generic_merge_plant_materiel
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = MAN_need_research_speed
+						MAN = {
+							check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.18 compare = greater_than_or_equals }
+						}
+					}
+					num_of_civilian_factories_available_for_projects > 1
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+				 } 
+				visible = {
+					check_variable = {
+						art1 < 2
+					}
+				}
+	
+				fire_only_once = no
+	
+				modifier = {
+					civilian_factory_use = 2
+				}
+
+
+				days_remove = 90
+				days_re_enable = 1
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 101 }
+				   }
+				remove_effect = {
+
+					add_tech_bonus = {
+						bonus = 0.50
+						uses = 1
+						category = artillery
+						name = artillery
+					}
+					custom_effect_tooltip = MANspace
+					mio:JAP_osaka_army_arsenal_artillery_organization = {
+						add_mio_funds_gain_factor = 0.04
+						add_mio_funds = 750
+					}
+
+					add_to_variable = { MAN_731_arty = +1}
+					add_to_variable = { art1 = +1}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = repetition_double_30
+					custom_effect_tooltip = MANspace
+				}
+			}
+			MAN_advanced_arty = {#2
+				icon = GFX_decision_generic_merge_plant_materiel
+				available = {
+						custom_trigger_tooltip = {
+							tooltip = MAN_need_research_speed2
+							MAN = {
+								check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.10 compare = greater_than_or_equals }
+							}
+						}
+					num_of_civilian_factories_available_for_projects > 2
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+
+					NOT = {
+						check_variable = {
+							MAN_731_arty < 2
+						}
+					 }
+				 } 
+				visible = {
+					
+					
+				}
+	
+				fire_only_once = yes
+
+				modifier = {
+					civilian_factory_use = 3
+
+				}
+
+				days_remove = 150
+				days_re_enable = 1
+
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 151 }
+				   }
+				remove_effect = {
+
+					add_tech_bonus = {
+						bonus = 0.75
+						uses = 1
+						ahead_reduction = 0.5
+						category = artillery
+						name = artillery
+					}
+					custom_effect_tooltip = MANspace
+					add_tech_bonus = {
+						bonus = 0.75
+						uses = 1
+						ahead_reduction = 0.5
+						category = rocketry
+						name = artillery
+					}
+					custom_effect_tooltip = MANspace
+					mio:JAP_osaka_army_arsenal_artillery_organization = {
+						add_mio_funds_gain_factor = 0.06
+						add_mio_funds = 1200
+					}
+					add_to_variable = { MAN_731_elites = +1}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = MAN_retardism_for_retards
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = done_only_one_man_tooltip
+					custom_effect_tooltip = MANspace
+					}
+				
+			}
+			MAN_rocketa= {#3
+				icon = GFX_decision_generic_merge_plant_materiel
+				available = {
+						custom_trigger_tooltip = {
+							tooltip = MAN_need_research_speed4
+							MAN = {
+								check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.10 compare = greater_than_or_equals }
+							}
+						}
+					OR = {has_completed_focus = MAN_frontline_infantry_le_74 has_completed_focus = MAN_frontline_special_tard_special has_completed_focus = MAN_tank_mech_foc }
+					num_of_civilian_factories_available_for_projects > 4
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+
+						check_variable = {
+							MAN_731_elites = 1
+						}
+
+				 } 
+				visible = {
+					
+					
+				}
+	
+				fire_only_once = yes
+	
+				modifier = {
+					civilian_factory_use = 5
+
+				}
+				
+				days_remove = 210
+				days_re_enable = 1
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 201 }
+				   }
+				
+				remove_effect = {
+
+						add_tech_bonus = {
+							bonus = 1
+							uses = 1
+							ahead_reduction = 1
+							category = rocketry
+						}
+						custom_effect_tooltip = MANspace
+						add_tech_bonus = {
+							bonus = 1
+							uses = 1
+							ahead_reduction = 1
+							category = artillery
+						}
+						custom_effect_tooltip = MANspace
+						mio:JAP_osaka_army_arsenal_artillery_organization = {
+						add_mio_funds_gain_factor = 0.12
+						add_mio_size = 1
+						}
+						custom_effect_tooltip = MANspace
+						custom_effect_tooltip = MAN_retardism
+						custom_effect_tooltip = MANspace
+
+					}
+				
+			}
+
+
+ #######################################################################
+			MAN_research_tanks_long = {#1
+				icon = GFX_decision_generic_merge_plant_tank
+				available = {
+						custom_trigger_tooltip = {
+							tooltip = MAN_need_research_speed
+							MAN = {
+								check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.18 compare = greater_than_or_equals }
+							}
+						}
+					num_of_civilian_factories_available_for_projects > 1
+					has_completed_focus = MAN_amph_tank_focus_fuckers_2
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+				 } 
+				visible = {
+					check_variable = {
+						tnk1 < 2
+					}
+				}
+	
+				fire_only_once = no
+	
+				modifier = {
+					civilian_factory_use = 2
+
+				}
+
+				days_remove = 90
+				days_re_enable = 1
+
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 101 }
+				   }
+
+				   remove_effect = {
+
+					add_tech_bonus = {
+						bonus = 0.50
+						uses = 1
+						category = tank_upgrade
+					}
+					custom_effect_tooltip = MANspace
+					add_tech_bonus = {
+						bonus = 0.50
+						uses = 1
+						category = armor
+					}
+					custom_effect_tooltip = MANspace
+					mio:JAP_mitsu = {
+						add_mio_funds = 750
+						add_mio_funds_gain_factor = 0.04
+					}
+					mio:JAP_osaka_army_arsenal_organization = {
+						add_mio_funds = 750
+						add_mio_funds_gain_factor = 0.04
+					}
+		
+					add_to_variable = { MAN_731_tank = +1}
+					add_to_variable = { tnk1 = +1}
+
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = repetition_double_30
+					custom_effect_tooltip = MANspace
+				}
+			}
+
+			MAN_advanced_tanks = {#2
+				icon = GFX_decision_generic_merge_plant_tank
+				available = { 
+						custom_trigger_tooltip = {
+							tooltip = MAN_need_research_speed2
+							MAN = {
+								check_variable = { var = MAN_kempeitai_var_research_speed_factor value = -0.10 compare = greater_than_or_equals }
+							}
+						}
+					has_completed_focus = MAN_amph_tank_focus_fuckers_2
+					num_of_civilian_factories_available_for_projects > 2
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+					 NOT = {
+						check_variable = {
+							MAN_731_tank < 2
+						}
+					 }
+				 } 
+				visible = {
+					
+					
+				}
+	
+				fire_only_once = yes
+	
+				modifier = {
+					civilian_factory_use = 3
+				}
+				
+				days_remove = 150
+				days_re_enable = 1
+
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 151 }
+				   }
+				remove_effect = {
+
+					add_tech_bonus = {
+						bonus = 0.75
+						uses = 1
+						category = armor
+					}
+					custom_effect_tooltip = MANspace
+					add_tech_bonus = {
+						bonus = 0.75
+						uses = 1
+						category = tank_upgrade
+					}
+					custom_effect_tooltip = MANspace
+					mio:JAP_mitsu = {
+						add_mio_funds = 1200
+						add_mio_funds_gain_factor = 0.06
+					}
+					mio:JAP_osaka_army_arsenal_organization = {
+						add_mio_funds = 1200
+						add_mio_funds_gain_factor = 0.06
+					}
+
+					add_to_variable = { MAN_731_elites_tank = +1}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = MAN_retardism_for_retards
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = done_only_one_man_tooltip
+					custom_effect_tooltip = MANspace
+					}
+				
+			}
+			MAN_elite_tanks= {#3
+				icon = GFX_decision_generic_merge_plant_tank
+				available = { 
+						custom_trigger_tooltip = {
+							tooltip = MAN_need_research_speed4
+							MAN = {
+								check_variable = { var = MAN_kempeitai_var_research_speed_factor value = 0.00 compare = greater_than_or_equals }
+							}
+						}
+					OR = {has_completed_focus = MAN_special_forces_3 has_completed_focus = MAN_frontline_infantry_3 }
+					num_of_civilian_factories_available_for_projects > 4
+					NOT =  {
+					 has_country_flag = MAN_731_flag			
+					 }
+					 check_variable = {
+						MAN_731_elites_tank = 1
+					}
+
+				 } 
+				visible = {
+					
+					
+				}
+	
+				fire_only_once = yes
+	
+				modifier = {
+					civilian_factory_use = 5
+
+				}
+				
+				days_remove = 210
+				days_re_enable = 1
+
+				complete_effect = {
+					set_country_flag = { flag = MAN_731_flag value = 1 days = 201 }
+				   }
+				
+				remove_effect = {
+
+						add_tech_bonus = {
+							bonus = 1
+							uses = 1
+							ahead_reduction = 1
+							category = armor
+						}
+						custom_effect_tooltip = MANspace
+						add_tech_bonus = {
+							bonus = 1
+							uses = 1
+							ahead_reduction = 1
+							category = tank_upgrade
+						}
+						custom_effect_tooltip = MANspace
+						mio:JAP_mitsu = {
+							add_mio_funds_gain_factor = 0.12
+							add_mio_size = 1
+						}
+						mio:JAP_osaka_army_arsenal_organization = {
+							add_mio_funds_gain_factor = 0.12
+							add_mio_size = 1
+						}
+						custom_effect_tooltip = MANspace
+						custom_effect_tooltip = MAN_retardism
+						custom_effect_tooltip = MANspace
+
+					}
+				
+			}
+		}
+
+#######################################################################
+
+Exports_to_japan ={
+		Develop_air_fatory_center_2 ={
+			icon = GFX_decision_generic_merge_plant_aircraft
+
+			available = {
+				always = no
+			}
+
+			fire_only_once = yes
+			days_remove = 90
+
+			modifier = {
+				consumer_goods_expected_value = 0.01
+				civilian_factory_use = 1
+			}
+			remove_effect = {
+				hidden_effect = {
+					clr_country_flag = cope
+				} 
+			}
+			complete_effect = {
+				set_country_flag = { flag = Develop_air_fatory_center value = 1 days = 60 }
+				set_country_flag = air_production
+				hidden_effect = {
+					set_country_flag= cope
+				} 
+
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = air_production_generic_top_tooltip
+					custom_effect_tooltip = air_production_small_1
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = if_expanded
+					custom_effect_tooltip = MANspace
+				
+			}
+		}
+		Develop_air_fatory_center_3 ={
+			icon = GFX_decision_generic_merge_plant_aircraft
+
+			available = {
+				always = no
+			}
+
+			fire_only_once = yes
+			days_remove = 90
+
+			modifier = {
+				consumer_goods_expected_value = 0.01
+				civilian_factory_use = 1
+			}
+			remove_effect = {
+				hidden_effect = {
+					clr_country_flag = cope
+				} 
+			}
+			complete_effect = {
+				set_country_flag = { flag = Develop_air_fatory_center value = 1 days = 60 }
+				set_country_flag = air_production_2
+				hidden_effect = {
+					set_country_flag= cope
+				} 
+			IF = {
+				limit = {
+					NOT= {has_completed_focus = MAN_bomber_modernization}
+				}
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = air_production_generic_top_tooltip
+				custom_effect_tooltip = air_production_small_2
+
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = if_expanded
+				custom_effect_tooltip = MANspace
+				else_if = {
+					limit = { has_completed_focus = MAN_bomber_modernization }
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = air_production_generic_top_tooltip
+					custom_effect_tooltip = air_production_small_2
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = air_production_small_1_cas
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = if_expanded
+					custom_effect_tooltip = MANspace
+				}
+			}
+			}
+		}
+		Develop_air_fatory_center_4 ={
+			icon = GFX_decision_generic_merge_plant_aircraft
+
+			available = {
+				always = no
+			}
+
+			fire_only_once = yes
+			days_remove = 90
+
+			modifier = {
+				consumer_goods_expected_value = 0.01
+				civilian_factory_use = 1
+			}
+			remove_effect = {
+				hidden_effect = {
+					clr_country_flag = cope
+				} 
+			}
+			complete_effect = {
+				set_country_flag = { flag = Develop_air_fatory_center value = 1 days = 60 }
+				set_country_flag = air_production_heavies
+				hidden_effect = {
+					set_country_flag= cope
+				} 
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = air_production_generic_top_tooltip
+				custom_effect_tooltip = air_production_large_1
+				custom_effect_tooltip = MANspace
+				custom_effect_tooltip = if_expanded
+				custom_effect_tooltip = MANspace
+			}
+		}
+		Develop_air_fatory_center_5 ={
+			icon = GFX_decision_generic_merge_plant_aircraft
+
+			available = {
+				always = no
+			}
+
+			fire_only_once = yes
+			days_remove = 90
+
+			modifier = {
+				consumer_goods_expected_value = 0.01
+				civilian_factory_use = 1
+			}
+			remove_effect = {
+				hidden_effect = {
+					clr_country_flag = cope
+				} 
+			}
+			complete_effect = {
+				set_country_flag = { flag = Develop_air_fatory_center value = 1 days = 60 }
+				set_country_flag = air_production_tac
+				hidden_effect = {
+					set_country_flag= cope
+				} 
+				IF = {
+					limit = {
+						NOT= {has_completed_focus = MAN_bomber_modernization}
+					}
+					custom_effect_tooltip = MANspace
+					custom_effect_tooltip = air_production_generic_top_tooltip
+					custom_effect_tooltip = air_production_large_2
+					custom_effect_tooltip = MANspace
+
+					custom_effect_tooltip = if_expanded
+					custom_effect_tooltip = MANspace
+					else_if = {
+						limit = { has_completed_focus = MAN_bomber_modernization }
+						custom_effect_tooltip = MANspace
+						custom_effect_tooltip = air_production_generic_top_tooltip
+						custom_effect_tooltip = air_production_large_2
+						custom_effect_tooltip = MANspace
+						custom_effect_tooltip = air_production_large_2_cas
+						custom_effect_tooltip = MANspace
+						custom_effect_tooltip = if_expanded
+						custom_effect_tooltip = MANspace
+					}
+				}
+			}
+		}
+
+
+		MAN_export_planes = {
+
+			icon = generic_air
+
+			available = {
+				tag = MAN
+				has_completed_focus = MAN_fighter_modernization
+				NOT = {	has_completed_focus = MAN_agility_focus }
+				NOT =  {
+					has_country_flag = Develop_air_fatory_center			
+				}
+			}
+			visible = {
+				country_exists = JAP
+				is_in_faction_with = JAP
+
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+
+			selectable_mission = no
+			days_mission_timeout = 120
+			is_good = no
+			fire_only_once = no
+
+			days_remove = 120
+
+			activation = {
+				has_completed_focus = MAN_fighter_modernization
+				NOT = {	has_completed_focus = MAN_agility_focus }
+				NOT = {
+					has_country_flag = Develop_air_fatory_center 
+				}
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+
+			cancel_trigger = {
+				OR = {
+					has_country_flag = Develop_air_fatory_center 
+					NOT= {
+						controls_state = 715
+						controls_state = 716
+					}					
+				}
+
+			}
+			remove_effect = {
+				add_cic = 15000
+				if = {
+					limit = {
+						NOT = { has_country_flag = air_production }
+						NOT = { has_country_flag = air_production_2 }
+						NOT = {has_completed_focus = MAN_bomber_modernization}
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = small_plane_airframe
+							amount = 50
+							producer = JAP
+						}
+					}							
+				}
+				if = {
+					limit = {
+						has_country_flag = air_production
+						NOT = { has_country_flag = air_production_2 }
+						NOT = {has_completed_focus = MAN_bomber_modernization}
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = small_plane_airframe
+							amount = 80
+							producer = JAP
+						}
+					}								
+				}
+				else_if = {
+					limit = {
+						has_country_flag = air_production
+						NOT = { has_country_flag = air_production_2 }
+						has_completed_focus = MAN_bomber_modernization
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = small_plane_airframe
+							amount = 80
+							producer = JAP
+						}
+						add_equipment_to_stockpile = {
+							type = small_plane_cas_airframe
+							amount = 40
+							producer = JAP
+						}
+					}							
+				}
+				if = {
+					limit = {
+						has_country_flag = air_production
+						has_country_flag = air_production_2
+						NOT = {has_completed_focus = MAN_bomber_modernization}
+						
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = small_plane_airframe
+							amount = 110
+							producer = JAP
+						}
+					}								
+				}
+				else_if = {
+					limit = {
+						has_country_flag = air_production
+						has_country_flag = air_production_2
+						has_completed_focus = MAN_bomber_modernization
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = small_plane_airframe
+							amount = 110
+							producer = JAP
+						}
+						add_equipment_to_stockpile = {
+							type = small_plane_cas_airframe
+							amount = 60
+							producer = JAP
+						}
+					}							
+				}
+			}
+		}
+
+		MAN_export_planes_heavies = {
+
+			icon = GFX_decision_eng_puppet_usa
+
+			available = {
+				tag = MAN
+				has_completed_focus = MAN_fighter_modernization
+				NOT =  {
+					has_country_flag = Develop_air_fatory_center			
+				}
+			}
+			visible = {
+				country_exists = JAP
+				is_in_faction_with = JAP
+
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+
+			selectable_mission = no
+			days_mission_timeout = 120
+			is_good = no
+			fire_only_once = no
+
+			days_remove = 120
+
+			activation = {
+				has_completed_focus = MAN_agility_focus
+				NOT = {
+					has_country_flag = Develop_air_fatory_center 
+				}
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.2
+			}
+
+			cancel_trigger = {
+				OR = {
+
+					NOT= {
+						controls_state = 715
+						controls_state = 716
+					}					
+				}
+
+			}
+			remove_effect = {
+				add_cic = 25000
+				if = {
+					limit = {
+						has_country_flag = air_production_heavies
+						NOT = { has_country_flag = air_production_tac }
+						NOT = {has_completed_focus = MAN_bomber_modernization}
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = medium_plane_fighter_airframe
+							amount = 40
+							producer = JAP
+						}
+					}								
+				}
+				else_if = {
+					limit = {
+						has_country_flag = air_production_heavies
+						NOT = { has_country_flag = air_production_tac }
+						has_completed_focus = MAN_bomber_modernization
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = medium_plane_fighter_airframe
+							amount = 40
+							producer = JAP
+						}
+						add_equipment_to_stockpile = {
+							type = medium_plane_airframe
+							amount = 20
+							producer = JAP
+						}
+					}							
+				}
+				if = {
+					limit = {
+						has_country_flag = air_production_heavies
+						has_country_flag = air_production_tac
+						NOT = {has_completed_focus = MAN_bomber_modernization}
+						
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = medium_plane_fighter_airframe
+							amount = 60
+							producer = JAP
+						}
+					}								
+				}
+				else_if = {
+					limit = {
+						has_country_flag = air_production_heavies
+						has_country_flag = air_production_tac
+						has_completed_focus = MAN_bomber_modernization
+					}
+					JAP = {
+						add_equipment_to_stockpile = {
+							type = medium_plane_fighter_airframe
+							amount = 60
+							producer = JAP
+						}
+						add_equipment_to_stockpile = {
+							type = medium_plane_airframe
+							amount = 40
+							producer = JAP
+						}
+					}							
+				}
+			}
+		}
+
+	}
+
+	

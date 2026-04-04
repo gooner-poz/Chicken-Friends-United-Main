@@ -1,0 +1,23 @@
+
+state = {
+	id = 462
+	name = "STATE_462"
+	manpower = 1865552
+	
+	state_category = wasteland
+
+	history = {
+		owner = FRA
+		add_core_of = SEN
+		victory_points = {
+			13603 6
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		1102 1152 1207 1989 4022 4108 4154 4933 5046 7203 7908 7958 8046 10107  1111 13595 13596 13606 13605 13603 13604 13602 4139 7116 13316 13300 12140
+	}
+}

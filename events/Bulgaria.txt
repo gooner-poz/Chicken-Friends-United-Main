@@ -1,0 +1,335 @@
+﻿###########################
+# Bulgarian Events
+###########################
+
+add_namespace = bulgaria
+
+# Treaty of Craiova - Romania Accepts
+country_event = {
+	id = bulgaria.1
+	title = bulgaria.1.t
+	desc = bulgaria.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.1.a
+		
+		if = {
+			limit = {
+				BUL = {
+					exists = yes 
+				}
+			}
+			BUL = { 
+				transfer_state = 77
+			}
+		}
+		if = {
+			limit = {
+				77 = { is_core_of = ROM }
+				BUL = {
+					exists = yes 
+				}
+			}
+			ROM = {
+				remove_state_core = 77
+			}
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = news.21 }
+		}
+	}
+}
+
+# Treaty of Craiova - Romania Refuses
+country_event = {
+	id = bulgaria.2
+	title = bulgaria.2.t
+	desc = bulgaria.2.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.2.a
+		create_wargoal = {
+			type = take_state_focus
+			target = ROM
+			generator = { 77 }
+		}
+		#generate wargoal for romania
+	}
+}
+
+# Bulgaria (First Ljubljana Award) from german focus
+country_event = {
+	id = bulgaria.3
+	title = bulgaria.3.t
+	desc = bulgaria.3.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.3.a
+		if = {
+			limit = {
+				OR = {
+					106 = { is_owned_by = YUG }
+					106 = { is_owned_by = GER }
+					803 = { is_owned_by = YUG }
+					803 = { is_owned_by = GER }
+				}
+			}
+			transfer_state = 106
+			transfer_state = 803
+		}
+	}
+}
+
+# Treaty of Craiova - Hungary gets land. So should we
+#country_event = {
+#	id = bulgaria.4
+#	title = bulgaria.4.t
+#	desc = bulgaria.4.d
+#	picture = GFX_report_event_vienna_award_negotiations
+#	
+#	trigger = {
+#		tag = BUL
+#		NOT = { has_country_flag = bulgaria.4_fired }
+#		BUL = {
+#			NOT = { is_in_faction_with = ROM }
+#		}
+#		BUL = {
+#			NOT = { is_subject_of = ROM }
+#		}
+#		ROM = {
+#			OR = { 
+#				has_country_flag = second_vienna_accepted_north
+#				has_country_flag = second_vienna_accepted_all
+#			}
+#		}
+#	}
+#
+#	mean_time_to_happen = { days = 5 } 
+#	
+#	immediate = { set_country_flag = bulgaria.4_fired	}
+#
+#	#make demands
+#	option = {
+#		ai_chance = { factor = 10 }
+#		name = bulgaria.4.a
+#	}	
+#	#dont make demands
+#	option = {
+#		ai_chance = { factor = 0 }
+#		name = bulgaria.4.b
+#	}
+#}
+
+# Treaty of Craiova - Germany will not back us
+#country_event = {
+#	id = bulgaria.5
+#	title = bulgaria.5.t
+#	desc = bulgaria.5.d
+#	picture = GFX_report_event_vienna_award_negotiations
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = bulgaria.5.a
+#	}
+#}
+
+country_event = {
+	id = bulgaria.6
+	title = bulgaria.6.t
+	desc = bulgaria.6.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.6.a
+		army_experience = 50
+		if = {
+			limit = {
+				BUL = {
+					exists = yes 
+				}
+			}
+			BUL = { 
+				transfer_state = 106
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = bulgaria.7
+	title = bulgaria.7.t
+	desc = bulgaria.7.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.7.a	
+		army_experience = 25		
+	}
+}
+
+country_event = {
+	id = bulgaria.8
+	title = bulgaria.8.t
+	desc = bulgaria.8.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.8.a
+		army_experience = 25
+		set_country_flag = { flag = BUL_border_flag_2 value = 1 }		
+	}
+}
+
+country_event = {
+	id = bulgaria.9
+	title = bulgaria.9.t
+	desc = bulgaria.9.d
+	picture = GFX_report_event_DEN_german_tanks
+
+	is_triggered_only = yes
+	option = {
+		name = britain.51.a	
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis 
+			producer = BUL 
+			amount = 200 #300
+		}	
+	}	
+	option = {
+		name = britain.51.b	
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis
+			producer = BUL  
+			amount = 100 #300
+		}
+	
+	}
+	option = {
+		name = britain.51.c	
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis
+			producer = BUL  
+			amount = 50 #200
+		}
+	}
+}
+
+country_event = {
+	id = bulgaria.10
+	title = bulgaria.6.t
+	desc = bulgaria.6.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.10.a
+		army_experience = 50
+		if = {
+			limit = {
+				BUL = {
+					exists = yes 
+				}
+			}
+			BUL = { 
+				transfer_state = 184
+			}
+		}			
+	}
+}
+
+country_event = {
+	id = bulgaria.11
+	title = bulgaria.8.t
+	desc = bulgaria.8.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.8.a
+		army_experience = 25
+		set_country_flag = { flag = BUL_border_flag_3 value = 1 }		
+	}
+}
+
+country_event = {
+	id = bulgaria.12
+	title = bulgaria.8.t
+	desc = bulgaria.8.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.8.a
+		army_experience = 25
+		set_country_flag = { flag = BUL_border_flag_4 value = 1 }		
+	}
+}
+
+country_event = {
+	id = bulgaria.13
+	title = bulgaria.7.t
+	desc = bulgaria.7.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.7.a	
+		country_event = { days = 10 id = bulgaria.11 }		
+	}
+}
+
+country_event = {
+	id = bulgaria.14
+	title = bulgaria.7.t
+	desc = bulgaria.7.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.14.a	
+		country_event = { days = 10 id = bulgaria.12 }		
+	}
+}
+
+country_event = {
+	id = bulgaria.15
+	title = bulgaria.6.t
+	desc = bulgaria.6.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.15.a
+		army_experience = 50
+		add_political_power = 50	
+	}
+}
+
+country_event = {
+	id = bulgaria.16
+	title = bulgaria.7.t
+	desc = bulgaria.7.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	option = {
+		name = bulgaria.16.a	
+		army_experience = 25		
+	}
+}

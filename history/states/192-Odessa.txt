@@ -1,0 +1,43 @@
+
+state = {
+	id = 192
+	name = "STATE_192"
+	manpower = 1469986
+
+	state_category = city
+
+	history = {
+		set_state_flag = SOV_UKR
+		owner = SOV
+		victory_points = {
+			13438 10 
+		}
+		victory_points = {
+			741 2 
+		}
+		victory_points = {
+			3757 2 
+		}
+		buildings = {
+			infrastructure = 9
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 6
+			13438 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+		}
+		add_core_of = SOV
+		
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+	}
+
+	provinces = {
+		741 754 3575 3738 3757 9698 9714 11670 11703 9423 9435 9576 6455 13438
+	}
+}

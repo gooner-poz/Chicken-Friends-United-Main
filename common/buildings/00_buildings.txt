@@ -1,0 +1,664 @@
+buildings = {
+
+	# show_on_map:
+	#    if provincial = yes, then show_on_map = X is amount per each province
+	#    if provincial = no, then show_on_map = X is amount per state
+
+	supply_node = {
+		show_on_map = 1
+		base_cost = 14000
+	
+		disabled_in_dmz = yes
+		icon_frame = 16
+		
+		centered = yes
+		supply_node = yes
+		infrastructure_construction_effect = yes
+		damage_factor = 0.1
+		allied_build = yes
+		always_shown = yes
+		level_cap = {
+			province_max = 1
+		}
+	}
+	rail_way = {
+		base_cost = 600
+		per_level_extra_cost = 150
+		damage_factor = 0.05
+		
+		disabled_in_dmz = yes
+		infrastructure_construction_effect = yes
+		icon_frame = 17
+		level_cap = {
+			province_max = 1
+		}
+	}
+
+	infrastructure = {
+		base_cost = 1600
+		per_level_extra_cost = 200
+		icon_frame = 3
+		infrastructure = yes
+		value = 1
+		show_modifier = yes
+		damage_factor = 0.65
+		allied_build = yes
+		level_cap = {
+			state_max = 10
+		}
+		country_modifiers = {
+			modifiers = {
+				max_fuel_building = 0.75 #k
+			}
+		}
+	}
+	
+	arms_factory = {
+		show_on_map = 6
+		base_cost = 8400
+		base_cost_conversion = 5700
+		military_production = 1
+		icon_frame = 2
+		tags = { military_factories }
+
+		value = 0.5
+		infrastructure_construction_effect = yes
+		damage_factor = 2
+		level_cap = {
+			shares_slots = yes
+			state_max = 99
+		}
+	}
+	industrial_complex = {
+		show_on_map = 6
+		base_cost = 11500
+		base_cost_conversion = 6500
+		general_production = 1
+		icon_frame = 1
+		tags = { civilian_factories }
+	
+		value = 0.5
+		infrastructure_construction_effect = yes
+		damage_factor = 2
+		level_cap = {
+			shares_slots = yes
+			state_max = 99
+		}
+	}
+
+	air_base = {
+		show_on_map = 1
+		base_cost = 2000
+		icon_frame = 5
+		air_base = yes
+		value = 1
+		damage_factor = 0.07
+		infrastructure_construction_effect = yes
+		allied_build = yes
+		level_cap = {
+			
+			state_max = 25
+		}
+	}
+	
+	naval_base = {
+		show_on_map = 1
+		show_on_map_meshes = 3
+		always_shown = yes
+		base_cost = 13000
+		per_level_extra_cost = -1000
+		spawn_point = naval_base_spawn 
+		only_costal = yes
+		is_port = yes
+		icon_frame = 6
+		value = 1
+		damage_factor = 0.3
+		infrastructure_construction_effect = yes
+		allied_build = yes
+		level_cap = {
+			province_max = 15
+		}
+	}
+
+	bunker = {
+		show_on_map = 1
+		has_destroyed_mesh = yes
+		base_cost = 3000
+		per_level_extra_cost = 400
+		disabled_in_dmz = yes
+		icon_frame = 7
+		land_fort = 1
+		value = 1
+		damage_factor = 0.2
+		infrastructure_construction_effect = yes
+		allied_build = yes
+		level_cap = {
+			province_max = 15
+		}
+	}
+
+	coastal_bunker = {
+		show_on_map = 1
+		has_destroyed_mesh = yes
+		base_cost = 3000
+		per_level_extra_cost = 400
+		
+		disabled_in_dmz = yes
+		only_costal = yes
+		icon_frame = 8
+		naval_fort = 1
+		value = 1
+		damage_factor = 0.4
+		infrastructure_construction_effect = yes
+		allied_build = yes
+		level_cap = {
+			province_max = 60
+		}
+		
+	}
+	dockyard = {
+		show_on_map = 1
+		show_on_map_meshes = 3
+		base_cost = 6000
+		only_costal = yes
+		naval_production = 1
+		icon_frame = 4
+		only_costal = yes
+		tags = { military_dockyards }
+		
+		value = 4
+		damage_factor = 3
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 60
+		}
+	}
+	
+	anti_air_building = {
+		show_on_map = 3
+		base_cost = 2000
+		per_level_extra_cost = 400
+		icon_frame = 9
+		anti_air = yes
+		disabled_in_dmz = yes
+		air_defence = 1
+		damage_factor = 0.1
+		value = 5
+		infrastructure_construction_effect = yes
+		allied_build = yes
+		level_cap = {
+			state_max = 10
+		}
+	}
+	
+	synthetic_refinery = {
+		show_on_map = 1
+	    base_cost = 16000
+		icon_frame = 10
+	    refinery = yes
+	
+		value = 5
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+		
+		damage_factor = 1
+		level_cap = {
+			shares_slots = no
+			state_max = 3
+		}
+		country_modifiers = {
+			modifiers = {
+				fuel_gain_from_states = 7.5
+			}
+		}
+	}
+	synthetic_rubber_refinery = {
+		show_on_map = 1
+		base_cost = 14000
+		icon_frame = 11
+		refinery = yes
+		local_resources_rubber = 15	 
+		value = 5
+		infrastructure_construction_effect = yes
+		damage_factor = 0.05
+		level_cap = {
+			shares_slots = no
+			state_max = 3
+		}
+	
+	}
+	fuel_silo = {
+		show_on_map = 1
+		base_cost = 3000
+		icon_frame = 15				 
+		#max_level = 1
+		
+		value = 5
+		infrastructure_construction_effect = yes
+		fuel_silo = yes
+		show_modifier = yes
+		damage_factor = 0.05	
+		country_modifiers = {
+			modifiers = {
+				max_fuel_building = 45.0 #k
+			}
+		}
+		
+		level_cap = {
+			shares_slots = yes
+		}
+	}
+	
+	radar_station = {
+		show_on_map = 1
+		base_cost = 2800
+		per_level_extra_cost = 500
+		icon_frame = 12
+		radar = yes
+	
+		damage_factor = 0.05
+		value = 4
+		infrastructure_construction_effect = yes
+		allied_build = yes
+		level_cap = {
+			state_max = 5
+		}
+	}
+
+	rocket_site = {
+		show_on_map = 1
+		base_cost = 4000
+		icon_frame = 13
+		rocket_production = 0
+		rocket_launch_capacity = 2
+		hide_if_missing_tech = yes
+		value = 1
+		tags = {}
+		
+		infrastructure_construction_effect = yes
+		disabled_in_dmz = yes
+		spawn_point = rocket_site_spawn
+		level_cap = {
+			state_max = 3
+			shares_slots = yes
+			exclusive_with = mega_gun_emplacement
+			
+		}
+	}
+
+	nuclear_reactor = {
+		hide_if_missing_tech = yes
+		missing_tech_loc = { 
+			localization_key = SP_BUILDING_MISSING_PROJECT
+			PROJECT = sp_nuclear_reactor
+		}
+		spawn_point = nuclear_reactor_spawn
+		show_on_map = 1
+		base_cost = 50000
+		per_controlled_building_extra_cost = 15000
+		icon_frame = 14
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		nuclear_reactor = yes
+		value = 10
+		tags = { specialization_nuclear }
+		infrastructure_construction_effect = yes
+
+		country_modifiers = {
+			modifiers = {
+				nuclear_production_factor = 5
+				sp_nuclear_bomb_speed_factor = 0.05
+				sp_thermo_nuclear_bomb_speed_factor = 0.05
+				thermonuclear_production_factor = 4
+			}
+		}
+
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			group_by = reactors
+		}
+	}
+	nuclear_reactor_heavy_water = {
+		hide_if_missing_tech = yes
+		missing_tech_loc = { 
+			localization_key = SP_BUILDING_MISSING_PROJECT
+			PROJECT = sp_nuclear_reactor
+		}
+		spawn_point = nuclear_reactor_spawn
+		show_on_map = 1
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		base_cost = 40000
+		per_controlled_building_extra_cost = 15000
+		icon_frame = 14
+		tags = { specialization_nuclear }
+		nuclear_reactor = yes
+		value = 10
+		infrastructure_construction_effect = yes
+
+		country_modifiers = {
+			modifiers = {
+				nuclear_production_factor = 5
+				sp_nuclear_bomb_speed_factor = 0.05
+				sp_thermo_nuclear_bomb_speed_factor = 0.05
+				thermonuclear_production_factor = 4
+			}
+		}
+
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			group_by = reactors
+		}
+	}
+	naval_facility = {
+		show_on_map = 1
+		base_cost = 20000
+		per_controlled_building_extra_cost = 5000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 19
+		value = 1
+		spawn_point = naval_base_spawn 
+		specialization = { specialization_naval }
+		tags = { facility }
+		disabled_in_dmz = yes
+		need_supply = yes
+		need_detection = yes
+		detecting_intel_type = navy
+		only_display_if_exists = yes
+		special_icon = GFX_specialization_naval
+		infrastructure_construction_effect = yes
+		level_cap = {
+			province_max = 1
+			state_max = 1
+			group_by = special_project_facility
+		}
+		only_costal = yes
+	}
+	stronghold_network = {
+		show_on_map = 1
+		has_destroyed_mesh = yes
+		base_cost = 20000
+		disabled_in_dmz = yes
+		icon_frame = 24
+		value = 1
+		infrastructure_construction_effect = yes
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+		}
+		hide_if_missing_tech = yes
+		tags = { stronghold_network_building }
+		show_modifier = yes
+		state_modifiers = {
+			local_supplies_for_controller = 0.1
+			state_bunker_max_level_terrain_limit = 3
+			state_coastal_bunker_max_level_terrain_limit = 3
+			enemy_attrition = 0.1
+			state_production_speed_bunker_factor = 0.1
+			state_production_speed_coastal_bunker_factor = 0.1
+			land_bunker_effectiveness_factor = 0.1
+			coastal_bunker_effectiveness_factor = 0.1
+		}		
+	}
+	mega_gun_emplacement = {
+		dlc_allowed = { has_dlc = Gotterdammerung }
+		hide_if_missing_tech = yes
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 25
+		value = 1
+		disabled_in_dmz = yes
+		infrastructure_construction_effect = yes
+		gun_emplacement = yes
+		spawn_point = rocket_site_spawn
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			exclusive_with = rocket_site
+		}
+		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
+	}
+	commercial_nuclear_reactor = {
+		hide_if_missing_tech = yes
+		missing_tech_loc = { 
+			localization_key = SP_BUILDING_MISSING_PROJECT
+			PROJECT = sp_commercial_nuclear_reactor
+		}
+		spawn_point = nuclear_reactor_spawn
+		show_on_map = 1
+		base_cost = 30000
+		icon_frame = 28
+		#nuclear_reactor = yes
+		tags = { civilian_reactor_building }
+		value = 10
+		infrastructure_construction_effect = yes
+		
+		country_modifiers = {
+			modifiers = {
+				nuclear_production_factor = 3
+				thermonuclear_production_factor = 2
+				industrial_capacity_dockyard = 0.04
+				industrial_capacity_factory = 0.04
+				local_resources_factor = -0.02
+			}
+		}
+
+		state_modifiers = {
+			state_production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1			
+		}
+
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			group_by = reactors
+		}
+	}
+
+	nuclear_facility = {
+		show_on_map = 1
+		base_cost = 30000
+		per_controlled_building_extra_cost = 5000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 21
+		value = 1
+		spawn_point = special_project_facility_spawn
+		specialization = { specialization_nuclear }
+		need_supply = yes
+		need_detection = yes
+		tags = { facility }
+		disabled_in_dmz = yes
+		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
+		special_icon = GFX_specialization_nuclear
+		level_cap = {
+			province_max = 1
+			state_max = 1
+			group_by = special_project_facility
+		}
+	}
+
+	air_facility = {
+		show_on_map = 1
+		base_cost = 20000
+		per_controlled_building_extra_cost = 5000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 18
+		value = 1
+		spawn_point = special_project_facility_spawn 
+		infrastructure_construction_effect = yes
+		specialization = { specialization_air}
+		tags = { facility }
+		need_supply = yes
+		need_detection = yes
+		detecting_intel_type = airforce
+		disabled_in_dmz = yes
+		only_display_if_exists = yes
+		special_icon = GFX_specialization_air
+		level_cap = {
+			province_max = 1
+			state_max = 1
+			group_by = special_project_facility
+		}
+	}
+
+	land_facility = {
+		show_on_map = 1
+		base_cost = 20000
+		per_controlled_building_extra_cost = 5000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 20
+		value = 1
+		spawn_point = special_project_facility_spawn 
+		infrastructure_construction_effect = yes
+		specialization = { specialization_land }
+		tags = { facility }
+		disabled_in_dmz = yes
+		need_supply = yes
+		need_detection = yes
+		detecting_intel_type = army
+		only_display_if_exists = no
+		special_icon = GFX_specialization_land
+		level_cap = {
+			province_max = 1
+			state_max = 1
+			group_by = special_project_facility
+		}
+	}
+
+	dam = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 27
+		value = 5
+		tags = { dam_building }
+		spawn_point = dam_spawn
+		damage_factor = -1
+		is_buildable = no
+		need_detection = yes
+		detecting_intel_type = civilian 
+		province_damage_modifiers = { flooded }
+		#state_damage_modifier = { kurdish_agitation }
+		only_display_if_exists = yes
+		special_icon = GFX_dam_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			state_production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
+		}
+	}
+	dam_mountain = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 27
+		value = 5
+		tags = { dam_building }
+		spawn_point = dam_spawn
+		damage_factor = -1
+		is_buildable = no
+		need_detection = yes
+		detecting_intel_type = civilian 
+		province_damage_modifiers = { flooded }
+		only_display_if_exists = yes
+		special_icon = GFX_dam_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			state_production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
+		}
+	}
+
+	canal_kiel = {
+		show_on_map = 1
+		base_cost = 60000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 26
+		value = 5
+		tags = { locks_building }
+		spawn_point = locks_spawn
+		damage_factor = -1
+		is_buildable = no
+		always_shown = yes
+		state_damage_modifier = { kiel_canal_damaged_modifier }
+		only_display_if_exists = yes
+		special_icon = GFX_canal_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			
+		}
+	}
+
+	canal_panama = {
+		show_on_map = 1
+		base_cost = 60000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 26
+		value = 5
+		tags = { locks_building }
+		spawn_point = locks_spawn
+		damage_factor = -1
+		is_buildable = no
+		always_shown = yes
+		state_damage_modifier = { panama_canal_damaged_modifier }
+		only_display_if_exists = yes
+		special_icon = GFX_canal_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			
+		}
+	}
+}
+
+spawn_points = {
+	nuclear_reactor_spawn = {
+		type = state
+		max = 1
+	}
+
+	special_project_facility_spawn = {
+		type = province
+		max = 1
+	}
+
+	rocket_site_spawn = {
+		type = state
+		max = 1
+	}
+
+	naval_base_spawn = {
+		type = province
+		max = 1
+		only_costal = yes
+	}
+
+	dam_spawn = {
+		type = province
+		max = 1
+		disable_auto_nudging = yes
+	}
+
+	locks_spawn = {
+		type = province
+		max = 1
+		disable_auto_nudging = yes
+	}
+}

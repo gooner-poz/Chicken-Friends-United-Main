@@ -1,0 +1,188 @@
+focus_tree = {
+	id = venezuela_focus
+	default = no
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = VEN
+		
+		}
+	}
+		continuous_focus_position = { x = 50 y = 2000 }
+
+	focus = {
+		id = VEN_joker_modding
+		icon = GFX_focus_jap_cast_the_dice
+		x = 0
+		y = 1
+		cost = 0
+
+		available = {
+			date > 1937.1.1
+			custom_trigger_tooltip = {
+				tooltip = has_scripted_china_rule		
+				282 = {
+					has_state_flag = no_partial_china_war_state_flag
+				}
+			}
+		}
+		 
+		completion_reward = {
+			
+
+			every_state = {
+				limit = {
+					is_core_of = CHI
+					NOT = {
+						state = 747
+						state = 745
+						state = 524
+						is_core_of = MAN
+						
+					}
+				}
+				set_state_flag  = CHI_state_flag1
+				add_province_modifier = {
+					static_modifiers = { CHI_frontline_modifier }
+					province = {
+						all_provinces = yes
+					}
+				}
+				
+			}
+		
+		}
+	}
+	
+	focus = {
+		id = VEN_connor
+		icon = GFX_focus_jap_cast_the_dice
+		x = 2
+		y = 1
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		 prerequisite = {
+		}
+		available = {	
+			GER = {
+				OR = {
+					has_idea = GER_afrika_campaign
+					has_idea = GER_afrika_campaign2
+				}
+			}
+			OR = {
+				ITA = {
+					controls_state = 451
+				}
+				date > 1941.4.1
+			}
+		}
+		completion_reward = {
+			ENG = {
+				country_event = britain.47
+				set_country_flag = no_connor
+			}
+		
+		}
+	}
+	focus = {
+		id = VEN_remove_africa_spirit
+		icon = GFX_focus_jap_cast_the_dice
+		x = 6
+		y = 1
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		 prerequisite = {
+		}
+		available = {	
+			date > 1941.4.1
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = ENG_afrika_campaign
+				}
+				remove_ideas = ENG_afrika_campaign
+			}
+			every_country = {
+				limit = {
+					has_idea = ENG_afrika_campaign2
+				}
+				remove_ideas = ENG_afrika_campaign2
+			}
+			every_country = {
+				limit = {
+					has_idea = ENG_afrika_campaign3
+				}
+				remove_ideas = ENG_afrika_campaign3
+			}
+			every_country = {
+				limit = {
+					has_idea = ENG_afrika_campaign4
+				}
+				remove_ideas = ENG_afrika_campaign4
+			}
+		
+		}
+	}
+	focus = {
+		id = ITA_albania
+		icon = GFX_focus_jap_cast_the_dice
+		x = 4
+		y = 1
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		prerequisite = {
+		}
+		available = {
+			date > 1939.2.1
+		}
+		completion_reward = {
+			ALB = { country_event = { id = italy.3 } }
+		}
+	}
+
+	focus = {
+		id = VEN_truman
+		icon = GFX_focus_jap_cast_the_dice
+		x = 8
+		y = 1
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		prerequisite = {
+		}
+		available = {
+			date > 1945.4.11
+			
+
+		}
+		completion_reward = {
+			USA = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Harry Truman"
+					desc = "HARRY_TRUMAN_DESC"
+					picture = "Portrait_USA_Harry_Truman.dds"
+					expire = "1965.1.1"
+					ideology = Conservatism
+					traits = {
+					}
+				}
+				
+
+			}
+			news_event = news.526
+		}
+	}
+}

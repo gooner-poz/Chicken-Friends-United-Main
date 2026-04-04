@@ -1,0 +1,972 @@
+
+	BUL_arms_purchase = {
+	BUL_purchase_weapons = {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = BUL_german_arms_deal
+			
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_power_to_the_tsar}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = GER }
+		}
+
+		days_remove = 90
+
+		days_re_enable = 0	
+
+		complete_effect = {
+			custom_effect_tooltip = BUL_purchase_guns_tt
+			
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	BUL_purchase_arty = {
+
+		icon = GFX_decision_ger_military_buildup
+
+		available = {
+			has_completed_focus = BUL_german_arms_deal
+			
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_power_to_the_tsar}
+		}
+
+		remove_effect = {		
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment amount = 150 producer = BUL
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_artillery_equipment amount = 50 producer = BUL
+			}				
+			add_equipment_to_stockpile = { 
+				type = anti_tank_equipment amount = 50 producer = BUL 
+			}
+			add_equipment_to_stockpile = { 
+				type = anti_air_equipment amount = 50 producer = BUL
+			}
+		}
+
+		days_remove = 90
+
+		days_re_enable = 0 
+
+		complete_effect = {
+			custom_effect_tooltip = BUL_purchase_guns_tt
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	BUL_purchase_vehicles = {
+
+		icon = GFX_decision_generic_trucks
+
+		available = {
+			has_completed_focus = BUL_german_arms_deal
+			
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_power_to_the_tsar}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { 
+				type = motorized_equipment amount = 400 producer = GER 
+			}
+		}
+
+		days_remove = 90
+
+		days_re_enable = 0	
+
+		complete_effect = {
+			custom_effect_tooltip = BUL_purchase_guns_tt
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	BUL_purchase_support = {
+
+		icon = GFX_decision_ger_mefo_bills
+
+		available = {
+			has_completed_focus = BUL_german_arms_deal
+			
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_power_to_the_tsar}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = special_equipment_1 amount = 200 producer = GER
+			}					
+			add_equipment_to_stockpile = {
+				type = horse_equipment amount = 200 producer = GER 
+			}
+			add_equipment_to_stockpile = { 
+				type = support_equipment amount = 150 producer = GER 
+			}			
+			add_equipment_to_stockpile = {
+				type = radio_equipment amount = 100 producer = GER
+			}
+			
+		}
+
+		days_remove = 90
+
+		days_re_enable = 0	
+
+		complete_effect = {
+			custom_effect_tooltip = BUL_purchase_guns_tt
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	BUL_purchase_tanks = {
+
+		icon = GFX_decision_generic_tank
+
+		available = {
+			has_completed_focus = BUL_german_arms_deal
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_power_to_the_tsar}
+		}
+
+		remove_effect = {
+			country_event = { id = bulgaria.9 }
+			custom_effect_tooltip = BUL_tank_purchase_tt
+			}		
+
+		days_remove = 90
+
+		days_re_enable = 0	
+
+		complete_effect = {
+			custom_effect_tooltip = BUL_purchase_guns_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			}
+		}
+	}
+
+	BUL_new_territories = {
+	
+	BUL_core_thrace = {
+	
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			has_completed_focus = BUL_integrate_balkans
+			184 = { is_controlled_by = BUL }
+			NOT =  {
+			has_country_flag = BUL_core_flag
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_resettle_in_the_balkans}
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = BUL_core_flag value = 1 days = 60 }
+		   }
+		   
+		   
+		modifier = {
+			civilian_factory_use = 8
+		}
+	
+		remove_effect = {
+			BUL = {
+				add_state_core  = 184
+			}
+		}	
+		days_remove = 60	
+	}	
+
+	BUL_core_macedonia = {
+	
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			has_completed_focus = BUL_integrate_balkans
+			106 = { is_controlled_by = BUL }
+			NOT =  {
+			has_country_flag = BUL_core_flag
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_resettle_in_the_balkans}
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = BUL_core_flag value = 1 days = 60 }
+		   }
+		   
+		modifier = {
+			civilian_factory_use = 8
+		}
+	
+		remove_effect = {
+			BUL = {
+				add_state_core  = 106
+			}
+		}	
+		days_remove = 60	
+	}
+
+	BUL_core_dobrudja = {
+	
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {
+			has_completed_focus = BUL_integrate_balkans
+			77 = { is_controlled_by = BUL }
+			NOT =  {
+			has_country_flag = BUL_core_flag
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_resettle_in_the_balkans}
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = BUL_core_flag value = 1 days = 60 }
+		   }
+		   
+		modifier = {
+			civilian_factory_use = 8
+		}
+	
+		remove_effect = {
+			BUL = {
+				add_state_core  = 77
+			}
+		}	
+		days_remove = 60	
+	}
+	
+	BUL_resettle_thrace = {
+
+		icon = GFX_decision_POL_looming_peasants_strike
+
+		available = {
+			has_completed_focus = BUL_resettle_in_the_balkans
+			184 = { is_controlled_by = BUL }
+			NOT =  {
+			has_country_flag = BUL_resettlement_flag
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_integrate_balkans}
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = BUL_resettlement_flag value = 1 days = 90 }
+
+			184 = {
+				add_manpower = -25417
+				}
+		   }
+		   
+		remove_effect = {
+			212 = {
+				add_manpower = 18567
+				}
+			custom_effect_tooltip = BUL_modify_production_spirit
+
+			add_to_variable = { BUL_industrial_capacity_factory_var = 0.04
+			tooltip = industrial_capacity_factory_tooltip
+			}	
+		set_country_flag = { flag = BUL_resettlement_thrace_flag value = 1 }			
+		}
+		
+		days_remove = 90
+
+		days_re_enable = 0
+	}
+
+	BUL_resettle_macedonia = {
+
+		icon = GFX_decision_POL_looming_peasants_strike
+
+		available = {
+			has_completed_focus = BUL_resettle_in_the_balkans
+			106 = { is_controlled_by = BUL }
+			NOT =  {
+			has_country_flag = BUL_resettlement_flag
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_integrate_balkans}
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = BUL_resettlement_flag value = 1 days = 90 }
+			
+			106 = {
+				add_manpower = -49381
+				}
+		   }
+		   
+		remove_effect = {
+			48 = {
+				add_manpower = 36732
+				}
+			custom_effect_tooltip = BUL_modify_production_spirit
+			add_to_variable = { BUL_industrial_capacity_factory_var = 0.04
+			tooltip = industrial_capacity_factory_tooltip
+			}	
+		set_country_flag = { flag = BUL_resettlement_macedonia_flag value = 1 }			
+		}
+		
+		days_remove = 90
+
+		days_re_enable = 0
+	}
+	
+	BUL_resettle_dobrudja = {
+
+		icon = GFX_decision_POL_looming_peasants_strike
+
+		available = {
+			has_completed_focus = BUL_resettle_in_the_balkans
+			77 = { is_controlled_by = BUL }
+			NOT =  {
+			has_country_flag = BUL_resettlement_flag
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			NOT =  { has_completed_focus = BUL_integrate_balkans}
+		}
+		
+		complete_effect = {
+			set_country_flag = { flag = BUL_resettlement_flag value = 1 days = 90 }		
+			77 = {
+				add_manpower = -12938
+				}
+		   }
+		   
+		remove_effect = {
+			211 = {
+				add_manpower = 10283
+				}
+			custom_effect_tooltip = BUL_modify_production_spirit
+			add_to_variable = { BUL_industrial_capacity_factory_var = 0.04
+			tooltip = industrial_capacity_factory_tooltip
+			}	
+			set_country_flag = { flag = BUL_resettlement_dobrudja_flag value = 1 }				
+		}
+		
+		days_remove = 90
+
+		days_re_enable = 0
+	}
+}
+
+BUL_handle_imro = {
+BUL_border_war_with_yugoslavia_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		 allowed = { tag = BUL }
+		
+		available = {
+			has_completed_focus = BUL_support_imro
+			106 = { is_controlled_by = YUG }
+			NOT =  {
+			has_country_flag = BUL_border_flag
+			}
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_condemn_imro}
+		}
+	 	
+		fire_only_once = yes
+		
+		cost = 25
+		
+		activation = {
+			has_completed_focus = BUL_support_imro
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+		
+		is_good = no
+		complete_effect = {
+				set_country_flag = { flag = BUL_border_flag value = 1 days = 35}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = BUL 
+			}
+		}
+		
+		days_remove = 15
+		
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 48
+					num_provinces = 1
+				on_lose = bulgaria.13
+				on_win = bulgaria.6
+				on_cancel = bulgaria.7
+				
+				}				
+			
+			
+				
+				defender = {
+					state = 106
+					num_provinces = 1
+					on_lose = romania.14
+					on_win = romania.15	
+					on_cancel = romania.15
+				}
+			}
+		custom_effect_tooltip = BUL_border_war_victory_yug
+		custom_effect_tooltip = BUL_border_war_defeat
+		}
+	 }
+
+BUL_border_war_with_yugoslavia_mission2 = {
+		icon = GFX_decision_generic_ignite_civil_war
+		 allowed = { tag = BUL }
+		name = BUL_border_war_with_yugoslavia_mission
+
+		available = {
+			has_completed_focus = BUL_support_imro
+			106 = { is_controlled_by = YUG }
+			NOT =  {
+			has_country_flag = BUL_border_flag
+			}
+			has_country_flag = BUL_border_flag_3
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_condemn_imro}
+			has_country_flag = BUL_border_flag_3
+		}
+	 	
+		fire_only_once = yes
+		
+		cost = 25
+		
+		activation = {
+			has_completed_focus = BUL_support_imro
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+		
+		is_good = no
+		complete_effect = {
+				set_country_flag = { flag = BUL_border_flag value = 1 days = 35}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = BUL 
+			}
+		}
+		
+		days_remove = 15
+		
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 48
+					num_provinces = 1
+				on_lose = bulgaria.16
+				on_win = bulgaria.6
+				on_cancel = bulgaria.7
+				
+				}				
+			
+			
+				
+				defender = {
+					state = 106
+					num_provinces = 1
+					on_lose = romania.14
+					on_win = romania.15	
+					on_cancel = romania.15
+				}
+			}
+		custom_effect_tooltip = BUL_border_war_victory_yug
+		custom_effect_tooltip = BUL_border_war_defeat_final
+		}
+	 }	 
+
+BUL_border_war_with_greece_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		 allowed = { tag = BUL }
+		
+		available = {
+			has_completed_focus = BUL_support_imro
+			184 = { is_controlled_by = GRE }
+			NOT =  {
+			has_country_flag = BUL_border_flag			
+			}		
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_condemn_imro}
+		}
+	 	
+		fire_only_once = yes
+		
+		cost = 25
+		
+		activation = {
+			has_completed_focus = BUL_support_imro
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+		
+		is_good = no
+		complete_effect = {
+				set_country_flag = { flag = BUL_border_flag value = 1 days = 35}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = BUL 
+			}
+		}
+		days_remove = 15
+		
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 212
+					num_provinces = 2
+				on_lose = bulgaria.14
+				on_win = bulgaria.10
+				on_cancel = bulgaria.10
+				
+				}				
+			
+			
+				
+				defender = {
+					state = 184
+					num_provinces = 1
+					on_lose = romania.14
+					on_win = romania.15	
+					on_cancel = romania.15
+
+
+				}
+			}
+		custom_effect_tooltip = BUL_border_war_victory_gre
+		custom_effect_tooltip = BUL_border_war_defeat
+		}
+	 }
+
+BUL_border_war_with_greece_mission2 = {
+		icon = GFX_decision_generic_ignite_civil_war
+		 allowed = { tag = BUL }
+		name = BUL_border_war_with_greece_mission
+
+		available = {
+			has_completed_focus = BUL_support_imro
+			184 = { is_controlled_by = GRE }
+			NOT =  {
+			has_country_flag = BUL_border_flag			
+			}	
+			has_country_flag = BUL_border_flag_4	
+		}
+		
+		visible = {
+			has_country_flag = BUL_border_flag_4
+		}
+	 	
+		fire_only_once = yes
+		
+		cost = 25
+		
+		activation = {
+			has_completed_focus = BUL_support_imro
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+		
+		is_good = no
+		complete_effect = {
+				set_country_flag = { flag = BUL_border_flag value = 1 days = 35}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = BUL 
+			}
+		}
+		days_remove = 15
+		
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 212
+					num_provinces = 2
+				on_lose = bulgaria.16
+				on_win = bulgaria.10
+				on_cancel = bulgaria.10
+				
+				}				
+			
+			
+				
+				defender = {
+					state = 184
+					num_provinces = 1
+					on_lose = romania.14
+					on_win = romania.15	
+					on_cancel = romania.15
+
+
+				}
+			}
+		custom_effect_tooltip = BUL_border_war_victory_gre
+		custom_effect_tooltip = BUL_border_war_defeat_final
+		}
+	 }
+
+BUL_border_war_with_romania_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		 allowed = { tag = BUL }
+		
+		available = {
+			has_completed_focus = BUL_support_imro
+			77 = { is_controlled_by = ROM }
+			NOT =  {
+			has_country_flag = BUL_border_flag
+			}
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_condemn_imro}
+		}
+	 	
+		fire_only_once = yes
+		
+		cost = 25
+		
+		activation = {
+			has_completed_focus = BUL_support_imro
+		}
+
+		ai_will_do = {
+			base = 100 
+		}
+		
+		is_good = no
+		complete_effect = {
+				set_country_flag = { flag = BUL_border_flag value = 1 days = 35}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = BUL 
+			}
+		}
+		days_remove = 15
+		
+		remove_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 211
+					num_provinces = 2
+				on_lose = bulgaria.16
+				on_win = bulgaria.15
+				on_cancel = bulgaria.7
+				
+				}				
+			
+			
+				
+				defender = {
+					state = 77
+					num_provinces = 1
+					on_lose = romania.14
+					on_win = romania.15
+					on_cancel = romania.15
+
+
+				}
+			}
+		custom_effect_tooltip = BUL_border_war_victory_rom
+		custom_effect_tooltip = BUL_border_war_defeat_rom
+		}
+	}
+
+	BUL_crush_imro_sofia = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			tag = BUL			
+		}
+
+		available = {
+			has_completed_focus = BUL_condemn_imro
+			NOT =  {
+			has_country_flag = BUL_crush_flag
+			}
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_support_imro} 
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 60
+
+		complete_effect = {
+				set_country_flag = { flag = BUL_crush_flag value = 1 days = 60}
+				army_experience = 25
+				add_manpower = -750
+		}
+		
+		remove_effect = {	
+			48 = {
+			remove_dynamic_modifier = { modifier = imro_cells_modifier}
+		}
+	}
+}
+	BUL_crush_imro_plovdiv = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			tag = BUL			
+		}
+
+		available = {
+			has_completed_focus = BUL_condemn_imro
+			NOT =  {
+			has_country_flag = BUL_crush_flag
+			}
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_support_imro}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 60
+
+		complete_effect = {
+				set_country_flag = { flag = BUL_crush_flag value = 1 days = 60}
+				army_experience = 25
+				add_manpower = -750
+		}
+
+		remove_effect = {	
+			212 = {
+			remove_dynamic_modifier = { modifier = imro_cells_modifier}
+		}
+	}
+}
+	BUL_crush_imro_veliko = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			tag = BUL			
+		}
+
+		available = {
+			has_completed_focus = BUL_condemn_imro
+			NOT =  {
+			has_country_flag = BUL_crush_flag
+			}
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_support_imro}
+		}		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 60
+
+		complete_effect = {
+				set_country_flag = { flag = BUL_crush_flag value = 1 days = 60}
+				army_experience = 25
+				add_manpower = -750
+				
+		}
+
+		remove_effect = {	
+			806 = {
+			remove_dynamic_modifier = { modifier = imro_cells_modifier}
+		}
+	}
+}
+	BUL_crush_imro_burgas = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			tag = BUL			
+		}
+
+		available = {
+			has_completed_focus = BUL_condemn_imro
+			NOT =  {
+			has_country_flag = BUL_crush_flag
+			}
+		}
+		
+		visible = {
+			NOT =  { has_completed_focus = BUL_support_imro}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 60
+
+		complete_effect = {
+				set_country_flag = { flag = BUL_crush_flag value = 1 days = 60}
+				army_experience = 25
+				add_manpower = -750
+		}
+
+		remove_effect = {	
+			211 = {
+			remove_dynamic_modifier = { modifier = imro_cells_modifier}
+			
+			}
+		}
+	}
+}
+	BUL_five_year_plan_cat = {
+	BUL_five_year_plan_mission = { ### Don't build civs reeee 
+
+		icon = generic_construction
+
+		available = {
+			num_of_factories > 65
+
+		}
+
+		days_mission_timeout = 1460
+		fire_only_once = yes
+		is_good = no
+
+		activation = {
+			has_completed_focus = BUL_five_year_plan
+		}
+
+		visible = {
+			has_completed_focus = BUL_five_year_plan
+		}
+
+		timeout_effect = {
+			add_stability = -0.15
+			add_political_power = -100
+		}
+
+		complete_effect = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 3 }
+			add_stability = 0.1
+			add_political_power = 100
+			add_tech_bonus = {
+				name = all_industry_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			} 				
+		}	
+	}
+}	

@@ -1,0 +1,213 @@
+sub_units = {
+	
+	engineer = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+
+		categories = {
+		
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0.0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 300
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.08
+		supply_consumption = 0.03
+		
+		entrenchment = 4
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.5
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			infantry_equipment = 20
+			support_equipment = 50
+		}
+
+		can_be_parachuted = yes
+
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			movement = 0.2
+			attack = 0.03
+		}
+		urban = {
+			attack = 0.03
+			defence = 0.03
+		}
+		same_support_type = engineer
+	}
+	mobile_engineer = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0.0
+	
+		#Size Definitions
+		max_strength = 3
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 300
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.08
+		supply_consumption = 0.03
+		
+		entrenchment = 1
+
+				
+		defense = 0.4
+		breakthrough = 0.6
+
+		# Support nerfs to combat abilities
+		soft_attack = 2.5
+		hard_attack = 2.5
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			infantry_equipment = 80
+			support_equipment = 60
+		}
+
+		can_be_parachuted = yes
+
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			movement = 0.2
+			attack = 0.03
+		}
+		urban = {
+			attack = 0.03
+			defence = 0.03
+		}
+		same_support_type = engineer
+	}
+	construction_engineer = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		active = no
+		affects_speed = no
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+		
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0.0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 300
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.08
+		supply_consumption = 0.03
+		
+		entrenchment = 7
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.5
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			infantry_equipment = 40
+			support_equipment = 70
+		}
+
+		can_be_parachuted = no
+
+		plains = {	
+			movement = -0.3
+		}
+		desert = {
+			movement = -0.3
+		}
+		forest = {
+			movement = -0.2
+		}
+		hills = {
+			movement = -0.3
+		}
+		mountain = {
+			movement = -0.3
+		}
+		jungle = {
+			movement = -0.15
+		}
+		marsh = {
+			movement = -0.15
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			movement = -0.05
+			attack = 0.03
+		}
+		urban = {
+			attack = 0.03
+			defence = 0.08
+			movement = -0.3
+		}
+		same_support_type = engineer
+	}	
+}
+

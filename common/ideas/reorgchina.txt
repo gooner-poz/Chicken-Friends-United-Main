@@ -1,0 +1,342 @@
+ideas = {
+	country = {
+		hidden_ideas = {
+		
+		}
+		RCC_industrial_sector_1_no_buffs = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			picture = ROM_agricultural_economy
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.05 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+
+			modifier = {
+				license_production_speed = -0.15
+			}
+			
+		}
+		RCC_industrial_sector_1_sf = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			picture = ROM_agricultural_economy
+
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.0 instant = yes
+				}
+				special_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				rocket_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+			}
+			modifier = {
+				license_production_speed = -0.15
+			}
+		}
+		RCC_industrial_sector_1_mot = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			picture = ROM_agricultural_economy
+
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.05 instant = yes
+				}
+				
+				armor = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			modifier = {
+				license_production_speed = -0.15
+			}
+		}
+		RCC_industrial_sector_1_inf = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			picture = ROM_agricultural_economy
+
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				pack_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				rocket_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			
+			}
+			modifier = {
+				license_production_speed = -0.15
+			}
+		}
+		############
+		RCC_industrial_sector_2_sf = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			picture = ROM_agricultural_economy
+
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.0 instant = yes
+				}
+				special_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				rocket_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+			}
+			modifier = {
+				license_production_speed = -0.15
+			}
+		}
+		RCC_industrial_sector_2_mot = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			picture = ROM_agricultural_economy
+
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.05 instant = yes
+				}
+			
+				armor = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			modifier = {
+				license_production_speed = -0.15
+			}
+		}
+		RCC_industrial_sector_2_inf = {
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			picture = ROM_agricultural_economy
+
+			research_bonus = {
+				artillery = -0.15
+				infantry_weapons = -0.15
+				armor = 0.15
+				electronics = -0.15
+				motorized_equipment = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				pack_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				heavy_artillery_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				rocket_artillery_equipment = {
+					build_cost_ic =-0.05 instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+			
+			}
+			modifier = {
+				license_production_speed = -0.15
+			}
+		}
+	peasant_uprising_rcc= {
+		name = "Peasant Uprising"
+		allowed = {
+			always = no
+			original_tag = RCC
+		}
+		removal_cost = -1
+		
+		modifier = {
+			stability_weekly = -0.001
+			stability_factor = -0.1
+			
+		}
+	}
+	contain_communism = {
+		name = "Contain Communism"
+		picture = SWE_hedgehog_defense
+		allowed = {
+			always = no
+			original_tag = RCC
+		}
+		removal_cost = -1
+		
+		modifier = {
+			communism_acceptance = -70
+			communism_drift = -0.05
+			
+		}
+	}
+	kill_the_hornets = {
+		name = "Kill the Hornets"
+		picture = SWE_hedgehog_defense
+		allowed = {
+			always = no
+			original_tag = RCC
+		}
+		removal_cost = -1
+		
+		modifier = {
+			communism_acceptance = -10
+			communism_drift = -0.02
+			
+		}
+	}
+}
+	theorist_production = {
+	mill_guy={
+		name = "Xiao Shuxuan"
+		picture = "generic_captain_of_industry_asian_2d"
+		allowed = {
+			original_tag = RCC
+		}
+		cost = 125
+		traits = { war_industrialist_rcc }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	civ_guy ={
+		name = "Wang Yitang"
+		picture = "torashiro_kawabe"
+		allowed = {
+			original_tag = RCC
+		}
+		cost = 125
+		traits = { captain_of_industry_rcc }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	RCC_MinOfProp= {
+		name="Li Shiqun"
+		picture = "CHI_chen_cheng"
+		available = {
+			has_completed_focus = RCC_recognised_at_once
+		}
+
+		allowed = {
+			original_tag = RCC
+		}
+			traits = { RCC_minister_of_propaganda }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	
+	
+ }
+
+}

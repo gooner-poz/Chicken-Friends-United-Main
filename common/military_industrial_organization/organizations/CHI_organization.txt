@@ -1,0 +1,713 @@
+
+########    ###    ##    ## ##    ##  ######  
+   ##      ## ##   ###   ## ##   ##  ##    ## 
+   ##     ##   ##  ####  ## ##  ##   ##       
+   ##    ##     ## ## ## ## #####     ######  
+   ##    ######### ##  #### ##  ##         ## 
+   ##    ##     ## ##   ### ##   ##  ##    ## 
+   ##    ##     ## ##    ## ##    ##  ######  
+
+   CHI_refit_organization = {
+	name = "The Hanyang Arsenal"
+	
+	icon = GFX_idea_qishuyan_machinery
+
+	allowed = {	
+		original_tag = CHI
+	}
+	available = {
+		CHI = {
+			controls_state = 620
+		}
+		
+	}
+
+	equipment_type = { armor }
+	research_categories = { armor }
+
+	initial_trait = {
+		name = "Refurbishment Manufacturer"
+		
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 0.3
+		}
+		
+		equipment_bonus = {
+			build_cost_ic = -0.02
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+
+	#GUN
+	trait = {
+		token = soviet_tank_gun_adaptor
+		name = "Soviet Armament Design"
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
+
+		position = { x = 0 y=0 }
+
+		mutually_exclusive = {
+			american_tank_gun_adaptor
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			reliability = -0.05
+		}
+	}
+	trait = {
+		token = american_tank_gun_adaptor
+		name = "American Armament Design"
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_weapons
+
+		relative_position_id = soviet_tank_gun_adaptor
+		position = { x=2 y=0 }
+
+		mutually_exclusive = {
+			soviet_tank_gun_adaptor
+		}
+		
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {
+		token = improved_turret_design
+		name = "Improved Turret Design"
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		relative_position_id = american_tank_gun_adaptor
+		position = { x=-1 y=1 }
+
+		any_parent = {
+			soviet_tank_gun_adaptor
+			american_tank_gun_adaptor
+		}
+		
+		equipment_bonus = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			build_cost_ic = 0.01
+		}
+	}
+
+	trait = {
+		token = modern_turret_design
+		name = "Domestic Armament Evolution"
+		icon = GFX_generic_mio_department_icon_tank_general_quality
+
+		relative_position_id = improved_turret_design
+		position = { x=2 y=0 }
+
+		all_parents = {
+			improved_turret_design
+		}
+		
+		equipment_bonus = {
+
+			soft_attack = 0.02
+			hard_attack = 0.02
+			build_cost_ic = 0.01
+		}
+	}
+
+	#transmission
+	trait = {
+		token = soviet_transmission
+		name = "Cheap Transmission Design"
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x=0 y=2 }
+
+		mutually_exclusive = {
+			american_transmission
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.02
+		}
+	}
+	trait = {
+		token = american_transmission
+		name = "Reliable Transmission Design"
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		relative_position_id = soviet_transmission
+		position = { x=2 y=0 }
+
+		mutually_exclusive = {
+			soviet_transmission
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = improved_transmission
+		name = "Domestic Engine Production"
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		relative_position_id = american_transmission
+		position = { x=-1 y=1 }
+
+		any_parent = {
+			soviet_transmission
+			american_transmission
+		}
+		
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = modern_transmission
+		name = "Reverse Engineer Transmission"
+		icon = GFX_generic_mio_department_icon_tank_light_tank_engine
+
+		relative_position_id = improved_transmission
+		position = { x=2 y=0 }
+
+		all_parents = {
+			improved_transmission
+		}
+		
+		equipment_bonus = {
+			reliability = 0.03
+			maximum_speed = 0.03
+			build_cost_ic = -0.02
+		}
+	}
+
+	#armor
+	trait = {
+		token = soviet_armor
+		name = "Soviet Armor Design"
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		position = { x=6 y=0 }
+		mutually_exclusive = {
+			american_armor
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.2
+		}
+	}
+
+
+	trait = {
+		token = american_armor
+		name = "American Armor Layout"
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		relative_position_id = soviet_armor
+		position = { x=2 y=0 }
+
+		mutually_exclusive = {
+			soviet_armor
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.4
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {
+		token = improved_armor
+		name = "Improved Turret Design"
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		relative_position_id = american_armor
+		position = { x=-1 y=1 }
+
+		any_parent = {
+			soviet_armor
+			american_armor
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.1
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token = modern_chinese_armor
+		name = "Turret Spaced Armor"
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		relative_position_id = improved_armor
+		position = { x=-2 y=0 }
+
+		all_parents = {
+			improved_armor
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.15
+			hardness = 0.05
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {
+		token = improved_production
+		name = "Improved Production"
+		icon = GFX_generic_mio_department_icon_tank_general_production
+
+		position = { x=6 y=2 }
+		mutually_exclusive = {
+			keep_production_going
+		}
+		
+		production_bonus = {
+			production_capacity_factor = 0.1
+			production_resource_need_factor = 0.1
+		}
+
+	}
+	trait = {
+			token = keep_production_going
+			name = "Reliable Production"
+			icon = GFX_generic_mio_trait_icon_efficiency_gain
+	
+			relative_position_id = improved_production
+			position = { x=2 y=0 }
+			mutually_exclusive = {
+				improved_production
+			}
+
+			production_bonus = {
+				production_efficiency_gain_factor = 0.2
+				production_resource_need_factor = -0.15
+			}
+	}
+	trait = {
+		token = streamline_parts
+		name = "Aditional State Funds"
+		icon = GFX_generic_mio_department_icon_facilities
+
+		relative_position_id = keep_production_going
+		position = { x=-1 y=1 }
+
+		any_parent = {
+			keep_production_going
+			improved_production
+		}
+		
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.25
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+	}
+
+	trait = {
+		token = modern_streamline_prod
+		name = "New Facilities"
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		relative_position_id = streamline_parts
+		position = { x=-2 y=0 }
+
+		all_parents = {
+			streamline_parts
+		}
+		
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+	}
+	###MODERNIZATION
+
+}
+
+CHI_vickers_armstrong_eng_organization = {
+	include = ENG_vickers_armstrong_eng_organization
+	icon = GFX_idea_vickers_armstrong_eng
+
+	allowed = {	
+		original_tag = CHI
+	}
+	available = {
+		CHI = {
+			is_in_faction_with = ENG
+		}
+	}
+
+	equipment_type = { armor }
+	research_categories = { armor }
+
+	initial_trait = {
+		name = infantry_support_tank_designer
+		
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 1
+		}
+		
+		equipment_bonus = {
+					supply_consumption = -0.05
+					reliability = 0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+}
+CHI_nuffield ={
+    #name = "Nuffield Mechanizations and Aero"
+	include = ENG_nuffield
+	icon = GFX_idea_ENG_nuffield
+	
+
+	allowed = {	
+		original_tag = CHI
+	}
+	available = {
+		CHI = {
+			is_in_faction_with = ENG
+		}
+	}
+
+	equipment_type = { armor }
+	research_categories = { armor }
+
+	initial_trait = {
+		name = cruiser_tank_designer
+		
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 1
+		}
+		
+		equipment_bonus = {
+			soft_attack = -0.035
+			hard_attack = -0.035
+			breakthrough = 0.1
+			reliability = -0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+}
+CHI_birmingham = {
+	#name = "Birmingham R&C" 
+	include = birmingham
+	icon = GFX_idea_birmingham_railway_carriage_designer_resize
+
+	allowed = {	
+		original_tag = CHI
+	}
+	available = {
+		CHI = {
+			is_in_faction_with = ENG
+		}
+	}
+	equipment_type = { armor }
+	research_categories = { armor }
+
+	initial_trait = {
+		name = medium_tank_designer
+		
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 1
+		}
+		
+		equipment_bonus = {
+					reliability = -0.1
+					build_cost_ic = -0.025
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+}
+CHI_Vauxhall = {
+	icon = GFX_idea_vauxhall
+	include = Vauxhall
+	allowed = {	
+		original_tag = CHI
+	}
+	available = {
+		CHI = {
+			is_in_faction_with = ENG
+		}
+	}
+
+	equipment_type = { armor }
+	research_categories = { armor }
+
+	initial_trait = {
+		name = Infantry_tank_designer
+		
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 1
+		}
+		equipment_bonus = {
+				soft_attack = 0.1
+				reliability = -0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+}
+CHI_Vulcan = {
+	#name = "Vulcan Foundry" 
+	icon = GFX_idea_vulcan
+	include = Vulcan
+	allowed = {	
+		original_tag = CHI
+	}
+	available = {
+		CHI = {
+			is_in_faction_with = ENG
+		}
+	}
+
+	equipment_type = { armor }
+	research_categories = { armor }
+
+	initial_trait = {
+		name = Infantry_tank_designer
+		
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 1
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.4
+			soft_attack = 0.14
+			maximum_speed = -0.1
+			reliability = -0.1
+			build_cost_ic = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+}
+CHI_white = {
+	name = "White Motor Corporation" 
+	include = generic_mechanized_designer
+	icon = GFX_idea_white_motor
+	name = "White Motor Corporation"
+
+	available = {
+		CHI = {
+			is_in_faction_with = USA
+		}
+	}
+	
+	allowed = {	
+			tag = CHI
+
+	}
+	initial_trait = {
+		
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+}
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+CHI_camco_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_CHI_camco
+	allowed = {	
+		tag = CHI
+	}
+	available = {
+		owner = { has_completed_focus = CHI_camco }
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+CHI_sichuan_arsenal_organization = {
+	name = "Sichuan Arsenal"
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_sichuan_arsenal
+	
+	allowed = {	
+		tag = CHI
+	}
+	
+	available = {
+		CHI = {
+			controls_state = 605 
+		}			
+	}
+
+}
+
+CHI_hengyang_arsenal_organization = {
+	name = "Hengyang Arsenal"
+	include = generic_artillery_organization
+	icon = GFX_idea_hengyang_arsenal
+	
+	allowed = {	
+		tag = CHI
+	}
+
+	available = {
+		CHI = {
+			controls_state = 602 	
+		}
+	  		
+	}
+
+}
+CHI_yue_loong_organization = {
+	name = "Ye Loong"
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_yue_loong
+	allowed = {	
+			original_tag = CHI
+				
+		}
+	available = {
+		622 = {
+			OR = {
+				is_controlled_by = PRC 
+				is_controlled_by = CHI 
+
+			}
+		}
+		
+	}
+}
+
+
+#########RCC
+
+RCC_jinan_arsenal_organization = {
+	name = "Jinan Arsenal"
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_jinan_arsenal
+	
+	allowed = {	
+		tag = RCC
+	}
+	
+	available = {
+		RCC = {
+			controls_state = 597
+		}
+		 			
+	}
+	initial_trait = {
+
+		
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		
+		
+	}
+
+}
+
+RCC_jingling_arsenal_organization = {
+	name = "Jingling Arsenal"
+	include = generic_artillery_organization
+	icon = GFX_idea_idea_jingling_arsenal
+	
+	allowed = {	
+		tag = RCC
+	}
+
+	available = {
+		RCC = {
+			controls_state = 613	
+		}
+	    		
+	}
+	initial_trait = {
+
+		
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		
+		
+	}
+
+}
+
+RCC_nissan_organization = {
+	name = "Nissan China"
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_nissan
+	allowed = {	
+			original_tag = RCC
+			
+		}
+	available = {
+		
+		
+	}
+	initial_trait = {
+
+		
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
+		}
+		
+		
+	}
+}
+RCC_tokyo_gas = {
+	name = "Tokyo Gas Electric Engineering Co."
+	include = generic_mechanized_designer
+	icon = GFX_idea_JAP_tokyo_gas
+
+	allowed = {	
+		original_tag = RCC
+	}
+	available = {
+		RCC = {
+			has_completed_focus = RCC_devoted_people
+		}
+		
+	}
+
+	
+}

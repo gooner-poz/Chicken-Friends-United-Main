@@ -1,0 +1,3023 @@
+#Important to put HIGHEST first
+
+USA_crisis_reward_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				USA_crisis_level < 10 
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.3
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 20 
+				}
+				check_variable = {
+					USA_crisis_level > 9
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.25
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 30 
+				}
+				check_variable = {
+					USA_crisis_level > 19
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.2
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 40 
+				}
+				check_variable = {
+					USA_crisis_level > 29
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.15
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 50 
+				}
+				check_variable = {
+					USA_crisis_level > 39
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 60 
+				}
+				check_variable = {
+					USA_crisis_level > 49
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 70
+				}
+				check_variable = {
+					USA_crisis_level > 59
+				}
+			}
+		}
+	
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 80
+				}
+				check_variable = {
+					USA_crisis_level > 69
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.05
+		}
+		add_stability = -0.03
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 90 
+				}
+				check_variable = {
+					USA_crisis_level > 79
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.1
+		}
+		add_stability = -0.06
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				USA_crisis_level > 89 
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.15
+		}
+		add_stability = -0.1
+	}
+}
+USA_crisis_reward_effect2 = {
+	if = {
+		limit = {
+			check_variable = {
+				USA_crisis_level < 10 
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.3
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 20 
+				}
+				check_variable = {
+					USA_crisis_level > 9
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.25
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 30 
+				}
+				check_variable = {
+					USA_crisis_level > 19
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.2
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 40 
+				}
+				check_variable = {
+					USA_crisis_level > 29
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.15
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 50 
+				}
+				check_variable = {
+					USA_crisis_level > 39
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 60 
+				}
+				check_variable = {
+					USA_crisis_level > 49
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 70
+				}
+				check_variable = {
+					USA_crisis_level > 59
+				}
+			}
+		}
+	
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 80
+				}
+				check_variable = {
+					USA_crisis_level > 69
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					USA_crisis_level < 90 
+				}
+				check_variable = {
+					USA_crisis_level > 79
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				USA_crisis_level > 89 
+			}
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.15
+		}
+	}
+}
+USA_display_depression_idea_effect2 = {
+	set_temp_variable = {
+		var = great_depression_eco_temp_var
+		value = great_depression_var
+	}
+	add_to_variable = {
+		var = great_depression_eco_temp_var 
+		value = -3
+	}
+	if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 0 } }
+		show_ideas_tooltip = USA_great_depression_1_law
+	}
+	if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 1 } }
+		show_ideas_tooltip = USA_great_depression_2_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 2 } }
+		show_ideas_tooltip = USA_great_depression_3_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 3 } }
+		show_ideas_tooltip = USA_great_depression_4_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 4 } }
+		show_ideas_tooltip = USA_great_depression_5_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 5 } }
+		show_ideas_tooltip = USA_great_depression_6_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 6 } }
+		show_ideas_tooltip = USA_great_depression_7_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 7 } }
+		show_ideas_tooltip = USA_great_depression_8_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 8 } }
+		show_ideas_tooltip = USA_great_depression_9_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 9 } }
+		show_ideas_tooltip = USA_great_depression_10_law
+	}
+}
+
+USA_display_depression_idea_effect = {
+	set_temp_variable = {
+		var = great_depression_eco_temp_var
+		value = great_depression_var
+	}
+	add_to_variable = {
+		var = great_depression_eco_temp_var 
+		value = 1 
+	}
+	if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 0 } }
+		show_ideas_tooltip = USA_great_depression_1_law
+	}
+	if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 1 } }
+		show_ideas_tooltip = USA_great_depression_2_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 2 } }
+		show_ideas_tooltip = USA_great_depression_3_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 3 } }
+		show_ideas_tooltip = USA_great_depression_4_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 4 } }
+		show_ideas_tooltip = USA_great_depression_5_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 5 } }
+		show_ideas_tooltip = USA_great_depression_6_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 6 } }
+		show_ideas_tooltip = USA_great_depression_7_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 7 } }
+		show_ideas_tooltip = USA_great_depression_8_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 8 } }
+		show_ideas_tooltip = USA_great_depression_9_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 9 } }
+		show_ideas_tooltip = USA_great_depression_10_law
+	}
+}
+
+USA_display_depression_idea_effect3 = {
+	set_temp_variable = {
+		var = great_depression_eco_temp_var
+		value = great_depression_var
+	}
+	add_to_variable = {
+		var = great_depression_eco_temp_var 
+		value = -1
+	}
+	if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 2 } }
+		show_ideas_tooltip = USA_great_depression_1_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 3 } }
+		show_ideas_tooltip = USA_great_depression_2_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 4 } }
+		show_ideas_tooltip = USA_great_depression_3_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 5 } }
+		show_ideas_tooltip = USA_great_depression_4_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 6 } }
+		show_ideas_tooltip = USA_great_depression_5_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 7 } }
+		show_ideas_tooltip = USA_great_depression_6_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 8 } }
+		show_ideas_tooltip = USA_great_depression_7_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 9 } }
+		show_ideas_tooltip = USA_great_depression_8_law
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_eco_temp_var = 10 } }
+		show_ideas_tooltip = USA_great_depression_9_law
+	}
+	
+}
+
+
+USA_decrease_crisis_level_by_10 = {
+	if = {
+		limit = {
+			check_variable = { USA_crisis_level > 10 }
+		}
+		subtract_from_variable = { USA_crisis_level = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level < 10 }
+		}
+		set_variable = { USA_crisis_level = 0 }
+	}
+}
+
+USA_decrease_crisis_level_by_5 = {
+	if = {
+		limit = {
+			check_variable = { USA_crisis_level > 5 }
+		}
+		subtract_from_variable = { USA_crisis_level = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level < 5 }
+		}
+		set_variable = { USA_crisis_level = 0 }
+	}
+}
+
+USA_update_ui_effect = {
+
+	set_temp_variable = {
+		var = USA_crisis_level_var_multiplier
+		value = USA_crisis_level 
+	}
+	divide_temp_variable = {
+		USA_crisis_level_var_multiplier = 100
+	}
+	multiply_temp_variable = {
+		USA_crisis_level_var_multiplier = -1
+	}
+	set_variable = {  
+		USA_crisis_level_stab_var = USA_crisis_level_var_multiplier
+	}
+	if = {
+		limit = {
+			check_variable = { USA_crisis_level = 0 }
+		}
+		set_variable = { USA_crisis_indicatormeter = 1 }
+		set_variable = { USA_crisis_level = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 5 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 10 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 15 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 20 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 25 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 6 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 30 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 7 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 35 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 8 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 40 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 9 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 45 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 50 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 11 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 55 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 12 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 60 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 13 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 65 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 14 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 70 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 15 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 75 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 16 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 80 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 17 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 85 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 18 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 90 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 19 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { USA_crisis_level = 95 compare = less_than_or_equals }
+		}
+		set_variable = { USA_crisis_indicatormeter = 20 }
+	}
+	else = { # crisis_level > 95
+		set_variable = { USA_crisis_indicatormeter = 21 }
+		set_variable = { USA_crisis_level = 100 }
+		
+	}
+}
+
+USA_clear_economic_idea_1 = {
+	if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_1_law
+		}
+	}
+}
+
+USA_clear_economic_idea_2 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_2_law
+		}
+	}
+}
+
+USA_clear_economic_idea_3 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_3_law
+		}
+	}
+}
+
+USA_clear_economic_idea_4 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_4_law
+		}
+	}
+}
+
+USA_clear_economic_idea_5 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_5_law
+		}
+	}
+}
+
+USA_clear_economic_idea_6 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_6_law
+		}
+	}
+}
+
+USA_clear_economic_idea_7 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_7_law
+		}
+	}
+}
+
+USA_clear_economic_idea_8 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_10_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_10_law
+			add_idea = USA_great_depression_8_law
+		}
+	}
+}
+
+USA_clear_economic_idea_9 = {
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_9_law
+		}
+	}
+}
+
+USA_clear_economic_idea_10 = {
+
+	if = {
+		limit = { has_idea = USA_great_depression_1_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_1_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_2_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_2_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_3_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_3_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_4_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_4_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_5_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_5_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_6_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_6_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_7_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_7_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_8_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_8_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_great_depression_9_law }
+		swap_ideas = {
+			remove_idea = USA_great_depression_9_law
+			add_idea = USA_great_depression_10_law
+		}
+	}
+}
+
+USA_great_depression_level_set_idea = {
+	if = {
+		limit = { check_variable = { great_depression_var = 1 } }
+		USA_clear_economic_idea_1 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 2 } }
+		USA_clear_economic_idea_2 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 3 } }
+		USA_clear_economic_idea_3 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 4 } }
+		USA_clear_economic_idea_4 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 5 } }
+		USA_clear_economic_idea_5 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 6 } }
+		USA_clear_economic_idea_6 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 7 } }
+		USA_clear_economic_idea_7 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 8 } }
+		USA_clear_economic_idea_8 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 9 } }
+		USA_clear_economic_idea_9 = yes
+	}
+	else_if = {
+		limit = { check_variable = { great_depression_var = 10 } }
+		USA_clear_economic_idea_10 = yes
+	}
+}
+
+USA_initiate_balance_of_power_effect = {
+	set_power_balance = {
+		id = USA_power_balance
+		left_side = USA_isolationist_side # will keep the last set side if not specified
+		right_side = USA_interventionist_side # will keep the last set side if not specified
+		set_default = yes # whether or not to reset the power balance to the initial value, default = no
+		#set_value = 0.25 # if specified will set the value of the power balance, this option will override the effect of set_default so the two options should not be used together. if neither set_default or set_value is specified the current value of the power balance will not change
+	}
+}
+USA_initiate_balance2_of_power_effect = {
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_isolationist_total_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.95
+		}
+	}
+
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_isolationist_high_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.75
+		}
+	}
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_isolationist_medium_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.45
+		}
+	}
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_isolationist_low_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = 0.2
+		}
+	}
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_interventionist_low_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.2
+		}
+	}
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_interventionist_medium_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.45
+		}
+	}
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_interventionist_high_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.75
+		}
+	}
+	if = {
+		limit = {
+			is_power_balance_in_range = {
+				id = USA_power_balance
+				range = USA_interventionist_total_control_range
+			}
+			
+		}
+		add_power_balance_value = {
+			id = USA_power_balance2
+			value = -0.95
+		}
+	}
+	set_power_balance = {
+		id = USA_power_balance2
+		#left_side =  USA_war_weariness_side# will keep the last set side if not specified
+		#right_side =  USA_war_enthusiasm_side# will keep the last set side if not specified
+		#set_default = yes # whether or not to reset the power balance to the initial value, default = no
+		#set_value = 0.25 # if specified will set the value of the power balance, this option will override the effect of set_default so the two options should not be used together. if neither set_default or set_value is specified the current value of the power balance will not change
+	}
+
+	
+}
+
+USA_bop_absurdly_high_increase_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = 1
+	}
+}
+
+USA_bop_very_high_increase_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = 0.5
+	}
+}
+
+USA_bop_high_increase_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = 0.4
+	}
+}
+
+USA_bop_medium_increase_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = 0.3
+	}
+}
+
+USA_bop_low_increase_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = 0.2
+	}
+}
+
+USA_bop_very_low_increase_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = 0.1
+	}
+}
+
+USA_bop_absurdly_high_decrease_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = -1
+	}
+}
+
+USA_bop_very_high_decrease_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = -0.25
+	}
+}
+
+USA_bop_high_decrease_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = -0.2
+	}
+}
+
+USA_bop_medium_decrease_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = -0.15
+	}
+}
+
+USA_bop_low_decrease_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = -0.1
+	}
+}
+
+USA_bop_very_low_decrease_effect = {
+	add_power_balance_value = {
+		id = USA_power_balance
+		value = -0.05
+	}
+}
+
+
+
+USA_bop_absurdly_high_increase_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = 1
+	}
+}
+
+USA_bop_very_high_increase_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = 0.5
+	}
+}
+
+USA_bop_high_increase_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = 0.4
+	}
+}
+
+USA_bop_medium_increase_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = 0.3
+	}
+}
+
+USA_bop_low_increase_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = 0.2
+	}
+}
+
+USA_bop_very_low_increase_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = 0.1
+	}
+}
+
+USA_bop_absurdly_high_decrease_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = -1
+	}
+}
+
+USA_bop_very_high_decrease_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = -0.25
+	}
+}
+
+USA_bop_high_decrease_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = -0.2
+	}
+}
+
+USA_bop_medium_decrease_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = -0.15
+	}
+}
+
+USA_bop_low_decrease_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = -0.1
+	}
+}
+
+USA_bop_very_low_decrease_effect2 = {
+	add_power_balance_value = {
+		id = USA_power_balance2
+		value = -0.05
+	}
+}
+
+
+
+USA_wunderwaffe_up = {
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_49 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_49
+			add_idea = USA_economy_of_plunder_50
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_48 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_48
+			add_idea = USA_economy_of_plunder_49
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_47 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_47
+			add_idea = USA_economy_of_plunder_48
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_46 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_46
+			add_idea = USA_economy_of_plunder_47
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_45 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_45
+			add_idea = USA_economy_of_plunder_46
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_44 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_44
+			add_idea = USA_economy_of_plunder_45
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_43 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_43
+			add_idea = USA_economy_of_plunder_44
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_42 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_42
+			add_idea = USA_economy_of_plunder_43
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_41 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_41
+			add_idea = USA_economy_of_plunder_42
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_40 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_40
+			add_idea = USA_economy_of_plunder_41
+		}		
+	}
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_39 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_39
+			add_idea = USA_economy_of_plunder_40
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_38 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_38
+			add_idea = USA_economy_of_plunder_39
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_37 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_37
+			add_idea = USA_economy_of_plunder_38
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_36 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_36
+			add_idea = USA_economy_of_plunder_37
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_35 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_35
+			add_idea = USA_economy_of_plunder_36
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_34 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_34
+			add_idea = USA_economy_of_plunder_35
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_33 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_33
+			add_idea = USA_economy_of_plunder_34
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_32 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_32
+			add_idea = USA_economy_of_plunder_33
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_31 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_31
+			add_idea = USA_economy_of_plunder_32
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_30 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_30
+			add_idea = USA_economy_of_plunder_31
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_29 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_29
+			add_idea = USA_economy_of_plunder_30
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_28 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_28
+			add_idea = USA_economy_of_plunder_29
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_27 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_27
+			add_idea = USA_economy_of_plunder_28
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_26 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_26
+			add_idea = USA_economy_of_plunder_27
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_25 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_25
+			add_idea = USA_economy_of_plunder_26
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_24 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_24
+			add_idea = USA_economy_of_plunder_25
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_23 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_23
+			add_idea = USA_economy_of_plunder_24
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_22 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_22
+			add_idea = USA_economy_of_plunder_23
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_21 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_21
+			add_idea = USA_economy_of_plunder_22
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_20 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_20
+			add_idea = USA_economy_of_plunder_21
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_19 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_19
+			add_idea = USA_economy_of_plunder_20
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_18 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_18
+			add_idea = USA_economy_of_plunder_19
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_17 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_17
+			add_idea = USA_economy_of_plunder_18
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_16 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_16
+			add_idea = USA_economy_of_plunder_17
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_15 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_15
+			add_idea = USA_economy_of_plunder_16
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_14 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_14
+			add_idea = USA_economy_of_plunder_15
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_13 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_13
+			add_idea = USA_economy_of_plunder_14
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_12 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_12
+			add_idea = USA_economy_of_plunder_13
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_11 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_11
+			add_idea = USA_economy_of_plunder_12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_10 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_10
+			add_idea = USA_economy_of_plunder_11
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_9 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_9
+			add_idea = USA_economy_of_plunder_10
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_8 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_8
+			add_idea = USA_economy_of_plunder_9
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_7 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_7
+			add_idea = USA_economy_of_plunder_8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a6 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a6
+			add_idea = USA_economy_of_plunder_7
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a5 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a5
+			add_idea = USA_economy_of_plunder_a6
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a4 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a4
+			add_idea = USA_economy_of_plunder_a5
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a3 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a3
+			add_idea = USA_economy_of_plunder_a4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a2 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a2
+			add_idea = USA_economy_of_plunder_a3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a1 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a1
+			add_idea = USA_economy_of_plunder_a2
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a0 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a0
+			add_idea = USA_economy_of_plunder_a1
+		}		
+	}
+}
+
+USA_wunderwaffe_down = {
+	if = {
+		limit = { has_idea = USA_economy_of_plunder_a1 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a1
+			add_idea = USA_economy_of_plunder_a0
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a2 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a2
+			add_idea = USA_economy_of_plunder_a1
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a3 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a3
+			add_idea = USA_economy_of_plunder_a2
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a4 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a4
+			add_idea = USA_economy_of_plunder_a3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a5 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a5
+			add_idea = USA_economy_of_plunder_a4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_a6 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_a6
+			add_idea = USA_economy_of_plunder_a5
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_7 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_7
+			add_idea = USA_economy_of_plunder_a6
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_8 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_8
+			add_idea = USA_economy_of_plunder_7
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_9 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_9
+			add_idea = USA_economy_of_plunder_8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_10 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_10
+			add_idea = USA_economy_of_plunder_9
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_11 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_11
+			add_idea = USA_economy_of_plunder_10
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_12 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_12
+			add_idea = USA_economy_of_plunder_11
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_13 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_13
+			add_idea = USA_economy_of_plunder_12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_14 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_14
+			add_idea = USA_economy_of_plunder_13
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_15 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_15
+			add_idea = USA_economy_of_plunder_14
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_16 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_16
+			add_idea = USA_economy_of_plunder_15
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_17 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_17
+			add_idea = USA_economy_of_plunder_16
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_18 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_18
+			add_idea = USA_economy_of_plunder_17
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_19 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_19
+			add_idea = USA_economy_of_plunder_18
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_20 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_20
+			add_idea = USA_economy_of_plunder_19
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_21 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_21
+			add_idea = USA_economy_of_plunder_20
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_22 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_22
+			add_idea = USA_economy_of_plunder_21
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_23 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_23
+			add_idea = USA_economy_of_plunder_22
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_24 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_24
+			add_idea = USA_economy_of_plunder_23
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_25 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_25
+			add_idea = USA_economy_of_plunder_24
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_26 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_26
+			add_idea = USA_economy_of_plunder_25
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_27 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_27
+			add_idea = USA_economy_of_plunder_26
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_28 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_28
+			add_idea = USA_economy_of_plunder_27
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_29 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_29
+			add_idea = USA_economy_of_plunder_28
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_30 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_30
+			add_idea = USA_economy_of_plunder_29
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_31 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_31
+			add_idea = USA_economy_of_plunder_30
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_32 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_32
+			add_idea = USA_economy_of_plunder_31
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_33 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_33
+			add_idea = USA_economy_of_plunder_32
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_34 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_34
+			add_idea = USA_economy_of_plunder_33
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_35}
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_35
+			add_idea = USA_economy_of_plunder_34
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_36 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_36
+			add_idea = USA_economy_of_plunder_35
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_37 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_37
+			add_idea = USA_economy_of_plunder_36
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_38 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_38
+			add_idea = USA_economy_of_plunder_37
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_39 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_39
+			add_idea = USA_economy_of_plunder_38
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_40 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_40
+			add_idea = USA_economy_of_plunder_39
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_41 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_41
+			add_idea = USA_economy_of_plunder_40
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_42 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_42
+			add_idea = USA_economy_of_plunder_41
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_43 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_43
+			add_idea = USA_economy_of_plunder_42
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_44 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_44
+			add_idea = USA_economy_of_plunder_43
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_45 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_45
+			add_idea = USA_economy_of_plunder_44
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_46 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_45
+			add_idea = USA_economy_of_plunder_45
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_47 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_47
+			add_idea = USA_economy_of_plunder_46
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_48 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_48
+			add_idea = USA_economy_of_plunder_47
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_economy_of_plunder_49 }
+		swap_ideas = {
+			remove_idea = USA_economy_of_plunder_49
+			add_idea = USA_economy_of_plunder_48
+		}		
+	}
+}
+
+
+USA_island_hopping_level_up = {	
+	if = {
+		limit = { has_idea = USA_island_hopping16 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping16
+			add_idea = USA_island_hopping17
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping15 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping15
+			add_idea = USA_island_hopping16
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping14 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping14
+			add_idea = USA_island_hopping15
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping13 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping13
+			add_idea = USA_island_hopping14
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping12 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping12
+			add_idea = USA_island_hopping13
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping11 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping11
+			add_idea = USA_island_hopping12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping10 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping10
+			add_idea = USA_island_hopping11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping9 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping9
+			add_idea = USA_island_hopping10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping8 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping8
+			add_idea = USA_island_hopping9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping7 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping7
+			add_idea = USA_island_hopping8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping6 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping6
+			add_idea = USA_island_hopping7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping5 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping5
+			add_idea = USA_island_hopping6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping4 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping4
+			add_idea = USA_island_hopping5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping3 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping3
+			add_idea = USA_island_hopping4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping2 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping2
+			add_idea = USA_island_hopping3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping1 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping1
+			add_idea = USA_island_hopping2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping0 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping0
+			add_idea = USA_island_hopping1
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping-1 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping-1
+			add_idea = USA_island_hopping0
+		}
+	}
+}
+
+# Like the level up effect except it runs in reverse
+USA_island_hopping_level_down = {
+	if = {
+		limit = { has_idea = USA_island_hopping0 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping0
+			add_idea = USA_island_hopping-1
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping1 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping1
+			add_idea = USA_island_hopping0
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping2 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping2
+			add_idea = USA_island_hopping1
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping3 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping3
+			add_idea = USA_island_hopping2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping4 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping4
+			add_idea = USA_island_hopping3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping5 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping5
+			add_idea = USA_island_hopping4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping6 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping6
+			add_idea = USA_island_hopping5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping7 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping7
+			add_idea = USA_island_hopping6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping8 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping8
+			add_idea = USA_island_hopping7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping9 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping9
+			add_idea = USA_island_hopping8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping10 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping10
+			add_idea = USA_island_hopping9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping11 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping11
+			add_idea = USA_island_hopping10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping12 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping12
+			add_idea = USA_island_hopping11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping13 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping13
+			add_idea = USA_island_hopping12
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping14 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping14
+			add_idea = USA_island_hopping13
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping15 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping15
+			add_idea = USA_island_hopping14
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping16 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping16
+			add_idea = USA_island_hopping15
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_hopping17 }
+		swap_ideas = {
+			remove_idea = USA_island_hopping17
+			add_idea = USA_island_hopping16
+		}
+	}
+}
+
+
+USA_aircraft_industry_level_up = {
+	if = {
+		limit = { has_idea = USA_aircraft_industry1 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry1
+			add_idea = USA_aircraft_industry2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry2 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry2
+			add_idea = USA_aircraft_industry3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry3 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry3
+			add_idea = USA_aircraft_industry4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry4 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry4
+			add_idea = USA_aircraft_industry5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry5 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry5
+			add_idea = USA_aircraft_industry6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry6 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry6
+			add_idea = USA_aircraft_industry7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry7 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry7
+			add_idea = USA_aircraft_industry8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry8 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry8
+			add_idea = USA_aircraft_industry9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry9 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry9
+			add_idea = USA_aircraft_industry10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry10 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry10
+			add_idea = USA_aircraft_industry11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry11 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry11
+			add_idea = USA_aircraft_industry12
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry12 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry12
+			add_idea = USA_aircraft_industry13
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry13 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry13
+			add_idea = USA_aircraft_industry14
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_aircraft_industry14 }
+		swap_ideas = {
+			remove_idea = USA_aircraft_industry14
+			add_idea = USA_aircraft_industry15
+		}
+	}
+}
+
+USA_armor_industry_level_up = {
+	
+	if = {
+		limit = { has_idea = USA_armor_industry1 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry1
+			add_idea = USA_armor_industry2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry2 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry2
+			add_idea = USA_armor_industry3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry3 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry3
+			add_idea = USA_armor_industry4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry4 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry4
+			add_idea = USA_armor_industry5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry5 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry5
+			add_idea = USA_armor_industry6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry6 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry6
+			add_idea = USA_armor_industry7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry7 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry7
+			add_idea = USA_armor_industry8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry8 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry8
+			add_idea = USA_armor_industry9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry9 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry9
+			add_idea = USA_armor_industry10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry10 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry10
+			add_idea = USA_armor_industry11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry11 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry11
+			add_idea = USA_armor_industry12
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_armor_industry12 }
+		swap_ideas = {
+			remove_idea = USA_armor_industry12
+			add_idea = USA_armor_industry13
+		}
+	}
+}
+
+USA_infantry_industry_level_up = {
+	
+	if = {
+		limit = { has_idea = USA_infantry_industry1 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry1
+			add_idea = USA_infantry_industry2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry2 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry2
+			add_idea = USA_infantry_industry3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry3 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry3
+			add_idea = USA_infantry_industry4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry4 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry4
+			add_idea = USA_infantry_industry5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry5 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry5
+			add_idea = USA_infantry_industry6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry6 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry6
+			add_idea = USA_infantry_industry7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry7 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry7
+			add_idea = USA_infantry_industry8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry8 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry8
+			add_idea = USA_infantry_industry9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry9 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry9
+			add_idea = USA_infantry_industry10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry10 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry10
+			add_idea = USA_infantry_industry11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry11 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry11
+			add_idea = USA_infantry_industry12
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry12 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry12
+			add_idea = USA_infantry_industry13
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry13 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry13
+			add_idea = USA_infantry_industry14
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry14 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry14
+			add_idea = USA_infantry_industry15
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_infantry_industry15 }
+		swap_ideas = {
+			remove_idea = USA_infantry_industry15
+			add_idea = USA_infantry_industry16
+		}
+	}
+}
+
+USA_naval_industry_level_up = {
+	
+	if = {
+		limit = { has_idea = USA_naval_industry0 }
+		swap_ideas = {
+			remove_idea = USA_naval_industry0
+			add_idea = USA_naval_industry1
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_naval_industry1 }
+		swap_ideas = {
+			remove_idea = USA_naval_industry1
+			add_idea = USA_naval_industry2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_naval_industry2 }
+		swap_ideas = {
+			remove_idea = USA_naval_industry2
+			add_idea = USA_naval_industry3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_naval_industry3 }
+		swap_ideas = {
+			remove_idea = USA_naval_industry3
+			add_idea = USA_naval_industry4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = USA_naval_industry4 }
+		swap_ideas = {
+			remove_idea = USA_naval_industry4
+			add_idea = USA_naval_industry5
+		}
+	}
+}
+
+USA_we_dont_want_to_send_our_boys_away = {
+	set_temp_variable = {
+		var = USA_popular_support_var_stab
+		value = USA_popular_support_var
+	}
+	multiply_temp_variable = {
+		var = USA_popular_support_var_stab
+		value = 0.2
+	}
+	add_stability = USA_popular_support_var_stab
+}
+
+USA_allies_pacific_war_level_up = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = ALLIES_pacific_war_1
+				has_idea = ALLIES_pacific_war_2
+				has_idea = ALLIES_pacific_war_3
+				has_idea = ALLIES_pacific_war_4
+				has_idea = ALLIES_pacific_war_5
+			}
+		}
+		add_ideas = ALLIES_pacific_war_1
+	}
+	else_if = { 
+		limit = {
+			has_idea = ALLIES_pacific_war_1
+		}
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_1
+			add_idea = ALLIES_pacific_war_2
+		}
+	}
+	else_if = { 
+		limit = {
+			has_idea = ALLIES_pacific_war_2
+		}
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_2
+			add_idea = ALLIES_pacific_war_3
+		}
+	}	
+	else_if = { 
+		limit = {
+			has_idea = ALLIES_pacific_war_3
+		}
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_3
+			add_idea = ALLIES_pacific_war_4
+		}
+	}	
+	else_if = { 
+		limit = {
+			has_idea = ALLIES_pacific_war_4
+		}
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_4
+			add_idea = ALLIES_pacific_war_5
+		}
+	}	
+}
+
+USA_allies_pacific_war_level_down = {
+	if = {
+		limit = { has_idea = ALLIES_pacific_war_5 }
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_5
+			add_idea = ALLIES_pacific_war_4 
+		}
+	}
+	else_if = { 
+		limit = { has_idea = ALLIES_pacific_war_4 }
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_4
+			add_idea = ALLIES_pacific_war_3 
+		}
+	}
+	else_if = { 
+		limit = { has_idea = ALLIES_pacific_war_3 }
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_3
+			add_idea = ALLIES_pacific_war_2 
+		}
+	}	
+	else_if = { 
+		limit = { has_idea = ALLIES_pacific_war_2 }
+		swap_ideas = {
+			remove_idea = ALLIES_pacific_war_2
+			add_idea = ALLIES_pacific_war_1 
+		}
+	}	
+	else_if = { 
+		limit = { has_idea = ALLIES_pacific_war_1 }
+		remove_ideas = ALLIES_pacific_war_1 
+	}	
+}

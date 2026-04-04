@@ -1,0 +1,3696 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+# Gets the loc to be displayed based on what the current v (value) of the element in the array is (the value corresponds to the party id set in the scripted effect).´
+defined_text = {
+	name = USA_get_extra_dock_output_size_tt
+	text = {
+		trigger = {
+			USA = {
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio < 0.9
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio > 0.8
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+			}
+		}
+		localization_key = "USA_extra_dock_output_size_tt2"
+	}
+	text = {
+		trigger = {
+			USA = {
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio < 0.8
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio > 0.7
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+			}
+		}
+		localization_key = "USA_extra_dock_output_size_tt3"
+	}
+	text = {
+		trigger = {
+			USA = {
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio < 0.7
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio > 0.6
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+			}
+		}
+		localization_key = "USA_extra_dock_output_size_tt4"
+	}
+	text = {
+		trigger = {
+			USA = {
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio < 0.6
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio > 0.5
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+			}
+		}
+		localization_key = "USA_extra_dock_output_size_tt5"
+	}
+	text = {
+		trigger = {
+			USA = {
+				naval_strength_comparison = {
+					other = JAP
+					#tooltip = my_loc_key_tt
+					ratio < 0.5
+					sub_unit_def_weights = {
+						battleship = 4
+						battle_cruiser = 3
+						carrier = 4
+						light_cruiser = 2
+						heavy_cruiser = 2
+						destroyer = 1
+						submarine = 0
+					}
+				}
+				
+			}
+		}
+		localization_key = "USA_extra_dock_output_size_tt6"
+	}
+	text = {
+		localization_key = "USA_extra_dock_output_size_tt0"
+	}
+	
+	
+	
+}
+defined_text = {
+	name = USA_get_heavy_bomber_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_heavy_bomber_order_bonus
+			}
+		}
+		localization_key = "USA_heavy_bomber_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_radio_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_radio_equip_bonus
+			}
+		}
+		localization_key = "USA_radio_equipment_order_tt2"
+	}
+	
+}
+defined_text = {
+	name = USA_get_tactical_bomber_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_tactical_bomber_order_bonus
+			}
+		}
+		localization_key = "USA_tac_bomber_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_heavy_fighter_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_heavy_fighter_order_bonus
+			}
+		}
+		localization_key = "USA_heavy_fighter_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_figher_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_fighter_order_bonus
+			}
+		}
+		localization_key = "USA_fighter_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_mech_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_mech_equip_bonus
+			}
+		}
+		localization_key = "USA_mech_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_acs_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_ac_equip_bonus
+			}
+		}
+		localization_key = "USA_acs_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_inf_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_inf_equip_order_bonus
+			}
+		}
+		localization_key = "USA_inf_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_mot_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_trucks_equip_bonus
+			}
+		}
+		localization_key = "USA_truck_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_heavy_guns_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_heavy_arty_order_bonus
+			}
+		}
+		localization_key = "USA_heavy_artillery_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_anti_air_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_anti_air_order_bonus
+			}
+		}
+		localization_key = "USA_anti_air_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_support_arty_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_supp_arty_equip_order_bonus
+			}
+		}
+		localization_key = "USA_field_gun_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_artillery_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_artillery_equip_order_bonus
+			}
+		}
+		localization_key = "USA_artillery_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_special_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_special_equip_order_bonus
+			}
+		}
+		localization_key = "USA_special_equipment_order_tt2"
+	}
+	
+	
+}
+defined_text = {
+	name = USA_get_support_equipment_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_sup_equip_order_bonus
+			}
+		}
+		localization_key = "USA_support_equipment_order_tt2"
+	}
+	
+}
+
+defined_text = {
+	name = USA_get_light_tank_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_light_tank_order_bonus
+			}
+		}
+		localization_key = "USA_light_tank_order_tt2"
+	}
+	
+}
+defined_text = {
+	name = USA_get_medium_tank_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_medium_tank_order_bonus
+			}
+		}
+		localization_key = "USA_medium_tank_order_tt2"
+	}
+	
+}
+defined_text = {
+	name = USA_get_heavy_tank_order
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_heavy_tank_order_bonus
+			}
+		}
+		localization_key = "USA_heavy_tank_order_tt2"
+	}
+}
+defined_text = {
+	name = USA_get_gun_and_arty
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry1
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt1"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry2
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt2"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry3
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt3"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry4
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt4"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry5
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt5"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry6
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt6"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry7
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt7"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry8
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt8"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry9
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt9"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry10
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt10"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry11
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt11"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry12
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt12"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry13
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt13"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry14
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt14"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry15
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt15"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_infantry_industry16
+			}
+		}
+		localization_key = "USA_infantry_and_arty_ic_bonus_tt16"
+	}
+	
+}
+
+defined_text = {
+	name = USA_get_tanks
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry1
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt1"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry2
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt2"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry3
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt3"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry4
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt4"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry5
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt5"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry6
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt6"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry7
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt7"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry8
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt8"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry9
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt9"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry10
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt10"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry11
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt11"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry12
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt12"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_armor_industry13
+			}
+		}
+		localization_key = "USA_tanks_ic_bonus_tt13"
+	}
+
+}
+defined_text = {
+	name = USA_get_planes
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry1
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt1"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry2
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt2"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry3
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt3"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry4
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt4"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry5
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt5"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry6
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt6"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry7
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt7"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry8
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt8"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry9
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt9"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry10
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt10"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry11
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt11"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry12
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt12"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry13
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt13"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry14
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt14"
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_aircraft_industry15
+			}
+		}
+		localization_key = "USA_planes_ic_bonus_tt15"
+	}
+
+}
+
+
+
+defined_text = {
+	name = GET_TICKING_CONSUMER_GOODS
+	text = {
+		trigger = {
+			USA = {
+				has_completed_focus = USA_defund_new_deal_programs
+			}
+		}
+		localization_key = "its_ticking_up_tt"
+	}
+	text = {
+		localization_key = "its_ticking_up_tt"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_1_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 0 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_2_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 1 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_3_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 2 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_4_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 3 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_5_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 4 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_6_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 5 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_7_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 6 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_8_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 7 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_9_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 8 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+defined_text = {
+	name = GET_GREAT_DEPRESSION_LEVEL_10_COLOR
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { great_depression_var > 9 }
+		}
+		localization_key = "GFX_war_escalation_level_green"
+	}
+	text = {
+		localization_key = "GFX_war_escalation_level_white"
+	}
+}
+
+defined_text = {
+	name = CRISIS_NAME_USA
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { USA_crisis_name = 1 }
+		}
+		localization_key = "USA_crisis_name_1" #Dust Bowl 
+	}
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { USA_crisis_name = 2 }
+		}
+		localization_key = "USA_crisis_name_2" #Labor Strikes 
+	}
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { USA_crisis_name = 3 }
+		}
+		localization_key = "USA_crisis_name_3" #Recession 
+	}
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { USA_crisis_name = 4 }
+		}
+		localization_key = "USA_crisis_name_4" #Political Radicalization
+	}
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { USA_crisis_name = 5 }
+		}
+		localization_key = "USA_crisis_name_5" #The rise of evil...
+	}
+	text = {
+		localization_key = "USA_crisis_name_6"
+	}
+}
+
+
+
+defined_text = { #
+	name = jap_get_research_bonus
+	
+	text = {
+		trigger = {
+		   	JAP = {
+				NOT = {
+					has_completed_focus = JAP_militarize_nippon_electric
+				}
+			}
+		}
+		localization_key = "JAP_starting_research_speed1"
+	}
+	text = {
+		trigger = {
+		   JAP = {
+				has_completed_focus = JAP_militarize_nippon_electric
+			}
+		}
+		localization_key = "JAP_research_speed_boost_dynamic"
+	}
+}
+defined_text = { #
+	name = foreign_get_description
+	
+	text = {
+		trigger = {
+		   	282 = {
+				NOT = {
+					has_state_flag = no_china_war_state_flag
+					has_state_flag = no_partial_china_war_state_flag
+				}
+			}
+		}
+		localization_key = "foreign_support_desc1"
+	}
+	text = {
+		trigger = {
+		     282 = {
+				has_state_flag = no_partial_china_war_state_flag
+			}
+		}
+		localization_key = "foreign_support_desc2"
+	}
+}
+defined_text = { #
+	name = JAP_get_marco_polo_description
+	
+	text = {
+		trigger = {
+		   	282 = {
+				NOT = {
+					has_state_flag = no_china_war_state_flag
+					has_state_flag = no_partial_china_war_state_flag
+				}
+			}
+		}
+		localization_key = "JAP_intervene_in_china_decision_desc1"
+	}
+	text = {
+		localization_key = "JAP_intervene_in_china_decision_desc2"
+	}
+	
+}
+defined_text = { #
+	name = CHI_get_army_bonus
+	
+	text = {
+		trigger = {
+		   CHI = {
+				NOT = {
+					has_completed_focus = CHI_modernisation_of_our_weapons
+					has_idea = jap_fuel_tank_bonus
+				}
+		   }
+		}
+		localization_key = "CHI_unprofessional_army_tt1"
+	}
+	text = {
+		trigger = {
+		   CHI = {
+				has_completed_focus = CHI_modernisation_of_our_weapons
+				NOT = {
+					has_idea = jap_fuel_tank_bonus
+				}
+		   }
+		}
+		localization_key = "CHI_unprofessional_army_tt2"
+	}
+	text = {
+		trigger = {
+		   CHI = {
+				NOT = {
+					has_completed_focus = CHI_modernisation_of_our_weapons
+				}
+				has_idea = jap_fuel_tank_bonus
+		   }
+		}
+		localization_key = "CHI_unprofessional_army_tt3"
+	}
+	text = {
+		trigger = {
+		   CHI = {
+				has_completed_focus = CHI_modernisation_of_our_weapons
+				has_idea = jap_fuel_tank_bonus
+		   }
+		}
+		localization_key = "CHI_unprofessional_army_tt4"
+	}
+}
+defined_text = { #
+	name = CHI_get_number_of_lendleases
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_overall_available_routes
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = "CHI_lend_lease_zero"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_overall_available_routes
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = "CHI_lend_lease_one"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_overall_available_routes
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = "CHI_lend_lease_two"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_overall_available_routes
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = "CHI_lend_lease_three"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_overall_available_routes
+				value = 4
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "CHI_lend_lease_four"
+	}
+}
+defined_text = { #
+	name = JAP_get_war_escalation_lvl
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = JAP_war_escalation_var
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = "JAP_macro_polo1"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = JAP_war_escalation_var
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = "JAP_macro_polo2"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = JAP_war_escalation_var
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = "JAP_macro_polo3"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = JAP_war_escalation_var
+				value = 3
+				compare = equals
+			}
+		}
+		localization_key = "JAP_macro_polo4"
+	}
+}
+defined_text = { # global
+	name = pause_selected
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=0}
+			NOT={Root={has_global_flag=blocking_pauses}}
+		}
+		localization_key = PAUSE_SELECT
+	}
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=1}
+		}
+		localization_key = PAUSE1
+	}
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=2}
+		}
+		localization_key = PAUSE2
+	}
+	
+		text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=3}
+		}
+		localization_key = PAUSE3
+	}
+	
+}
+defined_text = { #
+	name = AST_get_cruiser_cost
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_cruiser_expansion
+			}
+		   
+		}
+		localization_key = AST_cruiser_cost_tt2
+	}
+	text = {
+		localization_key = AST_cruiser_cost_tt1
+	}
+}
+defined_text = { #
+	name = AST_get_sub_cost
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_sub_construction
+			}
+		   
+		}
+		localization_key = AST_sub_cost_tt2
+	}
+	text = {
+		localization_key = AST_sub_cost_tt1
+	}
+}
+defined_text = { #
+	name = AST_get_railwaygun_cost_tt
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_railway_gun_idea
+			}
+		   
+		}
+		localization_key = AST_railwaygun_cost_tt2
+	}
+	text = {
+		localization_key = AST_railwaygun_cost_tt1
+	}
+}
+defined_text = { #
+	name = AST_get_arty_cost
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_arty_idea
+			}
+		   
+		}
+		localization_key = AST_arty_cost_tt2
+	}
+	text = {
+		localization_key = AST_arty_cost_tt1
+	}
+}
+
+defined_text = { #
+	name = AST_get_mot_cost
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_trucks_idea
+			}
+		   
+		}
+		localization_key = AST_mot_cost_tt2
+	}
+	text = {
+		localization_key = AST_mot_cost_tt1
+	}
+}
+defined_text = { #
+	name = AST_get_gun_cost
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_infantry_forces_idea
+			}
+		   
+		}
+		localization_key = AST_gun_cost_tt2
+	}
+	text = {
+		localization_key = AST_gun_cost_tt1
+	}
+}
+defined_text = { #
+	name = AST_get_tank_cost_tt
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_wartime_industry
+			}
+		   
+		}
+		localization_key = AST_tank_cost_tt2
+	}
+	text = {
+		localization_key = AST_tank_cost_tt1
+	}
+}
+defined_text = { #
+	name = USA_get_ger_debuff_tt
+	text = {
+		trigger = {
+			USA = {
+				has_idea = unprepared_for_war
+				has_idea = USA_starting_research_debuff
+			}
+		   
+		}
+		localization_key = USA_ger_debuff_tt2
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = unprepared_for_war
+				NOT = {
+					has_idea = USA_starting_research_debuff
+				}
+				
+			}
+		   
+		}
+		localization_key = USA_ger_debuff_tt3
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_starting_research_debuff
+				NOT = {
+					has_idea = unprepared_for_war
+				}
+				
+			}
+		   
+		}
+		localization_key = USA_ger_debuff_tt4
+	}
+	text = {
+		localization_key = USA_ger_debuff_tt1
+	}
+}
+defined_text = { #
+	name = USA_get_allies_trade_tt
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_arsenal_trading_idea
+			}
+		   
+		}
+		localization_key = USA_allies_trade_tt2
+	}
+	text = {
+		localization_key = USA_allies_trade_tt1
+	}
+}
+defined_text = { #
+	name = USA_get_bb_bonus_tt
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_lead_liberty
+			}
+		   
+		}
+		localization_key = USA_bb_bonus_tt2
+	}
+	text = {
+		localization_key = USA_bb_bonus_tt1
+	}
+}
+defined_text = { #
+	name = USA_get_ship_cost_tt
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_massive_funding_project
+			}
+		   
+		}
+		localization_key = USA_ship_cost_tt2
+	}
+	text = {
+		localization_key = USA_ship_cost_tt1
+	}
+}
+defined_text = { #
+	name = JAP_get_first_air_fleet
+	text = {
+		trigger = {
+			has_idea = JAP_sortie_buff
+			NOT = {
+				has_idea = JAP_screen_pen
+				has_idea = JAP_first_air_fleet
+			}
+			
+		  
+		}
+		localization_key = JAP_first_air_fleet_tt2
+	}
+	text = {
+		trigger = {
+			has_idea = JAP_screen_pen
+			NOT = {
+				has_idea = JAP_first_air_fleet
+				has_idea = JAP_sortie_buff
+			}
+			
+		  
+		}
+		localization_key = JAP_first_air_fleet_tt3
+	}
+	text = {
+		trigger = {
+			has_idea = JAP_sortie_buff
+			has_idea = JAP_screen_pen
+			NOT = {
+				has_idea = JAP_first_air_fleet
+			}
+			
+		  
+		}
+		localization_key = JAP_first_air_fleet_tt4
+	}
+	text = {
+		trigger = {
+			has_idea = JAP_sortie_buff
+			has_idea = JAP_first_air_fleet
+			NOT = {
+				has_idea = JAP_screen_pen
+			}
+			
+		  
+		}
+		localization_key = JAP_first_air_fleet_tt5
+	}
+	text = {
+		trigger = {
+			has_idea = JAP_first_air_fleet
+			has_idea = JAP_screen_pen
+			has_idea = JAP_screen_pen
+			
+		  
+		}
+		localization_key = JAP_first_air_fleet_tt6
+	}
+
+	text = {
+		localization_key = JAP_first_air_fleet_tt1
+	}
+}
+defined_text = { #
+	name = JAP_aircraft_bonus
+	text = {
+		trigger = {
+			has_completed_focus = JAP_air_land_cooperation
+			NOT = {
+				has_completed_focus = JAP_integrated_spotters
+			}
+		  
+		}
+		localization_key = JAP_air_bonus_tt2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = JAP_integrated_spotters
+		  
+		}
+		localization_key = JAP_air_bonus_tt3
+	}
+
+	text = {
+		localization_key = JAP_air_bonus_tt1
+	}
+}
+
+defined_text = { #
+	name = JAP_get_hp_status
+	text = {
+		trigger = {
+			tag = JAP
+			NOT = {
+				OR = {
+					has_completed_focus = JAP_superiority_of_firepower
+					has_completed_focus = JAP_innovative_theories
+					has_completed_focus = JAP_the_old_guard
+					has_completed_focus = JAP_superiority_of_man
+				}
+			}  
+		}
+		localization_key = JAP_ija_general_staff_tt2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = JAP_superiority_of_firepower
+		}
+		localization_key = JAP_ija_general_staff_tt3
+	}
+	text = {
+		trigger = {
+			has_completed_focus = JAP_innovative_theories
+		}
+		localization_key = JAP_ija_general_staff_tt4
+	}
+	text = {
+		trigger = {
+			has_completed_focus = JAP_superiority_of_man
+		}
+		localization_key = JAP_ija_general_staff_tt5
+	}
+	text = {
+		localization_key = JAP_ija_general_staff_tt1
+	}
+}
+defined_text = { #
+	name = JAP_get_infantry_cost
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = infantry_production_jap
+				NOT = {
+					has_idea = JAP_light_artillery_manufacturing_plant_idea
+					has_idea = JAP_ija_general_staff_superior_firepower_4
+					has_idea = tank_production_jap
+					has_idea = JAP_massed_production
+				}
+				
+			}
+		   
+		}
+		localization_key = JAP_infantry_production_tt2
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = infantry_production_jap
+				has_idea = JAP_ija_general_staff_superior_firepower_4
+				NOT = {
+					has_idea = JAP_light_artillery_manufacturing_plant_idea
+				}
+				
+			}
+		   
+		}
+		localization_key = JAP_infantry_production_tt3
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = infantry_production_jap
+				has_idea = JAP_light_artillery_manufacturing_plant_idea
+				has_idea = JAP_ija_general_staff_superior_firepower_4
+				NOT = {
+					has_idea = tank_production_jap
+				}
+				
+			}
+		   
+		}
+		localization_key = JAP_infantry_production_tt4
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = infantry_production_jap
+				has_idea = JAP_light_artillery_manufacturing_plant_idea
+				has_idea = JAP_ija_general_staff_superior_firepower_4
+				has_idea = tank_production_jap
+				
+			}
+		   
+		}
+		localization_key = JAP_infantry_production_tt5
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = infantry_production_jap
+				NOT = {
+					has_idea = JAP_ija_general_staff_superior_firepower_4
+					has_idea = JAP_light_artillery_manufacturing_plant_idea
+				}
+				has_idea = tank_production_jap
+				
+			}
+		   
+		}
+		localization_key = JAP_infantry_production_tt6
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = infantry_production_jap
+				
+				has_idea = JAP_massed_production
+				
+			}
+		   
+		}
+		localization_key = JAP_infantry_production_tt7
+	}
+	text = {
+		localization_key = ENG_infantry_production_tt1
+	}
+}
+defined_text = { #
+	name = CHI_get_state_of_army
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_state_of_army_var
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = CHI_state_of_army_var
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = "CHI_state_of_army_tt1"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_state_of_army_var
+				value = 20
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = CHI_state_of_army_var
+				value = 40
+				compare = less_than
+			}
+		}
+		localization_key = "CHI_state_of_army_tt2"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_state_of_army_var
+				value = 40
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = CHI_state_of_army_var
+				value = 60
+				compare = less_than
+			}
+		}
+		localization_key = "CHI_state_of_army_tt3"
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = CHI_state_of_army_var
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "CHI_state_of_army_tt4"
+	}
+}
+defined_text = { #
+	name = ENG_get_compass
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_afrika_campaign
+			}
+		   
+		}
+		localization_key = ENG_operation_compass_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_afrika_campaign2
+			}
+		   
+		}
+		localization_key = ENG_operation_compass_tt3
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_afrika_campaign3
+			}
+		   
+		}
+		localization_key = ENG_operation_compass_tt4
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_afrika_campaign4
+			}
+		   
+		}
+		localization_key = ENG_operation_compass_tt5
+	}
+	text = {
+		localization_key = ENG_operation_compass_tt1
+	}
+}
+defined_text = { #
+	name = CAN_get_war_industry
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_wartime_industry
+			}
+		   
+		}
+		localization_key = CAN_war_industry_tt2
+	}
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_wartime_industry_1
+			}
+		   
+		}
+		localization_key = CAN_war_industry_tt3
+	}
+	text = {
+		localization_key = CAN_war_industry_tt1
+	}
+}
+defined_text = { #
+	name = CAN_get_navy
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = no_bonus_can_ship
+			}
+		   
+		}
+		localization_key = CAN_no_bonuses_tooltip_ship
+	}
+	#^^^^^dd+5% ic
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = dd_only_bonus_can_ship
+			}
+		   
+		}
+		localization_key = CAN_destroyer_only_tooltip_ship
+	}
+	#^^^^^dd-5% ic
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = cl_only_bonus_can_ship
+			}
+		   
+		}
+		localization_key = CAN_cruiser_only_tooltip_ship
+	}
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = cl_cav_bonus_can_ship
+			}
+		   
+		}
+		localization_key = CAN_cruiser_and_carrier_tooltip_ship
+	}
+	#carrier alone
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = cav_only_bonus_can_ship
+			}
+		   
+		}
+		localization_key = CAN_carrier_only_tooltip_ship
+	}
+	#carrier alone
+
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = dd_cav_bonus_can_ship
+			}
+		   
+		}
+		localization_key = CAN_carrier_and_destroyer_tooltip_ship
+	}
+
+}
+defined_text = { #
+	name = POL_get_war_industry
+	text = {
+		trigger = {
+			POL = {
+				has_idea = POL_wartime_industry
+			}
+		   
+		}
+		localization_key = POL_war_industry_tt2
+	}
+	text = {
+		localization_key = POL_war_industry_tt1
+	}
+}
+defined_text = { #
+	name = AST_get_war_industry
+	text = {
+		trigger = {
+			AST = {
+				has_idea = AST_wartime_industry
+			}
+		   
+		}
+		localization_key = AST_war_industry_tt2
+	}
+	text = {
+		localization_key = AST_war_industry_tt1
+	}
+}
+defined_text = { #
+	name = CAN_get_USA_trade
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_reciprocal_trade_1
+			}
+		   
+		}
+		localization_key = CAN_USA_trade_tt2
+	}
+	text = {
+		localization_key = CAN_USA_trade_tt1
+	}
+}
+defined_text = { #
+	name = USA_get_USA_trade
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_reciprocal_trade_1
+			}
+		   
+		}
+		localization_key = USA_USA_trade_tt2
+	}
+	text = {
+		localization_key = USA_USA_trade_tt1
+	}
+}
+defined_text = { #
+	name = JAP_get_USA_trade
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_japan_trading
+			}
+		   
+		}
+		localization_key = JAP_trade_tt2
+	}
+	text = {
+		localization_key = JAP_trade_tt1
+	}
+}
+
+defined_text = { #
+	name = CAN_get_arty_bonus
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_firepower_focus_general_staff
+			}
+		   
+		}
+		localization_key = CAN_arty_bonus_tt2
+	}
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_firepower_focus_general_staff_3
+			}
+		   
+		}
+		localization_key = CAN_arty_bonus_tt3
+	}
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_firepower_focus_general_staff_2
+			}
+		   
+		}
+		localization_key = CAN_arty_bonus_tt4
+	}
+	text = {
+		localization_key = CAN_arty_bonus_tt1
+	}
+}
+defined_text = { #
+	name = CAN_get_vols
+	text = {
+		trigger = {
+			CAN = {
+				has_idea = CAN_volunteers3
+			}
+		   
+		}
+		localization_key = CAN_vols_tt2
+	}
+	
+	text = {
+		localization_key = CAN_vols_tt1
+	}
+}
+defined_text = { #
+	name = SLO_get_armor_cost
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt2
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea2
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt3
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea3
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt4
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea4
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt5
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea5
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt6
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea6
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt7
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea7
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt8
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea8
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt9
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea9
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt10
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea10
+			}
+		   
+		}
+		localization_key = SLO_armor_cost_tt11
+	}
+	text = {
+		localization_key = SLO_armor_cost_tt2
+	}
+}
+defined_text = { #
+	name = SLO_get_infantry_cost
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt2
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea2
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt3
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea3
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt4
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea4
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt5
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea5
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt6
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea6
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt7
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea7
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt8
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea8
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt9
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea9
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt10
+	}
+	text = {
+		trigger = {
+			SLO = {
+				has_idea = SLO_vig_mil_idea10
+			}
+		   
+		}
+		localization_key = SLO_infantry_cost_tt11
+	}
+	text = {
+		localization_key = SLO_infantry_cost_tt2
+	}
+}
+	
+defined_text = { #
+	name = FRA_get_planes_cost
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_bad_airforce
+			}
+		   
+		}
+		localization_key = FRA_planes_cost_tt2
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_not_as_bad_airforce
+			}
+		   
+		}
+		localization_key = FRA_planes_cost_tt3
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_not_as_bad_airforce2
+			}
+		   
+		}
+		localization_key = FRA_planes_cost_tt4
+	}
+	text = {
+		localization_key = FRA_planes_cost_tt1
+	}
+}
+defined_text = { #
+	name = FRA_get_radio_cost
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_archaic_command_Structure
+			}
+		   
+		}
+		localization_key = FRA_radio_cost_tt2
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_archaic_command_Structure2
+			}
+		   
+		}
+		localization_key = FRA_radio_cost_tt3
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_archaic_command_Structure3
+			}
+		   
+		}
+		localization_key = FRA_radio_cost_tt4
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_archaic_command_Structure4
+			}
+		   
+		}
+		localization_key = FRA_radio_cost_tt5
+	}
+	text = {
+		localization_key = FRA_radio_cost_tt1
+	}
+}
+defined_text = { #
+	name = FRA_get_armor_cost
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_antitank_tank_drive
+			}
+		   
+		}
+		localization_key = FRA_armor_cost_tt2
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_antitank_tank_drive3
+			}
+		   
+		}
+		localization_key = FRA_armor_cost_tt3
+	}
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_antitank_tank_drive2
+			}
+		   
+		}
+		localization_key = FRA_armor_cost_tt4
+	}
+	text = {
+		localization_key = FRA_armor_cost_tt1
+	}
+}
+defined_text = { #
+	name = FRA_get_mot_cost
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_trucks_idea
+			}
+		   
+		}
+		localization_key = FRA_mot_cost_tt2
+	}
+	text = {
+		localization_key = FRA_mot_cost_tt1
+	}
+}
+defined_text = { #
+	name = FRA_get_arty_cost
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_arms_industry
+			}
+		   
+		}
+		localization_key = FRA_arty_cost_tt2
+	}
+	text = {
+		localization_key = FRA_arty_cost_tt1
+	}
+}
+defined_text = { #
+	name = FRA_get_inf_research
+	text = {
+		trigger = {
+			FRA = {
+				has_idea = FRA_arms_industry
+			}
+		   
+		}
+		localization_key = FRA_inf_research_tt2
+	}
+	text = {
+		localization_key = FRA_inf_research_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_bomber_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_combined_bomber_offensive
+			}
+		   
+		}
+		localization_key = ENG_bombers_production_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_combined_bomber_offensive2
+			}
+		   
+		}
+		localization_key = ENG_bombers_production_tt3
+	}
+
+	text = {
+		localization_key = ENG_bombers_production_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_arty_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour
+			}
+		   
+		}
+		localization_key = ENG_arty_production_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour_2
+			}
+		   
+		}
+		localization_key = ENG_arty_production_tt3
+	}
+
+	text = {
+		localization_key = ENG_arty_production_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_tank_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour
+				NOT = {
+					has_idea = ENG_royal_tank_regiment_idea_first
+				}
+			}
+		   
+		}
+		localization_key = ENG_tank_production_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour_2
+				NOT = {
+					has_idea = ENG_royal_tank_regiment_idea_first
+				}
+			}
+		   
+		}
+		localization_key = ENG_tank_production_tt3
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_royal_tank_regiment_idea_first
+				NOT = {
+					OR = {	
+						has_idea = ENG_darkest_hour
+						has_idea = ENG_darkest_hour_2
+					}
+				}
+			}
+		   
+		}
+		localization_key = ENG_tank_production_tt4
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_royal_tank_regiment_idea_first
+				has_idea = ENG_darkest_hour
+			}
+		   
+		}
+		localization_key = ENG_tank_production_tt5
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_royal_tank_regiment_idea_first
+				has_idea = ENG_darkest_hour_2
+			}
+		   
+		}
+		localization_key = ENG_tank_production_tt6
+	}
+
+	text = {
+		localization_key = ENG_tank_production_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_infantry_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour
+				NOT = {
+					has_idea = british_arms_discount
+				}
+			}
+		   
+		}
+		localization_key = ENG_infantry_production_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour_2
+				NOT = {
+					has_idea = british_arms_discount
+				}
+			}
+		   
+		}
+		localization_key = ENG_infantry_production_tt3
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = british_arms_discount
+				NOT = {
+					OR = {	
+						has_idea = ENG_darkest_hour
+						has_idea = ENG_darkest_hour_2
+					}
+				}
+			}
+		   
+		}
+		localization_key = ENG_infantry_production_tt4
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = british_arms_discount
+				has_idea = ENG_darkest_hour
+			}
+		   
+		}
+		localization_key = ENG_infantry_production_tt5
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = british_arms_discount
+				has_idea = ENG_darkest_hour_2
+			}
+		   
+		}
+		localization_key = ENG_infantry_production_tt6
+	}
+
+	text = {
+		localization_key = ENG_infantry_production_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_aircraft_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour
+			}
+		   
+		}
+		localization_key = ENG_aircraft_production_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_darkest_hour_2
+			}
+		   
+		}
+		localization_key = ENG_aircraft_production_tt3
+	}
+
+	text = {
+		localization_key = ENG_aircraft_production_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_destroyer_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_asw_2
+			}
+		   
+		}
+		localization_key = ENG_destroyer_modifier_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_asw_3
+			}
+		   
+		}
+		localization_key = ENG_destroyer_modifier_tt3
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_asw_4
+			}
+		   
+		}
+		localization_key = ENG_destroyer_modifier_tt4
+	}
+
+	text = {
+		localization_key = ENG_destroyer_modifier_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_cruiser_cost
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_secure_the_imperial_shipping_routes
+				NOT = {
+					has_idea = british_convoy_discount
+				}
+			}
+		   
+		}
+		localization_key = ENG_cruiser_modifier_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_secure_the_imperial_shipping_routes
+				has_idea = british_convoy_discount
+			}
+		   
+		}
+		localization_key = ENG_cruiser_modifier_tt3
+	}
+
+	text = {
+		localization_key = ENG_cruiser_modifier_tt1
+	}
+}
+defined_text = { #
+	name = JAP_get_submarine_cost
+	
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = JAP_subs_1
+			}
+		}
+		localization_key = JAP_submarine_modifier_tt2
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = JAP_subs_2
+			}
+		   
+		}
+		localization_key = JAP_submarine_modifier_tt3
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = JAP_subs_3
+			}
+		   
+		}
+		localization_key = JAP_submarine_modifier_tt4
+	}
+	text = {
+		trigger = {
+
+			JAP = {
+				has_idea = JAP_subs_4
+			}
+		   
+		}
+		localization_key = JAP_submarine_modifier_tt5
+	}
+	text = {
+		trigger = {
+			JAP = {
+				has_idea = JAP_subs_5
+			}
+		   
+		}
+		localization_key = JAP_submarine_modifier_tt6
+	}
+	text = {
+		localization_key = JAP_submarine_modifier_tt1
+	}
+}
+defined_text = { #
+	name = ENG_get_submarine_cost
+	
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_subs_1
+			}
+		}
+		localization_key = ENG_submarine_modifier_tt2
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_subs_2
+			}
+		   
+		}
+		localization_key = ENG_submarine_modifier_tt3
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_subs_3
+			}
+		   
+		}
+		localization_key = ENG_submarine_modifier_tt4
+	}
+	text = {
+		trigger = {
+
+			ENG = {
+				has_idea = ENG_subs_4
+			}
+		   
+		}
+		localization_key = ENG_submarine_modifier_tt5
+	}
+	text = {
+		trigger = {
+			ENG = {
+				has_idea = ENG_subs_5
+			}
+		   
+		}
+		localization_key = ENG_submarine_modifier_tt6
+	}
+	text = {
+		localization_key = ENG_submarine_modifier_tt1
+	}
+}
+defined_text = { #
+	name = get_USA_popular_support_map_texture
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = USA_popular_support_var
+				value = -1
+				compare = less_than
+			}
+		}
+		localization_key = "GFX_USA_popular_support_20"
+	}
+}
+
+defined_text = { #
+	name = get_USA_popular_support_map_texture
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = USA_popular_support_var
+				value = -1
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_USA_popular_support_20"
+	}
+}
+
+defined_text = { #
+	name = get_USA_popular_support_map_texture2
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = USA_popular_support_var
+				value = -0.6
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_USA_popular_support_40"
+	}
+}
+
+defined_text = { #
+	name = get_USA_popular_support_map_texture3
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = USA_popular_support_var
+				value = -0.4
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_USA_popular_support_60"
+	}
+}
+
+defined_text = { #
+	name = get_USA_popular_support_map_texture4
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = USA_popular_support_var
+				value = -0.2
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_USA_popular_support_80"
+	}
+}
+
+defined_text = { #
+	name = get_USA_popular_support_map_texture5
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = USA_popular_support_var
+				value = 0.0
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_USA_popular_support_100"
+	}
+}
+
+defined_text = { #
+	name = get_GER_fanaticism_texture
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = GER_fanaticism_var 
+				value = 0
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_GER_fanatics_1"
+	}
+}
+
+defined_text = { #
+	name = get_GER_fanaticism_texture2
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = GER_fanaticism_var 
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_GER_fanatics_2"
+	}
+}
+
+defined_text = { #
+	name = get_GER_fanaticism_texture3
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = GER_fanaticism_var 
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_GER_fanatics_3"
+	}
+}
+
+defined_text = { #
+	name = get_GER_fanaticism_texture4
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = GER_fanaticism_var 
+				value = 90
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_GER_fanatics_4"
+	}
+}
+
+defined_text = { #
+	name = get_GER_fanaticism_texture5
+	
+	text = {
+		trigger = {
+		   check_variable = {
+				var = GER_fanaticism_var 
+				value = 120
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = "GFX_GER_fanatics_5"
+	}
+}
+
+defined_text = { # Country
+	name = GetFRAgovernmentname
+	text = {
+		trigger = {
+		   check_variable = {
+				var = FRA_collapsing_government_stability_factor_modifier 
+				value = 0
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = FRA_STABLE_GOVERNMENT_NAME
+	}
+	text = {
+		trigger = {
+		   check_variable = {
+				var = FRA_collapsing_government_stability_factor_modifier 
+				value = 0
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = FRA_UNSTABLE_GOVERNMENT_NAME
+	}
+}
+
+defined_text = { # Country
+	name = GetKdfWagenName
+	text = {
+		trigger = {
+			original_tag = GER
+			has_government = neutrality
+		}
+		localization_key = GER_KAISER_WAGEN_NAME
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			OR = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+		localization_key = GER_VOLKS_WAGEN_NAME
+	}
+	text = {
+		localization_key = GER_KDF_WAGEN_NAME
+	}
+}
+
+defined_text = { # Country
+	name = GetHermannGoringWerkeName
+	text = {
+		trigger = {
+			original_tag = GER
+			has_government = neutrality
+		}
+		localization_key = GER_HERMANN_GORING_WERKE_NAME_KAISER
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			has_government = communism
+		}
+		localization_key = GER_HERMANN_GORING_WERKE_NAME_COMMIE
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			has_government = fascism
+		}
+		localization_key = GER_HERMANN_GORING_WERKE_NAME_FASCIST
+	}
+	text = {
+		localization_key = GER_HERMANN_GORING_WERKE_NAME
+	}
+}
+
+defined_text = { # for PRC tree
+	name = GetManchuriaPuppet
+	text = {
+		trigger = {
+			MAN = {
+				OR = {
+					is_subject_of = JAP
+					has_cosmetic_tag = MAN_kwantung_army 
+				}
+			}
+		}
+		localization_key = PRC_provoke_japan_manchuria
+	}
+	text = {
+		localization_key = PRC_provoke_japan_korea
+	}
+}
+
+defined_text = { # for shared tree
+	name = GetVietnamOwner
+	text = {
+		trigger = {
+			671 = {
+				is_controlled_by = JAP
+			}
+		}
+		localization_key = CHI_vietnam_JAP
+	}
+	text = {
+		localization_key = CHI_vietnam_FRA
+	}
+}
+
+defined_text = { # Country
+	name = GetGermanTechnologyName
+	text = {
+		trigger = {
+			original_tag = RAJ
+			is_in_faction_with = JAP
+			NOT = { is_in_faction_with = GER }
+		}
+		localization_key = RAJ_german_technology_japan
+	}
+	text = {
+		localization_key = RAJ_german_technology_german
+	}
+}
+
+defined_text = { # Country
+	name = GetJAAFAName
+	text = {
+		trigger = {
+			original_tag = RAJ
+			is_in_faction_with = GER
+			NOT = { is_in_faction_with = JAP }
+		}
+		localization_key = RAJ_japanese_army_air_force_academy_german
+	}
+	text = {
+		localization_key = RAJ_japanese_army_air_force_academy_japan
+	}
+}
+
+defined_text = { #
+	name = GetWehrmachtAngerLevel
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = wehrmacht_anger value = 0 compare = less_than }
+
+		}
+		localization_key = SS_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = wehrmacht_anger value = 0 compare = greater_than_or_equals }
+			check_variable = { var = wehrmacht_anger value = 10 compare = less_than }
+
+		}
+		localization_key = SS_calm
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = wehrmacht_anger value = 10 compare = greater_than_or_equals }
+			check_variable = { var = wehrmacht_anger value = 20 compare = less_than }
+
+		}
+		localization_key = SS_worried
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = wehrmacht_anger value = 20 compare = greater_than_or_equals }
+			check_variable = { var = wehrmacht_anger value = 30 compare = less_than }
+
+		}
+		localization_key = SS_angry
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
+			check_variable = { var = wehrmacht_anger value = 40 compare = less_than }
+
+		}
+		localization_key = SS_plotting
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = wehrmacht_anger value = 40 compare = greater_than_or_equals }
+		}
+		localization_key = SS_rebellious
+	}
+}
+
+defined_text = { #
+	name = GetSSAngerLevel
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = SS_anger value = 0 compare = less_than }
+
+		}
+		localization_key = SS_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = SS_anger value = 0 compare = greater_than_or_equals }
+			check_variable = { var = SS_anger value = 10 compare = less_than }
+
+		}
+		localization_key = SS_calm
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = SS_anger value = 10 compare = greater_than_or_equals }
+			check_variable = { var = SS_anger value = 20 compare = less_than }
+
+		}
+		localization_key = SS_worried
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = SS_anger value = 20 compare = greater_than_or_equals }
+			check_variable = { var = SS_anger value = 30 compare = less_than }
+
+		}
+		localization_key = SS_angry
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = SS_anger value = 30 compare = greater_than_or_equals }
+			check_variable = { var = SS_anger value = 40 compare = less_than }
+
+		}
+		localization_key = SS_plotting
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			check_variable = { var = SS_anger value = 40 compare = greater_than_or_equals }
+		}
+		localization_key = SS_rebellious
+	}
+}
+
+defined_text = { # Country
+	name = GetStrengthRatioBritain
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_90
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_75
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_lower_than_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_over_100
+	}
+}
+defined_text = { # Country
+	name = GetRelevantNavalTreatyNation
+	text = {
+		trigger = {
+			ENG = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = ENG_Naval_treaty_nation
+	}
+	text = {
+		trigger = {
+			ENG = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			USA = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = USA_Naval_treaty_nation
+	}
+}
+
+defined_text = { #
+	name = ITA_get_submarine_cost
+	
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_subs_1
+			}
+		}
+		localization_key = ITA_submarine_modifier_tt2
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_subs_2
+			}
+		   
+		}
+		localization_key = ITA_submarine_modifier_tt3
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_subs_3
+			}
+		   
+		}
+		localization_key = ITA_submarine_modifier_tt4
+	}
+	text = {
+		trigger = {
+
+			ITA = {
+				has_idea = ITA_subs_4
+			}
+		   
+		}
+		localization_key = ITA_submarine_modifier_tt5
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_subs_5
+			}
+		   
+		}
+		localization_key = ITA_submarine_modifier_tt6
+	}
+	text = {
+		localization_key = ITA_submarine_modifier_tt1
+	}
+}
+defined_text = { #
+	name = USA_get_submarine_modifier_tt
+	
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_1
+				NOT = {
+					has_idea = USA_op_dive_bomber
+				}
+			}
+		}
+		localization_key = USA_submarine_modifier_tt2
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_2
+				NOT = {
+					has_idea = USA_op_dive_bomber
+				}
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt3
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_3
+				NOT = {
+					has_idea = USA_op_dive_bomber
+				}
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt4
+	}
+	text = {
+		trigger = {
+
+			USA = {
+				has_idea = USA_subs_4
+				NOT = {
+					has_idea = USA_op_dive_bomber
+				}
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt5
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_5
+				NOT = {
+					has_idea = USA_op_dive_bomber
+				}
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt6
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_1
+		
+				has_idea = USA_op_dive_bomber
+				
+			}
+		}
+		localization_key = USA_submarine_modifier_tt7
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_2
+				has_idea = USA_op_dive_bomber
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt8
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_3
+				has_idea = USA_op_dive_bomber
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt9
+	}
+	text = {
+		trigger = {
+
+			USA = {
+				has_idea = USA_subs_4
+				has_idea = USA_op_dive_bomber
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt10
+	}
+	text = {
+		trigger = {
+			USA = {
+				has_idea = USA_subs_5
+				has_idea = USA_op_dive_bomber
+			}
+		   
+		}
+		localization_key = USA_submarine_modifier_tt11
+	}
+	text = {
+		localization_key = USA_submarine_modifier_tt1
+	}
+}
+defined_text = { #
+	name = ITA_get_planes_cost
+	
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_alfa_romeo_boost_engine
+				NOT = {
+					has_idea = ITA_good_engines  
+					has_idea = ITA_good_airforce
+				}
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt2
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_good_engines  
+				NOT = { 
+					has_idea = ITA_good_airforce
+					has_idea = ITA_alfa_romeo_boost_engine
+				}
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt3
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_good_airforce  
+				NOT = {
+					has_idea = ITA_good_engines
+					has_idea = ITA_alfa_romeo_boost_engine
+				}
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt4
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_good_airforce  
+				has_idea = ITA_good_engines 
+				NOT = {
+					has_idea = ITA_alfa_romeo_boost_engine
+				}
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt5
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_good_airforce  
+				has_idea = ITA_alfa_romeo_boost_engine
+			
+				NOT = {
+						has_idea = ITA_good_engines 
+				}
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt6
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_good_engines
+				has_idea = ITA_alfa_romeo_boost_engine
+			
+				NOT = {
+					has_idea =  ITA_good_airforce
+				}
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt4
+	}
+	text = {
+		trigger = {
+			ITA = {
+				has_idea = ITA_good_engines
+				has_idea = ITA_alfa_romeo_boost_engine
+				has_idea =  ITA_good_airforce
+			}
+		   
+		}
+		localization_key = ITA_planes_cost_tt7
+	}
+	text = {
+		localization_key = ITA_planes_cost_tt1
+	}
+}
+
+
+defined_text = { #
+	name = GetStalinParanoiaLevel
+	text = {
+		trigger = {
+			original_tag = SOV
+			check_variable = { var = stalin_paranoia value = 0 compare = less_than }
+
+		}
+		localization_key = SOV_stalin_calm
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			check_variable = { var = stalin_paranoia value = 0 compare = greater_than_or_equals }
+			check_variable = { var = stalin_paranoia value = 20 compare = less_than }
+
+		}
+		localization_key = SOV_stalin_suspicious
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			check_variable = { var = stalin_paranoia value = 20 compare = greater_than_or_equals }
+			check_variable = { var = stalin_paranoia value = 40 compare = less_than }
+
+		}
+		localization_key = SOV_stalin_worried
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			check_variable = { var = stalin_paranoia value = 40 compare = greater_than_or_equals }
+			check_variable = { var = stalin_paranoia value = 60 compare = less_than }
+
+		}
+		localization_key = SOV_stalin_resentful
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			check_variable = { var = stalin_paranoia value = 60 compare = greater_than_or_equals }
+			check_variable = { var = stalin_paranoia value = 80 compare = less_than }
+
+		}
+		localization_key = SOV_stalin_preparing_purge
+	}
+	text = {
+		trigger = {
+			original_tag = SOV
+			check_variable = { var = stalin_paranoia value = 80 compare = greater_than_or_equals }			
+			check_variable = { var = stalin_paranoia value = 200 compare = less_than }			
+		}
+		localization_key = SOV_stalin_taking_names_and_dealing_pain
+	}
+}
+
+defined_text = { #
+	name = BUL_get_arty_cost
+	text = {
+			trigger = {
+			BUL = {
+			has_completed_focus = BUL_reorganize_shell_production
+		}
+		   
+	}
+		localization_key = BUL_arty_cost_tt2
+	}
+	text = {
+		localization_key = BUL_arty_cost_tt1
+	}
+}
+
+defined_text = { #
+	name = BUL_get_inf_cost
+	text = {
+			trigger = {
+			BUL = {
+			has_completed_focus = BUL_import_german_small_arms
+		}
+		   
+	}
+		localization_key = BUL_inf_cost_tt2
+	}
+	text = {
+		localization_key = BUL_inf_cost_tt1
+	}
+}
+
+defined_text = { #
+	name = BUL_get_tank_cost
+	text = {
+			trigger = {
+			BUL = {
+			has_completed_focus = BUL_tank_production
+		}
+		   
+	}
+		localization_key = BUL_tank_cost_tt2
+	}
+	text = {
+		localization_key = BUL_tank_cost_tt1
+	}
+}
+
+defined_text = { #
+	name = BUL_get_arty_bonus
+	text = {
+			trigger = {
+			BUL = {
+			has_completed_focus = BUL_steel_rain
+		}
+		   
+	}
+		localization_key = BUL_arty_bonus_tt2
+	}
+	text = {
+		localization_key = BUL_arty_bonus_tt1
+	}
+}

@@ -1,0 +1,565 @@
+### AI ###
+#BUL_is_historical_ai
+#BUL_is_communist_stalinist_ai
+#BUL_is_communist_balkan_ai
+#BUL_is_democratic_socialist_ai
+#BUL_is_democratic_liberal_ai
+#BUL_is_fascist_axis_ai
+
+ideas = {
+
+
+##    ##    ###    ######## ####  #######  ##    ##    ###    ##           ######  ########  #### ########  #### ########  ######  
+###   ##   ## ##      ##     ##  ##     ## ###   ##   ## ##   ##          ##    ## ##     ##  ##  ##     ##  ##     ##    ##    ## 
+####  ##  ##   ##     ##     ##  ##     ## ####  ##  ##   ##  ##          ##       ##     ##  ##  ##     ##  ##     ##    ##       
+## ## ## ##     ##    ##     ##  ##     ## ## ## ## ##     ## ##           ######  ########   ##  ########   ##     ##     ######  
+##  #### #########    ##     ##  ##     ## ##  #### ######### ##                ## ##         ##  ##   ##    ##     ##          ## 
+##   ### ##     ##    ##     ##  ##     ## ##   ### ##     ## ##          ##    ## ##         ##  ##    ##   ##     ##    ##    ## 
+##    ## ##     ##    ##    ####  #######  ##    ## ##     ## ########     ######  ##        #### ##     ## ####    ##     ######  
+
+
+	country = { #DLC		
+
+		BUL_prussia_of_the_balkans = {
+			name = BUL_prussia_of_the_balkans
+
+			picture = GER_fan_prussian_militarism
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.1
+				experience_gain_army_factor = 0.1
+				army_morale_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.25
+				winter_attrition_factor = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				experience_loss_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = Sov
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+
+		}
+		
+		BUL_national_catastrophe1 = {
+			name = BUL_national_catastrophe
+
+			picture = bul_second_national_catastrophe
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {	
+				stability_factor = -0.15
+				stability_weekly = -0.003
+				war_support_factor = -0.10
+				
+			}
+		}
+		
+		BUL_national_catastrophe2 = {
+			name = BUL_national_catastrophe
+
+			picture = bul_second_national_catastrophe
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {	
+				stability_factor = -0.10
+				stability_weekly = -0.002
+				war_support_factor = -0.05
+				
+			}
+		}
+		
+		BUL_national_catastrophe3 = {
+			name = BUL_national_catastrophe
+
+			picture = bul_second_national_catastrophe
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {	
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				war_support_factor = 0
+				
+			}
+		}
+		
+		BUL_volunteers_in_spain = {
+			name = BUL_volunteers_spain
+		
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				original_tag = BUL
+			}
+		
+			allowed_civil_war = {
+				tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -1
+				military_industrial_organization_funds_gain = 0.2
+				sortie_efficiency  = 0.1
+				positioning  = 0.05
+				navy_anti_air_attack_factor = 0.2
+			} 
+		}		
+		
+		BUL_volunteers_in_spain2 = {
+			name = BUL_volunteers_spain
+			
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				original_tag = BUL
+			}
+		
+			allowed_civil_war = {
+				tag = BUL
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -1
+				military_industrial_organization_funds_gain = 0.2
+				send_volunteer_size = 1
+				experience_gain_army = 0.07
+				sortie_efficiency  = 0.1
+				positioning  = 0.05
+				navy_anti_air_attack_factor = 0.2
+			} 
+		}
+
+		BUL_navy_expansion = {
+					
+			allowed = {
+				always = no
+			}
+			picture = escort_effort_focus
+
+
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.3 instant = yes
+				}
+			}
+		}
+
+		BUL_army_rearmament = {
+					
+			allowed = {
+				always = no
+			}
+			picture = escort_effort_focus
+
+
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			removal_cost = -1
+
+			modifier = {	
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.05 
+			}
+		}
+
+		BUL_future_secured_timed = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = GER_wirtschaftswunder
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.1
+				stability_weekly = 0.002
+
+
+			}
+		}
+		
+		BUL_axis_trade = {
+			picture = can_wartime_prices_and_trade_board
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.50
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		BUL_reichswerke_hermann_goring = {
+
+			name = reichswerke_hermann_goring
+			picture = reichswerke_hermann_goring 
+
+			allowed = {
+					original_tag = BUL
+			}
+
+			traits = { trait_industrial_concern }
+
+			visible = {
+			}
+
+			available = {
+				has_completed_focus = BUL_integration_in_german_economy
+				GER = {
+				has_completed_focus = GER_four_year_plan
+				}				
+			}
+
+			modifier = {	
+				production_speed_arms_factory_factor = 0.20
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.1 
+			}
+
+			ai_will_do = { 
+				factor = 100
+			}
+
+			cost = 100 
+		}
+		
+		BUL_steel_barons = {
+			
+			name = BUL_steel_barons
+			picture = krupp
+
+			allowed = {
+					original_tag = BUL
+			}
+
+			visible = {
+			}
+
+			traits = { trait_industrial_concern }
+
+			available = {
+				has_completed_focus = BUL_integration_in_german_economy
+				GER = {
+				has_completed_focus = GER_continue_the_new_plan
+				}				
+			}
+
+			modifier = {	
+				production_factory_max_efficiency_factor  = 0.05
+				production_factory_efficiency_gain_factor = -0.10
+			}
+
+			ai_will_do = { 
+				factor = 100
+			}
+
+			cost = 100 
+		}
+		
+		BUL_pirin = {
+			name = BUL_pirin	
+			picture = bul_pirin
+		
+			allowed = {
+				original_tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = BUL_self_sufficient_economy
+				}
+			}
+
+			available = {
+				
+				}
+
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+
+			traits = { construction_company_BUL }
+
+			cost = 100 
+
+		}
+
+		BUL_pirin_2 = {
+			name = BUL_pirin
+			picture = bul_pirin
+		
+			allowed = {
+				original_tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			visible = {
+				has_completed_focus = BUL_self_sufficient_economy
+			}
+
+			available = {
+				has_completed_focus = BUL_self_sufficient_economy	
+				}
+		
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = -0.10
+			}
+
+			traits = { construction_company_BUL }
+
+			cost = 100 
+
+		}
+
+		BUL_vulkan_cement = {
+			name = BUL_vulkan_cement
+			picture = generic_industrial_concern_3
+		
+			allowed = {
+				original_tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = BUL_self_sufficient_economy
+				}
+			}
+
+			available = {
+
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}			
+			
+			traits = { industrial_concern_BUL }
+
+			cost = 100 
+		}	
+
+		BUL_vulkan_cement_2 = {
+			name = BUL_vulkan_cement
+			picture = generic_industrial_concern_3
+		
+			allowed = {
+				original_tag = BUL
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			visible = {
+				has_completed_focus = BUL_self_sufficient_economy	
+			}
+
+			available = {
+				has_completed_focus = BUL_self_sufficient_economy
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.05
+			}			
+			
+			traits = { industrial_concern_BUL }
+
+			cost = 100 
+		}
+	}
+	
+	theorist_production = {
+		BUL_valko_chervenkov = { #DLC
+
+			picture = bul_valko_chervenkov
+			
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+
+			available = {
+
+			}
+			
+			traits = { armaments_organizer }
+
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+		BUL_dobri_bozhilov_bftb = { #DLC
+
+			picture = bul_dobri_bozhilov
+			
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+
+			available = {
+
+			}
+			
+			traits = { captain_of_industry }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+##     ## #### ########  ########  ######## ##    ##    #### ########  ########    ###     ######  
+##     ##  ##  ##     ## ##     ## ##       ###   ##     ##  ##     ## ##         ## ##   ##    ## 
+##     ##  ##  ##     ## ##     ## ##       ####  ##     ##  ##     ## ##        ##   ##  ##       
+#########  ##  ##     ## ##     ## ######   ## ## ##     ##  ##     ## ######   ##     ##  ######  
+##     ##  ##  ##     ## ##     ## ##       ##  ####     ##  ##     ## ##       #########       ## 
+##     ##  ##  ##     ## ##     ## ##       ##   ###     ##  ##     ## ##       ##     ## ##    ## 
+##     ## #### ########  ########  ######## ##    ##    #### ########  ######## ##     ##  ######  
+
+
+	hidden_ideas = {
+		BUL_arty_idea = { 
+
+			picture = MEX_politicised_army_2
+
+			available = {
+				original_tag = BUL
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery = {
+				build_cost_ic = -0.1
+				instant = yes
+				}
+			}	
+		}
+		
+		BUL_inf_idea = { 
+
+			picture = MEX_politicised_army_2
+
+			available = {
+				original_tag = BUL
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}	
+		}
+		BUL_tank_idea = { 
+
+			picture = MEX_politicised_army_2
+
+			available = {
+				original_tag = BUL
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}	
+		}
+		BUL_firepower_focus_general_staff = {
+		    picture = CAN_general_staff
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+				 	soft_attack = 0.1 instant = yes 
+				}
+				field_gun_equipment = {
+					soft_attack = 0.15 instant = yes 
+				}
+				pack_artillery_equipment = {
+					soft_attack = 0.1 instant = yes 
+				}
+				heavy_artillery_equipment = {
+					soft_attack = 0.1 instant = yes 
+				}
+				rocket_artillery_equipment = {
+				  soft_attack = 0.1 instant = yes 
+				}
+			}
+		}		
+	}	
+}
