@@ -655,10 +655,10 @@
 		ai_will_do = {
 		   factor = 60 }
 		completion_reward = {
-			army_experience = 75
+			army_experience = 150
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
+				cost_reduction = 0.8
 				uses = 1
 				category = land_doctrine
 		
@@ -1792,19 +1792,19 @@
 		completion_reward = { 
 			custom_effect_tooltip = SLO_modify_vig_army_tt
 			add_to_variable = {
-				SLO_army_attack_factor_var = 0.05
+				SLO_army_attack_factor_var = 0.08
 				tooltip = SLO_add_attack_tt1 
 			}
 			add_to_variable = {
-				SLO_army_defense_factor = 0.05
+				SLO_army_defense_factor = 0.08
 				tooltip = SLO_add_defense_tt1 
 			}
 			add_to_variable = {
-				SLO_army_speed_factor_var = 0.05
+				SLO_army_speed_factor_var = 0.08
 				tooltip = SLO_add_speed_tt1 
 			}
 			add_to_variable = {
-				SLO_army_morale_factor_var = 0.05
+				SLO_army_morale_factor_var = 0.08
 				tooltip = SLO_add_morale_tt1 
 			}
 		 custom_effect_tooltip = SLO_security_tt
