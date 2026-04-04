@@ -1715,8 +1715,8 @@
 		antiair3 = 1
 		antitank4 = 1
 		}
-	  add_equipment_to_stockpile = { type = artillery_equipment amount = 15000 producer = GER }
-	  add_equipment_to_stockpile = { type = heavy_artillery_equipment amount = 2000 producer = GER }
+	  add_equipment_to_stockpile = { type = artillery_equipment amount = 1500 producer = GER }
+	  add_equipment_to_stockpile = { type = heavy_artillery_equipment amount = 2500 producer = GER }
 	  add_equipment_to_stockpile = { type = anti_tank_equipment amount = 900 producer = GER }
 	  add_equipment_to_stockpile = { type = anti_air_equipment amount = 900 producer = GER }
 	} 
