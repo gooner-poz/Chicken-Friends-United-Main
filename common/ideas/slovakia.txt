@@ -428,7 +428,7 @@ ideas = {
 			
 			modifier = {
 		stability_weekly = 0.001
-		consumer_goods_expected_value = -0.05
+		consumer_goods_expected_value = -0.09
 
 	   }
 		
