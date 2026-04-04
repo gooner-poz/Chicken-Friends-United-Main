@@ -1,0 +1,24 @@
+state={
+	id=828
+	name="STATE_829"
+
+	impassable = yes
+	
+	history={
+	    owner = AST
+		add_core_of = SEN
+		
+		buildings = {
+			infrastructure = 1
+
+		}
+	
+	}
+	provinces={
+		12931 5135 10954 12428 11018 2129 11004
+	}
+	manpower=12504
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

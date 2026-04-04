@@ -1,0 +1,43 @@
+
+state = {
+	id = 847
+	name = "STATE_848"
+	manpower = 52517
+	
+	state_category = small_island
+
+	history = {
+		add_dynamic_modifier = { modifier = no_airfields2 }
+		add_dynamic_modifier = { modifier = no_lvl5aaplaceholder }
+		add_core_of = SEN
+		owner = JAP
+		buildings = {
+			infrastructure = 1
+			air_base = 3
+		
+			13040 = {
+				naval_base = 8
+
+			}
+		
+			13043 = {
+				naval_base = 5
+
+			}
+		
+
+		}
+		victory_points = {
+			13043 1 
+		}
+		victory_points = {
+			13040 1 
+		}
+		
+
+	}
+
+	provinces = {
+		13040  13042 13043  
+	}
+}

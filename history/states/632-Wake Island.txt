@@ -1,0 +1,33 @@
+
+state = {
+	id = 632
+	name = "STATE_632"
+	manpower = 150
+	state_category = tiny_island
+
+	history = {
+		add_dynamic_modifier = { modifier = no_lvl5aaplaceholder }
+	add_core_of = SEN
+	set_state_flag = USA_controls
+		owner = USA
+		buildings = {
+			air_base = 4
+			infrastructure = 3
+			13047 = {
+				naval_base = 10
+				coastal_bunker  = 2
+			}
+			13298 = {
+				coastal_bunker = 2
+			}
+			13301 = {
+				coastal_bunker = 2
+			}
+			anti_air_building = 3 
+		}
+
+	}
+	provinces = {
+		 13301  13047 13298
+	}
+}
