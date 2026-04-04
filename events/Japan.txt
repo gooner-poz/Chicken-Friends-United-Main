@@ -1663,3 +1663,50 @@ country_event = {
 		
 	}
 }
+
+### CJ PEACE
+country_event = {
+    id = japan.999
+	title = "The Eastern Settlement"
+	desc = "Under mounting pressure and shifting global priorities, a settlement has been reached between China and Japan. Territorial concessions redraw the map of East Asia, granting Japan strategic dominance while China survives in diminished form."
+	picture = GFX_report_event_chinese_soldiers_running
+
+    is_triggered_only = yes
+	option = {
+		name = OK
+		JAP = { 
+			white_peace = CHI 
+			set_truce = {
+				target = CHI 
+				days = 3650
+			}
+			transfer_state = 608
+            transfer_state = 614
+            transfer_state = 615
+            transfer_state = 597
+            transfer_state = 598
+            transfer_state = 606
+            transfer_state = 607
+            transfer_state = 821
+            transfer_state = 820
+            transfer_state = 750
+            transfer_state = 748
+            transfer_state = 603
+            transfer_state = 325
+            transfer_state = 599
+            transfer_state = 594
+            transfer_state = 591
+            transfer_state = 592
+            transfer_state = 593
+            transfer_state = 602
+            transfer_state = 600
+            transfer_state = 595
+            transfer_state = 596
+            transfer_state = 613
+            transfer_state = 840
+            transfer_state = 620
+			transfer_state = 749
+}
+
+	}
+}

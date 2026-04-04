@@ -1,4 +1,38 @@
 on_actions = {
+    on_daily = {
+    effect = {
+
+        if = {
+            limit = {
+
+                # 📅 DATE WINDOW (IMPORTANT)
+                date > 1939.5.31
+                date < 1939.6.3
+
+                # 🔁 Only fire once
+                NOT = { has_global_flag = sino_japan_peace_done }
+
+                # ⚔️ Must be at war
+                JAP = {
+                    has_war_with = CHI
+                }
+
+                CHI = {
+                    exists = yes
+                }
+            }
+
+            # mark as done
+            set_global_flag = sino_japan_peace_done
+
+            # fire event to Japan
+            JAP = {
+                country_event = { id = japan.999 }
+            }
+        }
+
+    }
+}
 	on_monthly_JAP = { 
 		effect = { 
 			if = {

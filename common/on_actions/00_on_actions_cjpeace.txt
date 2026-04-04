@@ -1,0 +1,14 @@
+## 00_on_actions.txt
+
+on_daily = {
+    effect = {
+        if = {
+            limit = {
+                date > 1939.6.1
+                JAP = { exists = yes }
+                CHI = { exists = yes }
+            }
+            country_event = { id = cj_peace.1 }
+        }
+    }
+}
