@@ -435,6 +435,15 @@ sub_units = {
 		need = {
 			light_tank_rocket_chassis = 25
 		}
+
+		battalion_mult = {
+			category = category_heavy_infantry
+			soft_attack = 0.25
+			hard_attack = 0.25
+			breakthrough = 0.25
+			add = no
+		}
+
 		manpower = 250
 		max_organisation = 0
 		default_morale = 0.1
@@ -577,6 +586,15 @@ sub_units = {
 		need = {
 			medium_tank_rocket_chassis = 25
 		}
+
+		battalion_mult = {
+			category = category_heavy_infantry
+			soft_attack = 0.25
+			hard_attack = 0.25
+			breakthrough = 0.25
+			add = no
+		}
+
 		manpower = 250
 		max_organisation = 0
 		default_morale = 0.1
@@ -630,6 +648,15 @@ sub_units = {
 		need = {
 			heavy_tank_rocket_chassis = 30
 		}
+
+		battalion_mult = {
+			category = category_heavy_infantry
+			soft_attack = 0.25
+			hard_attack = 0.25
+			breakthrough = 0.25
+			add = no
+		}
+		
 		defense = 0.2
 		breakthrough = -0.3
 		manpower = 550
