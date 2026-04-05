@@ -1221,3 +1221,29 @@ country_event = {
 		}		
 	}
 }
+country_event = {
+	id = china.300
+	title = "Well Played, but time to switch"
+	desc = "If you killed a lot good job, if you didn't then this will be a great time on barb for you"
+	picture = GFX_report_event_chinese_officers
+	
+	trigger = {
+		date = 1939.06.02
+
+	}
+    option = { 
+
+	   CHI = {
+				add_ideas = {developing_country
+		}
+            every_unit = {
+                disband_unit = yes
+            }
+        }
+
+        SOV = {
+            change_tag_from = CHI
+        }
+
+	}
+}
