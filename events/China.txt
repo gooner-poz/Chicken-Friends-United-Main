@@ -1223,9 +1223,11 @@ country_event = {
 }
 country_event = {
 	id = china.300
-	title = "Well Played, but time to switch"
-	desc = "If you killed a lot good job, if you didn't then this will be a great time on barb for you"
+	title = "Sino-Japanese Armstice"
+	desc = "The Chinese Nationalists have caved to the Japanese demands, forfeiting much of their territory. The people continue to resist the brutal Japanese occupation, but it seems that their government has given up on them."
 	picture = GFX_report_event_chinese_officers
+
+	fire_only_once = yes
 	
 	trigger = {
 		date = 1939.06.02
