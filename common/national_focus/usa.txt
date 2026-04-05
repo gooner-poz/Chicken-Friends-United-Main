@@ -7331,7 +7331,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			remove_ideas = USA_starting_research_debuff
 			random_core_state = {
 				limit = {
 					is_coastal = yes 
