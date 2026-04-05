@@ -202,9 +202,6 @@ sp_commercial_nuclear_reactor = {
 	prototype_time = sp_time.prototype.medium
 	complexity = sp_complexity.medium
 
-	special_project_parent = {
-		sp_nuclear_reactor
-	}
 	resource_cost = {
 		resources = { steel= 250 tungsten = 150 chromium = 200 }
 	}
@@ -213,7 +210,7 @@ sp_commercial_nuclear_reactor = {
 	}
 	available = { 
 		FROM = {
-			has_tech = construction4
+			has_tech = atomic_research
 		}
 	}
 	breakthrough_cost = {

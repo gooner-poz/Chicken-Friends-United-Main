@@ -1234,7 +1234,7 @@ PAR_instant_effect_decisions = {
 			}
 		}	
 		fire_only_once = no
-		days_re_enable = 80
+		days_re_enable = 60
 		fixed_random_seed = no
 
 

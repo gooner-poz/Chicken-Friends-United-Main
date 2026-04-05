@@ -1643,7 +1643,7 @@ country_event = {
 		hidden_effect = {
 			USA = {
 				set_country_flag = first_downturn
-				set_country_flag = { flag = first_downturn_timer value = 1 days = 80 }
+				set_country_flag = { flag = first_downturn_timer value = 1 days = 60 }
 			}
 		}
 	}
@@ -2431,7 +2431,7 @@ country_event = {  ## recovery 2
 
 	}
 	mean_time_to_happen = {
-		days = 40
+		days = 30
 	}
 
 	
@@ -2479,7 +2479,7 @@ country_event = {  ## recovery 3
 
 	}
 	mean_time_to_happen = {
-		days = 40
+		days = 30
 	}
 
 	
@@ -2756,7 +2756,7 @@ country_event = {  ## ## National Defense Mediation Board / UNLOCKS Henderson or
 	
 	trigger = {
 		tag = USA
-		date > 1940.10.1
+		date > 1940.01.1
 		has_country_flag = USA_office_of_production_formed_flag
 		NOT = {
 			has_country_flag = USA_national_defense_mediation_formed_flag
@@ -2766,7 +2766,7 @@ country_event = {  ## ## National Defense Mediation Board / UNLOCKS Henderson or
 	}
 
 	mean_time_to_happen = {
-		days = 60
+		days = 30
 	}
 
 	

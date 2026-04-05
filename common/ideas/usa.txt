@@ -21,7 +21,7 @@ ideas = {
 
 
 		}
-		USA_starting_research_debuff = {
+		USA_starting_research_buff = {
 			picture = liberty_ships_focus
 
 			allowed = {
@@ -34,7 +34,7 @@ ideas = {
 
 			removal_cost = -1			
 
-			research_bonus = { naval_equipment = -0.2 }
+			research_bonus = { naval_equipment = .2 }
 
 
 
