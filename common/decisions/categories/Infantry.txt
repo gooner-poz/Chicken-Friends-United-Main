@@ -1,0 +1,10 @@
+# This creates the "30w Inf Spawn" tab in the game
+my_decision_category = {
+    icon = generic_decision         # The icon for the category tab
+    picture = generic_decision_picture # Optional: a large picture for the tab
+
+    # This ensures the category is always visible and can be clicked
+    visible = {
+        always = yes
+    }
+}

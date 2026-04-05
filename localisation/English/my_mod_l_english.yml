@@ -1,0 +1,5 @@
+﻿l_english:
+ my_decision_category:0 "30w Inf Spawn"
+ my_decision_category_desc:0 "Custom decisions added by my mod."
+ add_30w_infantry_template:0 "Add 30-Width Infantry Template"
+ add_30w_infantry_template_desc:0 "Adds a powerful 30-width infantry division template to our army ."

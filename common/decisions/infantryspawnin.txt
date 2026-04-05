@@ -1,0 +1,60 @@
+my_decision_category = { # This MUST match the category name from Step 2
+
+    add_30w_infantry_template = {
+        icon = generic_decision # The icon for the individual decision
+
+        # This makes the decision always show up in the list
+        visible = {
+            always = yes
+        }
+
+        # This makes the decision always available to click (no greyed-out button)
+        available = {
+            always = yes
+        }
+
+        # This makes the decision free
+        cost = 0
+
+        # This is the effect when you click the decision
+        complete_effect = {
+            # The core command to add a new division template
+            create_division_template = {
+                name = "30w Infantry" # Must match the name in your .txt file
+                # This is where you copy the content from your 'templates.txt'
+                # *** regiments = {
+    # Row 0
+    infantry = { x = 0 y = 0 }
+    infantry = { x = 1 y = 0 }
+    infantry = { x = 2 y = 0 }
+    artillery_brigade = { x = 3 y = 0 }
+    artillery_brigade = { x = 4 y = 0 }
+
+    # Row 1
+    infantry = { x = 0 y = 1 }
+    infantry = { x = 1 y = 1 }
+    infantry = { x = 2 y = 1 }
+    artillery_brigade = { x = 3 y = 1 }
+    artillery_brigade = { x = 4 y = 1 }
+
+    # Row 2
+    artillery_brigade = { x = 0 y = 2 }
+    artillery_brigade = { x = 1 y = 2 }
+    artillery_brigade = { x = 2 y = 2 }
+}
+support = {
+    artillery = { x = 0 y = 0 }
+    recon_ac = { x = 0 y = 1 }
+    military_police = { x = 0 y = 2 }
+    field_hospital = { x = 0 y = 3 }
+    anti_air_company = { x = 0 y = 4 }
+} ***
+            }
+        }
+
+        # AI will not take this decision
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}
