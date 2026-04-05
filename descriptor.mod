@@ -27,6 +27,6 @@ replace_path="common/military_industrial_organization/policies"
 tags={
 	"Balance"
 }
-name="Chicken Friends United"
+name="Hearts of Oak 3"
 supported_version="1.16.10"
 remote_file_id="3697395033"
