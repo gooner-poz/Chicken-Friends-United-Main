@@ -30,6 +30,9 @@ state = {
 			11833 = {
 				naval_base = 4
 			}
+			3855 = { dam = 1
+
+			}
 			anti_air_building = 2
 		}
 		add_core_of = ITA

@@ -428,8 +428,8 @@ buildings = {
 		}
 		spawn_point = nuclear_reactor_spawn
 		show_on_map = 1
-		base_cost = 20000
-		per_controlled_building_extra_cost = 7500
+		base_cost = 25000
+		per_controlled_building_extra_cost = 5000
 		icon_frame = 28
 		#nuclear_reactor = yes
 		tags = { civilian_reactor_building }
@@ -438,9 +438,9 @@ buildings = {
 		
 		country_modifiers = {
 			modifiers = {
-				nuclear_production_factor = 3
-				thermonuclear_production_factor = 2
-				industrial_capacity_dockyard = 0.075
+				nuclear_production_factor = 2
+				thermonuclear_production_factor = 1
+				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
 			}
 		}
@@ -448,7 +448,7 @@ buildings = {
 		state_modifiers = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1			
+			state_resources_factor = 0.15			
 		}
 
 		level_cap = {
