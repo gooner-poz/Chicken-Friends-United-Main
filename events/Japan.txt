@@ -1685,27 +1685,21 @@ country_event = {
             transfer_state = 615
             transfer_state = 597
             transfer_state = 598
-            transfer_state = 606
-            transfer_state = 607
-            transfer_state = 821
-            transfer_state = 820
-            transfer_state = 750
-            transfer_state = 748
-            transfer_state = 603
-            transfer_state = 325
-            transfer_state = 599
-            transfer_state = 594
-            transfer_state = 591
-            transfer_state = 592
-            transfer_state = 593
-            transfer_state = 602
-            transfer_state = 600
-            transfer_state = 595
-            transfer_state = 596
-            transfer_state = 613
-            transfer_state = 840
-            transfer_state = 620
+			transfer_state = 613
+			transfer_state = 840
+			transfer_state = 613
 			transfer_state = 749
+			transfer_state = 569
+			transfer_state = 593
+			transfer_state = 592
+			transfer_state = 594
+			transfer_state = 599 
+			transfer_state = 602
+			transfer_state = 620
+			transfer_state = 606
+			transfer_state = 621
+			transfer_state = 607
+            
 }
 
 	}
