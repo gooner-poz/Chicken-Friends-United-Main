@@ -1236,12 +1236,9 @@ country_event = {
     option = { 
 
 	   CHI = {
-				add_ideas = {developing_country
-		}
-            every_unit = {
-                disband_unit = yes
-            }
-        }
+			add_ideas = {developing_country
+			}
+   		}
 
         SOV = {
             change_tag_from = CHI
