@@ -802,6 +802,9 @@ focus_tree = {
 
 		available = {
 			if = {
+<<<<<<< HEAD
+				date = 1939.6.1
+=======
 				limit = {
 					282 = {
 						NOT = {
@@ -810,13 +813,8 @@ focus_tree = {
 						}
 					}
 				}
-				OR={
-				has_war_with = CHI
-				CHI = {has_capitulated = yes }
-					NOT = {
-					country_exists = CHI
-					}
 				}
+>>>>>>> f382de57cd1a1dae3783e2d6f9de5a2210f07b7b
 			}
 			
 		}
@@ -5115,6 +5113,9 @@ focus_tree = {
 
 	available = {
 		if = {
+<<<<<<< HEAD
+			date = 1939.6.1
+=======
 			limit = {
 				282 = {
 					NOT = {
@@ -5122,16 +5123,13 @@ focus_tree = {
 						has_state_flag = no_partial_china_war_state_flag
 					}
 				}
-			}
-			RCC= {
-				has_completed_focus = RCC_recognised_at_once
-			}
-			has_war_with = CHI
-			OR = {
+			}			
+			if = {
 				date > 1939.1.1
 				608 = { CONTROLLER = { is_in_faction_with = JAP } }
 				613 = { CONTROLLER = { is_in_faction_with = JAP } }	
 			}
+>>>>>>> f382de57cd1a1dae3783e2d6f9de5a2210f07b7b
 		}
 		if = {
 			limit = {
@@ -6447,6 +6445,9 @@ focus = {
 
 	available = {
 		if = {
+<<<<<<< HEAD
+			date 1939.1.1
+=======
 			limit = {
 				282 = {
 					NOT = {
@@ -6455,13 +6456,13 @@ focus = {
 					}
 				}
 			}
-			OR = {
-				has_war_with = CHI
+			IF = {
 				NOT = {
 				country_exists = CHI
 				}
 				
 			}
+>>>>>>> f382de57cd1a1dae3783e2d6f9de5a2210f07b7b
 		}
 			
 	}
@@ -9257,26 +9258,13 @@ focus = {
 				custom_effect_tooltip = JAP_modify_army_spirit_tt
 				custom_effect_tooltip = JAP_kempeitai_bonus
 				add_to_variable = {
-					JAP_compliance_gain = 0.01
+					JAP_compliance_gain = 0.02
 				}
 				if = {
-					limit = {
-						282 = {
-							NOT = {
-								has_state_flag = no_china_war_state_flag
-								has_state_flag = no_partial_china_war_state_flag
-							}
-						}
-					}
+					date 1939.6.1
 
 					custom_effect_tooltip = JAP_kempeitai_bonus2
 					
-					RCC = {
-						add_to_variable = {
-							RCC_compliance_gain = 0.01
-						}
-					
-					}
 				
 				
 				
