@@ -810,13 +810,7 @@ focus_tree = {
 						}
 					}
 				}
-				OR={
-				has_war_with = CHI
-				CHI = {has_capitulated = yes }
-					NOT = {
-					country_exists = CHI
-					}
-				}
+				
 			}
 			
 		}
@@ -4106,10 +4100,7 @@ focus_tree = {
 		}
 	
 		available = {
-			OR = {
-				has_war_with = CHI
 				date > 1940.1.1
-			}
 		}
 	
 		bypass = {
@@ -5123,10 +5114,6 @@ focus_tree = {
 					}
 				}
 			}
-			RCC= {
-				has_completed_focus = RCC_recognised_at_once
-			}
-			has_war_with = CHI
 			OR = {
 				date > 1939.1.1
 				608 = { CONTROLLER = { is_in_faction_with = JAP } }
