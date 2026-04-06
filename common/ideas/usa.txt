@@ -34,7 +34,7 @@ ideas = {
 
 			removal_cost = -1			
 
-			research_bonus = { naval_equipment = .2 }
+			research_bonus = { naval_equipment = 0.2 }
 
 
 
