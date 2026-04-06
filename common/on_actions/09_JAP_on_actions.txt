@@ -6,8 +6,8 @@ on_actions = {
             limit = {
 
                 # 📅 DATE WINDOW (IMPORTANT)
-                date > 1939.5.31
-                date < 1939.6.3
+                date > 1939.12.31
+                date < 1940.1.3
 
                 # 🔁 Only fire once
                 NOT = { has_global_flag = sino_japan_peace_done }
