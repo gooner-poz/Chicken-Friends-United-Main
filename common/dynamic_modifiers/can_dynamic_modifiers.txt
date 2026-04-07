@@ -26,7 +26,6 @@ CAN_military = {
     naval_strike_attack_factor  = CAN_naval_strike_attack_factor_var
     air_ace_generation_chance_factor  = CAN_air_ace_generation_chance_factor_var
     army_core_attack_factor = CAN_army_core_attack_factor_var
-    special_forces_min = CAN_special_forces_min_var
     mobilization_laws_cost_factor = CAN_mobilization_law_cost
 	army_artillery_attack_factor = CAN_arty_attc
     army_armor_attack_factor = CAN_armor_attack

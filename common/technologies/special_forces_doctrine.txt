@@ -374,7 +374,6 @@ technologies = {
 		}
 
 		special_forces_attack_factor  = 0.05
-		special_forces_min = 27
 		special_forces_no_supply_grace = 24
 
 

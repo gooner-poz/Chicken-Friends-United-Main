@@ -3707,7 +3707,6 @@ ideas = {
 		
 
 			modifier = {
-				special_forces_cap = 0.05
 				non_core_manpower = 0.025
 				training_time_factor = -0.15
 			}

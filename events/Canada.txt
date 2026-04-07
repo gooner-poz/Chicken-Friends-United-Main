@@ -161,10 +161,6 @@ country_event = {
 			
 		}
 		custom_effect_tooltip = CAN_modify_army_spirit_tt
-		add_to_variable = {
-			CAN_special_forces_min_var = 54
-			tooltip = JAP_sf_bonus_tt
-		}
 		division_template = {
 			name = "South African Mountaineers"
 

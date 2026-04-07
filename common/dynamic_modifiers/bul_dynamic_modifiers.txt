@@ -25,7 +25,6 @@ BUL_army_spirit = {
 	land_doctrine_cost_factor = BUL_land_doctrine_cost_factor_var
 	experience_gain_factor = BUL_experience_gain_factor_var
 	experience_loss_factor = BUL_experience_loss_factor_var
-	special_forces_min = BUL_special_forces_min_var
 	
 	custom_modifier_tooltip = BUL_arty_cost_tt
 	custom_modifier_tooltip = BUL_inf_cost_tt

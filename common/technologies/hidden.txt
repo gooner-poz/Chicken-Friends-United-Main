@@ -3739,7 +3739,6 @@ technologies = {
 		allow = {
 			always = no
 		}
-		special_forces_min = 17
 		cavalry = {
 			combat_width = -0.4
 			max_strength = -1.5
@@ -4219,7 +4218,6 @@ technologies = {
 		allow = {
 			always = no
 		}
-		special_forces_min = 17
 		cavalry = {
 			combat_width = -0.4
 			max_strength = -1.5
@@ -4698,7 +4696,6 @@ technologies = {
 		allow = {
 			always = no
 		}
-		special_forces_min = 17
 		cavalry = {
 			combat_width = -0.4
 			max_strength = -1.5

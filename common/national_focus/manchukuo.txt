@@ -7832,10 +7832,6 @@ focus = {
 				tooltip = special_forces_defense_tooltip
 			}
 			custom_effect_tooltip = MANspace
-			add_to_variable = {
-				MAN_special_forces_min_var = 27
-				tooltip = JAP_sf_bonus_tt
-			}
 			custom_effect_tooltip = MANspace
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus

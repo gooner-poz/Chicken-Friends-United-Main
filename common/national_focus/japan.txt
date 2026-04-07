@@ -9144,10 +9144,6 @@ focus = {
 
 		completion_reward = {
 			custom_effect_tooltip = JAP_modify_army_spirit_tt
-			add_to_variable = {
-				JAP_special_forces_min_var = 27
-				tooltip = JAP_sf_bonus_tt
-			}
 			add_tech_bonus = {
 				name = special_bonus
 				bonus = 1.0

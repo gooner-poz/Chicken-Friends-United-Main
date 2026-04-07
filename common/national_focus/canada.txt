@@ -1952,10 +1952,6 @@ focus_tree = {
 				uses = 3
 				category = special_forces_doctrine
 			}
-			add_to_variable = {
-				CAN_special_forces_min_var = 27
-				tooltip = JAP_sf_bonus_tt
-			}
 			custom_effect_tooltip = MANspace
 			custom_effect_tooltip = robert_frederick_tooltip
 		}
@@ -4241,10 +4237,6 @@ focus = {
 		completion_reward = {
 		
 			custom_effect_tooltip = CAN_modify_army_spirit_tt
-			add_to_variable = {
-				CAN_special_forces_min_var = 27
-				tooltip = JAP_sf_bonus_tt
-			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5

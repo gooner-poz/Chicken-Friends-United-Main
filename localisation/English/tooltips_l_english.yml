@@ -2058,7 +2058,6 @@ JAP_macro_polo4:0 "§YSecond Sino-Japanese War§!: §RTotal War§!"
   JAP_supply_bonus:0 "Non-Combat Out of Supply Penalties: $RIGHT|-=%$"
   JAP_org_loss:0 "Org Loss when Moving: $RIGHT|-=%$"
    JAP_invasion_defense_bonus:0 "Invasion Defense: $RIGHT|+=%$"
-   JAP_sf_bonus_tt:0 "Special Forces Minimum Capacity: $RIGHT|+=$"
 
 JAP_submarine_modifier_tt:0 "[Root.JAP_get_submarine_cost]"
 JAP_submarine_modifier_tt1:0 ""

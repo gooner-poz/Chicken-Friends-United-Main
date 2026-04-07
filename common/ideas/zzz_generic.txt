@@ -46,9 +46,7 @@ ideas = {
 
 			
             
-			modifier = {
-				special_forces_min = 54
-			}
+			modifier = { }
 			
 		}
 		
@@ -80,9 +78,7 @@ ideas = {
 
 			
             
-			modifier = {
-				special_forces_min = 27
-			}
+			modifier = { }
 			
 		}
 		GEN_cheaper_mechmot = {
