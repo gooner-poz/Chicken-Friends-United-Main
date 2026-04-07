@@ -3,6 +3,12 @@ state = {
 	name = "STATE_726"
 	manpower = 123214
 	state_category = small_island
+	resources = {
+		rubber = 1
+		steel = 1
+		chromium = 1
+		aluminium = 1
+	}
 
 	history = {
 		add_dynamic_modifier = { modifier = no_airfields }

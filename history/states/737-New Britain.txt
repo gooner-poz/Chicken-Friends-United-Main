@@ -2,6 +2,10 @@ state = {
 	id = 737
 	name = "STATE_737"
 
+	resources = {
+		rubber = 5
+	}
+
 	history = {
 		add_core_of = SEN
 		owner = AST

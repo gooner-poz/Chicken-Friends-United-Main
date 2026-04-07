@@ -4,6 +4,9 @@ state =
 	name = "STATE_270"
 	manpower = 40
 	state_category = enclave
+	resources = {
+		steel = 1
+	}
 	
 	history =
 	{

@@ -4,6 +4,9 @@ state = {
 	name = "STATE_643"
 	manpower = 493
 	state_category = small_island
+	resources = {
+		steel = 1
+	}
 
 	history = {
 		owner = ENG

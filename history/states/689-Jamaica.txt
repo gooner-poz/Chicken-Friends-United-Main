@@ -4,6 +4,9 @@ state = {
 	manpower = 1075000
 	
 	state_category = town
+	resources = {
+		steel = 1
+	}
 
 	history = {
 		add_core_of = SEN

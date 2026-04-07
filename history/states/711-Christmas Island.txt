@@ -3,6 +3,9 @@ state = {
 	name = "STATE_711"
 	manpower = 1625	
 	state_category = tiny_island
+	resources = {
+		chromium = 1
+	}
 	
 	history =
 	{

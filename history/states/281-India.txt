@@ -5,6 +5,9 @@ state = {
 	manpower = 79300
 	
 	state_category = enclave
+	resources = {
+		rubber = 3
+	}
 
 	history = {
 		owner = ENG

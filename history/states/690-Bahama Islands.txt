@@ -4,6 +4,9 @@ state = {
 	manpower = 40000
 	
 	state_category = tiny_island
+	resources = {
+		steel = 1
+	}
 
 	history = {
 		add_core_of = SEN

@@ -4,13 +4,16 @@ state = {
 	name = "STATE_639"
 	manpower = 1035
 	state_category = small_island
+	resources = {
+		chromium = 3
+	}
 
 	history = {
 		add_dynamic_modifier = { modifier = no_lvl5aaplaceholder }
 		owner = USA
 		add_core_of = SEN
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5
 			13021 = {
 				naval_base = 10
 			}
