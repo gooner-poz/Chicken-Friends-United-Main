@@ -336,14 +336,14 @@ MAN_exports:0 "§YHas delivery of planes§!"
 ##############
 JAP_miners:0"Japanese Miners"
 JAP_workers:0"Japanese Workers"
-MAN_speed_descriptors:0 "§OEconomic Focuses:§!\n Improves Constuction Decision by:"
+MAN_speed_descriptors:0 "§OEconomic Focuses:§!\n Improves Construction Decision by:"
 
 
 ############
-MAN_politics_mandate:0 "Cooperating with Heretics/Supressing"
+MAN_politics_mandate:0 "Cooperating with Heretics/Suppressing"
 MAN_politics:0 "Political/Economy Focus"
 ########ideas##########
-MAN_center_inf:0 "Japanese Horse Recon Batalion"
+MAN_center_inf:0 "Japanese Horse Recon Battalion"
 ########################fix lateridk
 MAN_Heavy_Industry:0 "Underdeveloped Heavy Industry"
 MAN_Heavy_Industry_tank_2:0 "Ongoing Development of Heavy Industry"
@@ -423,7 +423,7 @@ commie_drift_hundred:0 "§YDaily Communism Support§!: $RIGHT|-=%%$\n"
 commie_drift_hundred_top:0 "§YDaily Communism Support§! is under $RIGHT|-=%%$\n"
 commie_drift_hundred_under:0 "§YDaily Communism Support§! is over $RIGHT|-=%%$\n"
 
-democrat_drift_hundred:0 "§YDaily Democatic Support§!: $RIGHT|-=%%$\n"
+democrat_drift_hundred:0 "§YDaily Democratic Support§!: $RIGHT|-=%%$\n"
 fascism_drift_hundred:0 "§YDaily Fascism Support§!: $RIGHT|+=%%$\n"
 
 Politica_new_plus:0 "§YPolitical Power Gain §!: $RIGHT|+=%%$\n"
@@ -618,7 +618,7 @@ RCC_Rule_Countryside:0 "If you own them you will gain §Y1 Civilian Factory§!, 
 MAN_garrisons:0 "Spawn Port Garrisons in Manchuria and East Hebei"
 
 commie_drift_red:0 "§YDaily Communism Support§!: $RIGHT|-=$\n"
-democrat_drift_red:0 "§YDaily Democatic Support§!: $RIGHT|-=$\n"
+democrat_drift_red:0 "§YDaily Democratic Support§!: $RIGHT|-=$\n"
 
 stability_leg_tooltip:0 "Stability: $RIGHT|+=%$\n"
 experience_pop_tooltip:0 "§YExperience soldier loses §!: $RIGHT|-=%$\n"
