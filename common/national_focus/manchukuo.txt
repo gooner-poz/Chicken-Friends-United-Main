@@ -256,111 +256,24 @@ focus_tree = {
 			}
 			custom_effect_tooltip = spacers
 
-				if = {
-					limit = { 
-
-						OR= {
-							check_variable = {
-								MIC_influence < 25				
-							}
-							has_country_flag = MAN_MIC_removed
-						}
-	
-						NOT = {has_country_flag = MAN_MIC_integrated}
-					}
-
-					714 = {
-						add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes 
-						}
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								MIC_influence > 24				
-							}
-							check_variable = {
-								MIC_influence < 75				
-							}
-
-							NOT = {has_country_flag = MAN_MIC_integrated}
-							NOT = {has_country_flag = MAN_MIC_removed}
-
-						}
-						714 = {
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-								type = industrial_complex
-								level = 2
-								instant_build = yes 
-							}
-						}
-					}
-					else_if = {
-						limit = {
-
-							OR = {
-								check_variable = {
-									MIC_influence > 74				
-								}
-								has_country_flag = MAN_MIC_integrated
-							}
-							NOT = {has_country_flag = MAN_MIC_removed}
-		
-						}
-						714 = {
-							add_extra_state_shared_building_slots = 3
-							add_building_construction = {
-								type = industrial_complex
-								level = 3
-								instant_build = yes 
-							}
-						}
-					}
+			714 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
+			}
 
 			
 			custom_effect_tooltip = spacers
-			if = {
-				limit = { 
-					check_variable = {
-						SM_influence < 25								
-					}		
-				}
-				build_railway = { # Muken to Delian #
-				level = 3
-				path = {11771 987 9781 11764 964 3783 6851 1150 }
-			
-				}
-			
-			else_if = {
-				limit = { 
-						check_variable = {
-							SM_influence < 75							
-						}		
-				}
-				build_railway = { # Muken to Delian #
-				level = 4
-				path = {11771 987 9781 11764 964 3783 6851 1150 }
-			
+			714 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
 			}
-			else_if = {
-				limit = { 
-						check_variable = {
-							SM_influence > 74									
-						}		
-				}
-				build_railway = { # Muken to Delian #
-				level = 5
-				path = {11771 987 9781 11764 964 3783 6851 1150 }
-			
-				}
-			}
-		}
 
 		if = {
 			limit = { 
@@ -489,299 +402,58 @@ focus_tree = {
 			custom_effect_tooltip = spacers
 
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
-				
-
+			328 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				328 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_resource = {
-						type = steel 
-						amount = 3
-					}
-					add_resource = {
-						type = aluminium 
-						amount = 3
-					}
-					add_resource = {
-						type = tungsten 
-						amount = 4
-					}
-					add_resource = {
-						type = chromium 
-						amount = 4
-					}
+				add_resource = {
+					type = steel 
+					amount = 4
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 4
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 4
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 6
-						}
-						add_resource = {
-							type = chromium 
-							amount = 6
-						}
-					}
+				add_resource = {
+					type = aluminium 
+					amount = 4
 				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 6
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 6
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 9
-						}
-						add_resource = {
-							type = chromium 
-							amount = 9
-						}
-					}
+				add_resource = {
+					type = tungsten 
+					amount = 6
 				}
-				
+				add_resource = {
+					type = chromium 
+					amount = 6
+				}
 			}
 
-			if = {
-				limit = { 
-					
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
-
+			611 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				611 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_resource = {
-						type = tungsten 
-						amount = 4
-					}
-					add_resource = {
-						type = chromium 
-						amount = 4
-					}
+				add_resource = {
+					type = tungsten 
+					amount = 6
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					611 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 6
-						}
-						add_resource = {
-							type = chromium 
-							amount = 6
-						}
-					}
+				add_resource = {
+					type = chromium 
+					amount = 6
 				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					611 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 9
-						}
-						add_resource = {
-							type = chromium 
-							amount = 9
-						}
-					}
-				}
-				
 			}
-
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
+			717 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				717 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_resource = {
-						type = steel 
-						amount = 3
-					}
-					add_resource = {
-						type = aluminium 
-						amount = 3
-					}
+				add_resource = {
+					type = steel 
+					amount = 4
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 4
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 4
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 6
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 6
-						}
-					}
+				add_resource = {
+					type = aluminium 
+					amount = 4
 				}
 			}
 
@@ -910,69 +582,12 @@ focus_tree = {
 				MAN_industry_spirit_population_factor_pog = -0.02
 				tooltip = CAN_recruitable_tt1
 			}
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				328 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence > 24				
-						}
-						check_variable = {
-							MIC_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-	
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
+			328 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
 			}
 			612 = {
@@ -1413,95 +1028,20 @@ focus_tree = {
 
 			custom_effect_tooltip = spacers
 			
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
+			761 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				761 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_building_construction = {
-						type = fuel_silo
-						level = 2
-						instant_build = yes 
-					}
-					add_resource = {
-						type = oil 
-						amount = 6
-					}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes 
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					761 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_building_construction = {
-							type = fuel_silo
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = oil 
-							amount = 9
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					761 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_building_construction = {
-							type = fuel_silo
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = oil 
-							amount = 12
-						}
-					}
+				add_resource = {
+					type = oil 
+					amount = 9
 				}
 			}
 			custom_effect_tooltip = spacers
@@ -1576,135 +1116,21 @@ focus_tree = {
 
 			custom_effect_tooltip = spacers
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				611 = {
-				add_extra_state_shared_building_slots = 1
-					add_building_construction = {
+			611 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes 
-				}
-			 }
-			 else_if = {
-				limit = {
-					check_variable = {
-						MIC_influence > 24				
-					}
-					check_variable = {
-						MIC_influence < 75				
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-					NOT = {has_country_flag = MAN_MIC_removed}
-
-				}
-				611 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes 
-					}
-				}
-			 }
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					611 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
 				}
 			}
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				717 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence > 24				
-						}
-						check_variable = {
-							MIC_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-	
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
+			717 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
 			}
 			
@@ -1857,69 +1283,12 @@ focus = {
 
 			custom_effect_tooltip = spacers
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				717 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence > 24				
-						}
-						check_variable = {
-							MIC_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-	
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
+			717 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
 			}
 			
@@ -2524,299 +1893,59 @@ focus = {
 				tooltip = CAN_recruitable_tt1
 			}
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
-				
-
+			328 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				328 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_resource = {
-						type = steel 
-						amount = 4
-					}
-					add_resource = {
-						type = aluminium 
-						amount = 4
-					}
-					add_resource = {
-						type = tungsten 
-						amount = 2
-					}
-					add_resource = {
-						type = chromium 
-						amount = 2
-					}
+				add_resource = {
+					type = steel 
+					amount = 6
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 6
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 6
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 3
-						}
-						add_resource = {
-							type = chromium 
-							amount = 3
-						}
-					}
+				add_resource = {
+					type = aluminium 
+					amount = 6
 				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 8
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 8
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 4
-						}
-						add_resource = {
-							type = chromium 
-							amount = 4
-						}
-					}
+				add_resource = {
+					type = tungsten 
+					amount = 3
 				}
-				
+				add_resource = {
+					type = chromium 
+					amount = 3
+				}
 			}
 
-			if = {
-				limit = { 
-					
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
-
+			611 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				611 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_resource = {
-						type = tungsten 
-						amount = 4
-					}
-					add_resource = {
-						type = chromium 
-						amount = 4
-					}
+				add_resource = {
+					type = tungsten 
+					amount = 6
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					611 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 6
-						}
-						add_resource = {
-							type = chromium 
-							amount = 6
-						}
-					}
+				add_resource = {
+					type = chromium 
+					amount = 6
 				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					611 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_resource = {
-							type = tungsten 
-							amount = 8
-						}
-						add_resource = {
-							type = chromium 
-							amount = 8
-						}
-					}
-				}
-				
 			}
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							SM_influence < 25				
-						}
-						has_country_flag = MAN_SM_removed
-					}
-
-					NOT = {has_country_flag = MAN_SM_integrated}
+			717 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
 				}
-				717 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes 
-					}
-					add_resource = {
-						type = steel 
-						amount = 3
-					}
-					add_resource = {
-						type = aluminium 
-						amount = 3
-					}
+				add_resource = {
+					type = steel 
+					amount = 4
 				}
-				else_if = {
-					limit = {
-						check_variable = {
-							SM_influence > 24				
-						}
-						check_variable = {
-							SM_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_SM_integrated}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = infrastructure
-							level = 2
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 4
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 4
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								SM_influence > 74
-							}
-							has_country_flag = MAN_SM_integrated
-						}
-						NOT = {has_country_flag = MAN_SM_removed}
-
-					}
-					717 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = infrastructure
-							level = 3
-							instant_build = yes 
-						}
-						add_resource = {
-							type = steel 
-							amount = 6
-						}
-						add_resource = {
-							type = aluminium 
-							amount = 6
-						}
-					}
+				add_resource = {
+					type = aluminium 
+					amount = 4
 				}
 			}
 
@@ -2863,201 +1992,30 @@ focus = {
 				tooltip = industrial_complex_build_speed_factor_tooltip
 			}
 			custom_effect_tooltip = MANspace
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				715 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence > 24				
-						}
-						check_variable = {
-							MIC_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					715 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-	
-					}
-					715 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
+			715 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
 			}
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				716 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence > 24				
-						}
-						check_variable = {
-							MIC_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					716 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-	
-					}
-					716 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
+			716 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
 			}
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							MIC_influence < 25				
-						}
-						has_country_flag = MAN_MIC_removed
-					}
-
-					NOT = {has_country_flag = MAN_MIC_integrated}
-				}
-
-				328 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence > 24				
-						}
-						check_variable = {
-							MIC_influence < 75				
-						}
-
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						NOT = {has_country_flag = MAN_MIC_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								MIC_influence > 74
-							}
-							has_country_flag = MAN_MIC_integrated
-						}
-						NOT = {has_country_flag = MAN_MIC_removed}
-	
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
+			328 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
 				}
 			}
 
@@ -3139,91 +2097,12 @@ focus = {
 				tooltip = production_factory_efficiency_gain_factor_tooltip
 			}
 			custom_effect_tooltip = MANspace
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							KPT_influence < 25				
-						}
-						has_country_flag = MAN_KPT_removed
-					}
-
-					NOT = {has_country_flag = MAN_KPT_integrated}
-				}
-
-				328 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 24				
-						}
-						check_variable = {
-							KPT_influence < 50
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 49	
-						}
-						check_variable = {
-							KPT_influence < 75
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								KPT_influence > 74	
-							}
-							has_country_flag = MAN_KPT_integrated
-						}
-						NOT = {has_country_flag = MAN_KPT_removed}
-	
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes 
-						}
-					}
+			328 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
 				}
 			}
 				328 = {
@@ -3275,95 +2154,35 @@ focus = {
 			custom_effect_tooltip = MANspace
 			if = {
 				limit = { 
-					OR ={
-						check_variable = {
-							MIC_influence < 25				
+					NOT ={
+						JAP = {
+							has_completed_focus = JAP_found_mangyo
 						}
-						check_variable = {
-							MIC_influence < 75			
-						}
-						check_variable = {
-							MIC_influence > 74			
-						}
-						has_country_flag = MAN_MIC_integrated
 					}
-						NOT ={
-							JAP = {
-								has_completed_focus = JAP_found_mangyo
-							}
-						}
-
 				}
 				328 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes 
 					}
 				}
 			 else_if = {
 				limit = {
-					check_variable = {
-						MIC_influence < 25					
-					}
-					NOT = {has_country_flag = MAN_MIC_integrated}
 					JAP = {
 						has_completed_focus = JAP_found_mangyo
 					}
 				}
 				328 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes 
 					}
 				}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							MIC_influence < 75						
-						}
-						NOT = {has_country_flag = MAN_MIC_integrated}
-						JAP = {
-							has_completed_focus = JAP_found_mangyo
-						}
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						OR ={
-
-							check_variable = {
-								MIC_influence > 74									
-							}
-
-							has_country_flag = MAN_MIC_integrated
-						}
-
-						JAP = {
-							has_completed_focus = JAP_found_mangyo
-						}
-					}
-					328 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = industrial_complex
-							level = 3
-							instant_build = yes 
-						}
-					}
-				}
+			}
 			}
 			612 = {
 				add_extra_state_shared_building_slots = 1
@@ -3491,91 +2310,12 @@ focus = {
 				tooltip = industrial_capacity_factory_tooltip
 			}
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							KPT_influence < 25				
-						}
-						has_country_flag = MAN_KPT_removed
-					}
-
-					NOT = {has_country_flag = MAN_KPT_integrated}
-				}
-
-				612 = {
-					add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes 
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 24				
-						}
-						check_variable = {
-							KPT_influence < 50
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 49		
-						}
-						check_variable = {
-							KPT_influence < 75
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes 
-						}
-					}
-				}
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								KPT_influence > 74
-							}
-							has_country_flag = MAN_KPT_integrated
-						}
-						NOT = {has_country_flag = MAN_KPT_removed}
-	
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes 
-						}
-					}
+			612 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
 				}
 			}
 
@@ -5315,106 +4055,12 @@ focus = {
 				tooltip = CAN_recruitable_tt1
 			}
 			custom_effect_tooltip = spacers
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							KPT_influence < 25				
-						}
-						has_country_flag = MAN_KPT_removed
-					}
-
-					NOT = {has_country_flag = MAN_KPT_integrated}
-				}
-
-				612 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes 
-					}
-				}
-				custom_effect_tooltip = MAN_right_side_exr
-
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 24
-						}
-						check_variable = {
-							KPT_influence < 50
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes 
-						}
-					}
-					custom_effect_tooltip = MAN_right_side_exr
-				}
-				
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 49
-						}
-						check_variable = {
-							KPT_influence < 75
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes 
-						}
-					}
-					custom_effect_tooltip = MAN_right_side_exr
-				}
-				
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								KPT_influence > 74			
-							}
-							has_country_flag = MAN_KPT_integrated
-						}
-						NOT = {has_country_flag = MAN_KPT_removed}
-	
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes 
-						}
-					}
-					if = {
-							limit = {
-								has_idea = jap_kwantung_army_3
-							}
-							army_experience = 125
-						}
-						else = {
-							army_experience = 45
-						}
+			612 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
 				}
 			}
 
@@ -5882,106 +4528,12 @@ focus = {
 			}
 			custom_effect_tooltip = spacers
 
-			if = {
-				limit = { 
-
-					OR= {
-						check_variable = {
-							KPT_influence < 25				
-						}
-						has_country_flag = MAN_KPT_removed
-					}
-
-					NOT = {has_country_flag = MAN_KPT_integrated}
-				}
-
-				612 = {
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes 
-					}
-				}
-				custom_effect_tooltip = MAN_right_side_exr
-
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 24
-						}
-						check_variable = {
-							KPT_influence < 50
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = arms_factory
-							level = 2
-							instant_build = yes 
-						}
-					}
-					custom_effect_tooltip = MAN_right_side_exr
-				}
-				
-				else_if = {
-					limit = {
-						check_variable = {
-							KPT_influence > 49
-						}
-						check_variable = {
-							KPT_influence < 75
-						}
-
-						NOT = {has_country_flag = MAN_KPT_integrated}
-						NOT = {has_country_flag = MAN_KPT_removed}
-
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes 
-						}
-					}
-					custom_effect_tooltip = MAN_right_side_exr
-				}
-				
-				else_if = {
-					limit = {
-
-						OR = {
-							check_variable = {
-								KPT_influence > 74			
-							}
-							has_country_flag = MAN_KPT_integrated
-						}
-						NOT = {has_country_flag = MAN_KPT_removed}
-	
-					}
-					612 = {
-						add_extra_state_shared_building_slots = 4
-						add_building_construction = {
-							type = arms_factory
-							level = 4
-							instant_build = yes 
-						}
-					}
-					if = {
-							limit = {
-								has_idea = jap_kwantung_army_3
-							}
-							army_experience = 125
-						}
-						else = {
-							army_experience = 45
-						}
+			612 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
 				}
 			}
 
